@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configure xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:rdb="http://namespaces.zope.org/rdb"
+  xmlns:sqlos="http://namespaces.sqlobject.org/sqlos"
+  xmlns:five="http://namespaces.zope.org/five">
+  
+  <!-- CSS files -->
+  <browser:resource name="globalstyle-20110406.css"
+    file="browser/css/globalstyle.css"
+    permission="zope2.Public" />
+  <browser:resource name="globalstyle-20110308.css"
+    file="browser/css/globalstyle.css"
+    permission="zope2.Public" />
+    
+  <browser:resource name="site-20110406.css"
+    file="browser/css/site.css" 
+    permission="zope2.Public" />
+  <browser:resource name="site-20110308.css"
+    file="browser/css/site.css" 
+    permission="zope2.Public" />
+    
+  <!-- Icons -->
+  <browser:resource name="icons.png"
+    file="browser/images/icons-chp.png" 
+    permission="zope2.Public" />
+  <browser:resource name="icons-colour.png"
+    file="browser/images/icons.png" 
+    permission="zope2.Public" />
+  <browser:resourceDirectory name="jquery-icons"
+    directory="browser/images/jquery-icons/"
+    permission="zope2.Public" />
+
+  <!-- Animated images -->
+  <browser:resourceDirectory name="anim"
+    directory="browser/images/anim/"
+    permission="zope2.Public" />
+
+  <!-- Generic image resources. -->
+  <browser:resourceDirectory name="images"
+    directory="browser/images" permission="zope2.Public" />    
+
+</configure>
+
