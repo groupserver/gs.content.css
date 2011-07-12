@@ -1713,7 +1713,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   * and the Topic page. */
 @media screen and (max-width: 960px) {
   /* The main job of the small-screen CSS is to hide stuff */
-  #toparea, #contextnav, #topicSummary, #toggleStickyTopic, .share-bar, .hide-button, .popup-help * {
+  #toparea, #contextnav, #topicSummary, #toggleStickyTopic, .share-bar, .hide-button, .popup-help *, #us-bar h2 {
     display: none;
   }
   /* And make other stuff wider */
@@ -1722,7 +1722,17 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     position: relative;
     left: 0;
   }
-    
+  
+  /* Group Homepage */
+  #us-tasks {
+    position: absolute;
+    right: 0;
+  }
+  #divisionHomeContent .leftColumn, #divisionHomeContent .rightColumn {
+    float: none;
+    width: 100%;
+  }
+  
   /*  Make the navigation links wider, so they are easier for fingers 
    *  to hit. The background does not work then, so replace the arrows
    *  with Unicode characters. */
