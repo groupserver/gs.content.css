@@ -1707,3 +1707,60 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-progressbar { height:2em; text-align: left; }
 .ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }
 
+
+/*  Small-screen browsing, for phones (iPhone). The main three pages
+  * that are handled by this CSS are the site homepage, group page,
+  * and the Topic page. */
+@media screen and (max-width: 960px) {
+  /* The main job of the small-screen CSS is to hide stuff */
+  #toparea, #contextnav, #topicSummary, #toggleStickyTopic, .share-bar, .hide-button, .popup-help * {
+    display: none;
+  }
+  /* And make other stuff wider */
+  #bodyblock, #content, .hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification {
+    width: auto;
+    position: relative;
+    left: 0;
+  }
+    
+  /*  Make the navigation links wider, so they are easier for fingers 
+   *  to hit. The background does not work then, so replace the arrows
+   *  with Unicode characters. */
+  .navlinks a, .navlinks span {
+    padding: 1.385em;
+    background: none;
+  }
+  .navlinks .prev:before {
+    content: "\0021D0\ ";
+  }
+  .navlinks .up:before {
+    content: "\0021D1 ";
+  }
+  .navlinks .next:after {
+    content: " \0021D2";
+  }
+  
+  /* Topic page */
+  .email-metadata, input, select, textarea {
+    margin-left: 0;
+  }
+  .hentry .userimage {
+     left: auto;
+     top: 0;
+     right: 0;
+     width: auto;
+     height: auto;
+     padding: 0;
+  }
+  .hentry .userimage img {
+    height: 3.467em; /*2.5u*/
+  }
+  .hentry .entry-content, textarea, input.textType, input.fileType, select {
+    width: auto;
+  }
+  .hentry .entry-content {
+    white-space: pre-wrap;
+  }
+
+}
+
