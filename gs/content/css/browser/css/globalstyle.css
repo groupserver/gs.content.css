@@ -1728,10 +1728,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   
   /*  The top area is smaller, without search nor menus. It is in 
    *  reverse-colours so it is seperated out from the rest of the 
-   *  page without taking up space with a border */
-  #toparea {
-    border: none;
-  }
+   *  page. */
   #toparea, #titlebar a {
     color: white;
     background: black;
