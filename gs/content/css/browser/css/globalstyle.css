@@ -1857,3 +1857,22 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   }
 }
 
+#signupmethods .odd,.even {
+	border-top: 1px #999999 solid;
+	background-color: #fefefe;
+	padding-top: 1.378em;
+	padding-bottom: 1.378em;
+}
+
+#signupmethods .even {
+	margin-top: 1.378em;
+}
+#signupmethods {
+	border-bottom: 1px #999999 solid;
+	margin-bottom: 0.689em;
+	margin-top: 0.689em;
+}
+
+#signupmethod-email {
+	padding-left: 1.387em;
+}
