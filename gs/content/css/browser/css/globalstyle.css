@@ -78,6 +78,17 @@ p, ul, ol, dl, fieldset, table, pre {
 ul, ol {
   margin-left: 2.077em; /*1.5u*/
 }
+ul ol li {
+  list-style:decimal outside;
+}
+
+ol ol li {
+  list-style:lower-alpha outside;
+}
+ol ol ol li {
+  list-style:lower-roman outside;
+}
+
 ul ul, ul ol, ol ol, ol ul {
   margin-top: 0;
 }
