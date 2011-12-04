@@ -88,9 +88,10 @@ ol ol li {
 ol ol ol li {
   list-style:lower-roman outside;
 }
-
+/* Remove the top and bottom margins for nested lists. */
 ul ul, ul ol, ol ol, ol ul {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 dt {
