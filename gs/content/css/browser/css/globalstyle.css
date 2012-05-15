@@ -625,7 +625,35 @@ code.url {
 /* Page-specific styles */
 /************************/
 
-/************/
+/* Group Page*/
+/*************/
+
+/* Loading */
+.loading-message, .items-list {
+  display: none;
+}
+.loading-message img {
+  margin: 0 0.692em 0 0;
+  padding:0;
+}
+
+.toolbar > span {
+  padding: 0.692em 0;
+}
+
+/* Sticky topic in the Topic list */
+.items-list .sticky {
+  display: inline-block;
+}
+.items-list .keyword {
+  text-decoration: none;
+}
+
+.tab .search input {
+  width:  27.692em;
+  margin-left: 0;
+  display: inline-block;
+}
 /* Messages */
 /************/
 /* Topic: The work-horse page of GroupServer, the Topic page displays */
