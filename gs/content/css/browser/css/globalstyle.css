@@ -638,7 +638,7 @@ code.url {
 }
 
 .toolbar > span {
-  padding: 0.692em 0;
+  padding: 0.9em 0.2em; /*Similar to jQuery.ui*/
 }
 
 /* Sticky topic in the Topic list */
