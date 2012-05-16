@@ -665,13 +665,13 @@ code.url {
   display:none;
 }
 
-#toggleStickyTopic {
+#gs-group-messages-topic-admin-stickytoggle {
   display: block;
   position: absolute;
   right: 0;
 }
-#toggleStickyTopic label {
-  width: auto;
+#gs-group-messages-topic-admin-stickytoggle-widget {
+  text-align: right;
 }
 
 #topicSummary .label { 
@@ -1761,7 +1761,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   * and the Topic page. */
 @media screen and (max-width: 960px) {
   /* The main job of the small-screen CSS is to hide stuff */
-  #mainnav, #externalbar, #searcharea, #contextnav, #topicSummary, #toggleStickyTopic, .share-bar, .hide-button, .popup-help *, #us-bar h2 {
+  #mainnav, #externalbar, #searcharea, #contextnav, #topicSummary, #gs-group-messages-topic-admin-stickytoggle, .share-bar, .hide-button, .popup-help *, #us-bar h2 {
     display: none;
   }
   /* And make other stuff wider */
