@@ -142,7 +142,8 @@ input.textType {
   height: 1.385em;
 }
 textarea, input.textType, input.fileType, select {
-  width: 34.615em; /* Note: file inputs do not resize in Firefox */
+  /* Note: file inputs do not resize in Firefox */
+  width: 34.615em; /* 25u */
   padding: 1px 0 2px 0;
 }
 .required label:before {
@@ -624,6 +625,22 @@ code.url {
 /************************/
 /* Page-specific styles */
 /************************/
+
+/* Site Homepage */
+/*****************/
+
+#gs-login-easy-login {
+  padding: 0.692em;
+  margin: 0 0 1.385em 0;
+}
+
+#gs-login-easy-login .textType {
+  width: 27.692em; /* 20u */
+}
+
+#gs-login-easy-login .buttons {
+  margin-bottom: 0;
+}
 
 /* Group Page*/
 /*************/
