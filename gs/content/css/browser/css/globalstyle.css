@@ -671,6 +671,19 @@ code.url {
   margin-left: 0;
   display: inline-block;
 }
+
+/* The Info-boxes on the group page are mostly for the admin. */
+.info {
+  margin: 0 0 0.689em 0;
+}
+.info p {
+  margin: 1.385em;
+}
+.info .ui-icon {
+  float: left; 
+  margin-right: 0.0.689em;
+}
+
 /* Messages */
 /************/
 /* Topic: The work-horse page of GroupServer, the Topic page displays */
