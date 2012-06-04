@@ -6,6 +6,9 @@
   xmlns:five="http://namespaces.zope.org/five">
   
   <!-- CSS files -->
+  <browser:resource name="globalstyle-20120604.css"
+    file="browser/css/globalstyle.css"
+    permission="zope2.Public" />
   <browser:resource name="globalstyle-20120515.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
