@@ -642,35 +642,8 @@ code.url {
   margin-bottom: 0;
 }
 
-/* Group Page*/
-/*************/
-
-/* Loading */
-.loading-message, .items-list {
-  display: none;
-}
-.loading-message img {
-  margin: 0 0.692em 0 0;
-  padding:0;
-}
-
-.toolbar > span {
-  padding: 0.9em 0.2em; /*Similar to jQuery.ui*/
-}
-
-/* Sticky topic in the Topic list */
-.items-list .sticky {
-  display: inline-block;
-}
-.items-list .keyword {
-  text-decoration: none;
-}
-
-.tab .search input {
-  width:  27.692em;
-  margin-left: 0;
-  display: inline-block;
-}
+/* Group Page (gs.group.home) */
+/******************************/
 
 /* The Info-boxes on the group page are mostly for the admin. */
 .info {
@@ -683,6 +656,36 @@ code.url {
   float: left; 
   margin-right: 0.0.689em;
 }
+
+/* Search (gs.search.base) */
+/***************************/
+
+/* The search entry box */
+.gs-search-entry input {
+  width:  27.692em;
+  margin-left: 0;
+  display: inline-block;
+}
+
+/* The Loading message */
+.gs-search-loading img {
+  margin: 0 0.692em 0 0;
+  padding:0;
+}
+
+/* The results */
+.gs-search-sticky {
+  display: inline-block;
+}
+.gs-search-keyword {
+  text-decoration: none;
+}
+
+/* The Next and Previous buttons */
+.gs-search-toolbar > span {
+  padding: 0.9em 0.2em; /*Similar to padding set by jQuery.ui*/
+}
+
 
 /* Messages */
 /************/
