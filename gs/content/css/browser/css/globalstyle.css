@@ -674,7 +674,8 @@ code.url {
 }
 
 /* The results */
-.gs-search-sticky {
+/*Sticky-topic icons need the .gs-search to over-ride the .ui-icon config */
+.gs-search .gs-search-sticky {
   display: inline-block;
 }
 .gs-search-keyword {
