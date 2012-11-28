@@ -302,26 +302,6 @@ body {
 }
 
 /* GroupServer Menus, from top to bottom */
-#externalbar {
-  /* Deprecated */
-  display: none;
-}
-
-#searcharea {
-  position: absolute;
-  top: 0.692em;
-  right: 0;
-}
-#searchTextInput, #searcharea .button {
-  display: inline;
-}
-#searchTextInput {
-  margin: 0;
-}
-#searcharea .button {
-    padding: 0 0.692em;
-}
-
 
 /* The main block that contains the context navigation and the main */
 /* page content. */
