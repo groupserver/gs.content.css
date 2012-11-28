@@ -37,16 +37,18 @@ http://yuilibrary.com/license/
 body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}#yui3-css-stamp.cssfonts{display:none}
 /*End of YUI code*/
 
-/*******************************/
-/* GroupServer Standard Layout */
-/*******************************/
-/* TODO: Move to gs.content.layout */
+/******************************/
+/* GroupServer Typeface Setup */
+/******************************/
 
+/* TODO: Move to a viewlet within gs.content.css */
+
+/* First the typeface: Helvetica, on an 18px grid */
 /* 13px text on a 18px line */
 /* <http://www.alistapart.com/articles/howtosizetextincss/> */
 body, select, input, button, textarea {
   /* 1u = 1.385em = 1.385 * text-size = 1.385 * 13px = 18px */
-  font-family: Trebuchet,'Trebuchet MS',arial,helvetica,clean,sans-serif;
+  font-family: arial,helvetica,clean,sans-serif;
 }
 body, select, input, button, textarea, pre {
   line-height: 1.385;
@@ -71,11 +73,12 @@ h3 {
 /* bold. The YUI code takes care of this.  */
 
 /* Text  */
+/* TOOD: move to a viewlet in gs.content.layout */
 
 p, ul, ol, dl, fieldset, table, pre {
   margin: 1.385em 0; /* 1u */
 }
-cite {
+cite, em {
   font-style: italic;
 }
 /* Text: Lists */
@@ -120,6 +123,7 @@ tbody th {
 /*********/
 /* Forms */
 /*********/
+/* TOOD: Move to gs.content.form */
 label {
   display: block;
   font-weight: bold;
@@ -228,18 +232,49 @@ input.button {
 /* separate CSS that the WYMeditor loads */
 
 /* GroupServer Page Layout */
-/* Main Layout: 52u main block, with a banner running across the */
-/* page. T: title, S: search, M: main-nav, U: utility links,       */
-/* C: context menu, B: body block.                                 */
-/* TTTTTTTTTTTTTTTT     SSSSSSSSS */
-/* MMMMMMMMMMMMMMMM     UUUUUUUUU */
+/* TODO: move to 3 viewlets within gs.content.layout */
+
+/* Main Layout for Site Homepage and Group Page */
+/* page. T: title, U: utility links, B: body block, R: breadcrumbs, */
+/* C: context viewlets, F: footer */
+/* TTTTTTTTTTTTTTTT     UUUUUUUUU */
 /* .............................. */
-/* CCCC   BBBBBBBBBBBBBBBBBBBBBBB */
-/* CCCC   BBBBBBBBBBBBBBBBBBBBBBB */
-/* CCCC   BBBBBBBBBBBBBBBBBBBBBBB */
-/* CCCC   BBBBBBBBBBBBBBBBBBBBBBB */
-/* CCCC   BBBBBBBBBBBBBBBBBBBBBBB */
-/* CCCC   BBBBBBBBBBBBBBBBBBBBBBB */
+/* RRRR > RRRR > RRRR > RRRR      */ 
+/*                                */
+/* BBBBBBBBBBBBBBBBBBBBBBB CCCCCC */
+/* BBBBBBBBBBBBBBBBBBBBBBB CCCCCC */
+/* BBBBBBBBBBBBBBBBBBBBBBB CCCCCC */
+/* BBBBBBBBBBBBBBBBBBBBBBB CCCCCC */
+/* BBBBBBBBBBBBBBBBBBBBBBB CCCCCC */
+/* .............................. */
+/* FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
+
+/* "Normal" page */
+/* TTTTTTTTTTTTTTTT     UUUUUUUUU */
+/* .............................. */
+/* RRRR > RRRR > RRRR > RRRR      */ 
+/*                                */
+/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* .............................. */
+/* FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
+
+/* "Old" pages */
+/* N: Context menu                */
+/* TTTTTTTTTTTTTTTT     UUUUUUUUU */
+/* .............................. */
+/* RRRR > RRRR > RRRR > RRRR      */ 
+/*                                */
+/* NNN BBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* NNN BBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* NNN BBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* NNN BBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* NNN BBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* .............................. */
+/* FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
 
 body {
   text-align: center; /* HACK for IE. Bless it. */ 
@@ -287,42 +322,6 @@ body {
     padding: 0 0.692em;
 }
 
-#sitenavigation .ui-tabs, #utilitylinks {
-  padding-top: 0; /*Hack*/
-  padding-bottom: 1px; /*Hack*/
-}
-#sitenavigation ul, #utilitylinks ul {
-  padding: 0;
-  margin: 0;
-  height: auto;
-  display: block;
-}
-#sitenavigation li, #utilitylinks li {
-  padding: 0;
-  height: auto;
-  width: auto;
-  display: inline-block;
-  border-top: thin solid black;
-  border-left: thin solid black;
-  border-bottom: none;
-  border-right: thin solid black;
-  font-weight: bold;
-}
-#sitenavigation li {
-  margin: 0 0.692em 0 0;
-}
-#utilitylinks li {
-  margin: 0 0 0 0.692em;
-}
-#sitenavigation a, #utilitylinks a {
-  padding: 0.692em;
-  text-decoration: none;
-}
-#utilitylinks {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
 /* The main block that contains the context navigation and the main */
 /* page content. */
