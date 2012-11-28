@@ -237,17 +237,18 @@ input.button {
 /* Main Layout for Site Homepage and Group Page */
 /* page. T: title, U: utility links, B: body block, R: breadcrumbs, */
 /* C: context viewlets, F: footer */
-/* TTTTTTTTTTTTTTTT     UUUUUUUUU */
+/*
+/*   TTTTTTTTTTTTTT     UUUUUUU   */
 /* .............................. */
-/* RRRR > RRRR > RRRR > RRRR      */ 
+/*   RRRR > RRRR > RRRR > RRRRR   */ 
 /*                                */
-/* BBBBBBBBBBBBBBBBBBBBBBB CCCCCC */
-/* BBBBBBBBBBBBBBBBBBBBBBB CCCCCC */
-/* BBBBBBBBBBBBBBBBBBBBBBB CCCCCC */
-/* BBBBBBBBBBBBBBBBBBBBBBB CCCCCC */
-/* BBBBBBBBBBBBBBBBBBBBBBB CCCCCC */
+/*   BBBBBBBBBBBBBBBBBBB CCCCCC   */
+/*   BBBBBBBBBBBBBBBBBBB CCCCCC   */
+/*   BBBBBBBBBBBBBBBBBBB CCCCCC   */
+/*   BBBBBBBBBBBBBBBBBBB CCCCCC   */
+/*   BBBBBBBBBBBBBBBBBBB CCCCCC   */
 /* .............................. */
-/* FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
+/*   FFFFFFFFFFFFFFFFFFFFFFFFFF   */
 
 /* "Normal" page */
 /* TTTTTTTTTTTTTTTT     UUUUUUUUU */
@@ -280,35 +281,50 @@ body {
   text-align: center; /* HACK for IE. Bless it. */ 
 }
 #toparea {
-  border-bottom: thick solid black;
+  border-bottom: thick solid #cccccc;
+  background: #eeeeee;
+  height: 6.923em; /*5u (90px); orig 87px*/
 }
 /* Center the three main elements */
-#titlebanner, #mainnav, #bodyblock {
+#titlebar, #bodyblock {
   position: relative; /* Create a new positioning context */
-  margin: 1.385em auto 0 auto;
+  margin: 0 auto 0 auto;
   width: 72.000em; /* 52u */
   text-align: left;
 }
 
-#titlebar .logo, #titlebar .group {
+#titlebar .logo {
   display: none;
 }
 #titlebar a {
   text-decoration: none;
   border: none;
+  display: block;
+  padding-top: 2.077em;
 }
-#titlebar .division {
+#titlebar .site {
   font: bold  278%/1 arial,helvetica,clean,sans-serif; /* 2u */
 }
 
-/* GroupServer Menus, from top to bottom */
+/* TODO: Move to wherever the utility-links viewlet will live */
+#utilitylinks {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#utilitylinks li {
+    display: inline-block;
+    margin-right: 1.385em;
+}
+#utilitylinks-profile {
+    font-weight: bold;
+}
 
 /* The main block that contains the context navigation and the main */
 /* page content. */
-#bodyblock {
-  margin: 0 auto 0 auto;
-}
-
 #contextnav {
   width: 12.462em;  /* 9u */
   position: absolute;
