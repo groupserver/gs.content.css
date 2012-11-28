@@ -293,14 +293,14 @@ body {
   text-align: left;
 }
 
-#titlebar .logo {
-  display: none;
-}
-#titlebar a {
+#titlebar-home-link {
   text-decoration: none;
   border: none;
   display: block;
   padding-top: 2.077em;
+}
+#titlebar .logo {
+  display: none;
 }
 #titlebar .site {
   font: bold  278%/1 arial,helvetica,clean,sans-serif; /* 2u */
@@ -309,7 +309,7 @@ body {
 /* TODO: Move to wherever the utility-links viewlet will live */
 #utilitylinks {
     margin: 0;
-    padding: 0;
+    padding: 2.769em 0 0 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -317,12 +317,11 @@ body {
 }
 #utilitylinks li {
     display: inline-block;
-    margin-right: 1.385em;
+    margin-left: 1.385em;
 }
 #utilitylinks-profile {
     font-weight: bold;
 }
-
 /* The main block that contains the context navigation and the main */
 /* page content. */
 #contextnav {
