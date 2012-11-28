@@ -59,11 +59,12 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 276.9%; /* 2u */
-  margin: 0 0 0.692em; /*1u*/
+    font-size: 207.7%;
+    font-weight: bold;
 }
 h2 {
-  font-size: 207.7%; /* 1.5u */
+    font-weight: bold;
+    font-size: 207.7%; /* 1.5u */
 }
 h3 {
   font-size: 138.5%; /* 1u */
@@ -81,6 +82,16 @@ p, ul, ol, dl, fieldset, table, pre {
 cite, em {
   font-style: italic;
 }
+
+/* Less important information is grey */
+.minor, .minor a {
+    color: #999999;
+}
+.minor em {
+  font-style: normal;
+  color: black;
+}
+
 /* Text: Lists */
 ul, ol {
   margin-left: 2.077em; /*1.5u*/
@@ -317,10 +328,12 @@ body {
 }
 #utilitylinks li {
     display: inline-block;
-    margin-left: 1.385em;
 }
 #utilitylinks-profile {
     font-weight: bold;
+}
+#utilitylinks-log-out:before {
+    content: "\2022 ";
 }
 /* The main block that contains the context navigation and the main */
 /* page content. */
@@ -359,9 +372,6 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-}
-#divisionHomeContent {
-  padding-top: 1.385em;
 }
 /* Text Markup */
 p.label {
@@ -685,6 +695,18 @@ code.url {
 
 /* Messages */
 /************/
+
+/* TODO: Move to gs.group.messages.topic */
+#gs-group-messages-topic-title cite {
+    font-style: normal;
+    font-weight: bold;
+}
+#gs-group-messages-topic-navlinks {
+    float:right;
+}
+#gs-group-messages-topic-navlinks li {
+    margin: 0 0 0 1.385em;
+}
 /* Topic: The work-horse page of GroupServer, the Topic page displays */
 /* all the posts in a topic. */
 #topicNavigation li, #postsNavigation li, #usefulLinks li {
@@ -692,6 +714,16 @@ code.url {
 }
 #topicNavigation .label, #postsNavigation .label, #usefulLinks .label {
   display:none;
+}
+
+#gs-group-messages-topic-summary ul {
+    margin: 0;
+}
+#gs-group-messages-topic-summary li {
+    display: inline-block;
+}
+#gs-group-messages-topic-summary li + li:before {
+    content: "\2022 ";
 }
 
 #gs-group-messages-topic-admin-stickytoggle {
@@ -703,12 +735,6 @@ code.url {
   text-align: right;
 }
 
-#topicSummary .label { 
-  margin-bottom: 0;
-}
-#topicSummary ul {
-  margin-top: 0;
-}
 #topic-index caption {
   display: none;
 }
@@ -1204,7 +1230,8 @@ input.full-share-input {
 
 /* Colour is for happy people */
 a, a:hover, a:visited {
-  color: black;
+  color: inherit;
+  text-decoration: none;
 }
 
 /*************/
@@ -1790,7 +1817,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   * and the Topic page. */
 @media screen and (max-width: 960px) {
   /* The main job of the small-screen CSS is to hide stuff */
-  #mainnav, #externalbar, #searcharea, #contextnav, #topicSummary, #gs-group-messages-topic-admin-stickytoggle, .share-bar, .hide-button, .popup-help *, #us-bar h2 {
+  #mainnav, #externalbar, #searcharea, #contextnav, #gs-group-messages-topic-admin-stickytoggle, .share-bar, .hide-button, .popup-help *, #us-bar h2 {
     display: none;
   }
   /* And make other stuff wider */
@@ -1809,10 +1836,6 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   #toparea, #titlebar a {
     color: white;
     background: black;
-  }
-  
-  #divisionHomeContent {
-    padding-top: 0;
   }
   
   #titlebar .division, h1 {
@@ -1835,10 +1858,6 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   #us-tasks {
     position: absolute;
     right: 0;
-  }
-  #divisionHomeContent .leftColumn, #divisionHomeContent .rightColumn {
-    float: none;
-    width: 100%;
   }
   
   .cols .leftColumn {
