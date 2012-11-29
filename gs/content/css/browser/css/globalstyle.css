@@ -768,6 +768,9 @@ code.url {
   position: absolute;
   right: 0;
 }
+#gs-group-messages-topic-admin-stickytoggle * {
+    margin: 0;
+}
 #gs-group-messages-topic-admin-stickytoggle-widget {
   text-align: right;
 }
@@ -779,7 +782,7 @@ code.url {
 /* Messages: Share bar. Widgets to share a topic or post */
 .share-bar {
   display: -moz-inline-stack;
-  display: inline-block;
+  display: none; /* Hiding the share bar for now */
 }
 .share-widgets a, .share-widgets span {
   min-width: 16px;
