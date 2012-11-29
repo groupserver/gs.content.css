@@ -59,11 +59,11 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 207.7%;
+    font-size: 207.7%; /* 1.5u */
     font-weight: bold;
+    margin-bottom: 0.667em; /* 1u (when the font-size is 2.077 times bigger. */
 }
 h2 {
-    font-weight: bold;
     font-size: 207.7%; /* 1.5u */
 }
 h3 {
@@ -714,6 +714,11 @@ code.url {
 }
 #topicNavigation .label, #postsNavigation .label, #usefulLinks .label {
   display:none;
+}
+
+/* Topic summary */
+#gs-group-messages-topic-summary {
+    margin: 1.385em 0 1.385em 0;
 }
 #gs-group-messages-topic-summary-simple {
     margin: 0;
