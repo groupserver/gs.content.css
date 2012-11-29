@@ -334,7 +334,8 @@ body {
     font-weight: bold;
 }
 #utilitylinks-log-out:before {
-    content: "\2022 ";
+    content: "\2022";
+    color: #999999;
 }
 
 /* Breadcrumbs (Where should this live?) */
@@ -416,32 +417,6 @@ div.noFloat {
   list-style: none;
   display: inline-block;
   margin-right: 1.385em;
-}
-/* Intra-area navigation: topic, post, image, manage members, search */
-.navlinks a, .navlinks span {
-  background: transparent url("/++resource++icons.png") no-repeat scroll;
-  padding: 0 0 0 1.385em;
-}
-.navlinks .next, .navlinks .last {
-  padding: 0 1.385em 0 0;
-}
-.navlinks .up {
-  background-position: 0 -1424px;
-}
-.navlinks .next {
-  background-position: right -1456px;
-}
-.navlinks .down {
-  background-position: 0 -1488px;
-}
-.navlinks .prev {
-  background-position: 0 -1520px;
-}
-.navlinks .last {
-  background-position: right -1552px;
-}
-.navlinks .first {
-  background-position: 0 -1584px;
 }
 
 /* Text Markup: The profile image, which appears everywhere. */
@@ -724,9 +699,10 @@ code.url {
 }
 #gs-group-messages-topic-navlinks {
     float:right;
+    margin: 0;
 }
 #gs-group-messages-topic-navlinks li {
-    margin: 0 0 0 1.385em;
+    margin: 0;
 }
 #topicNavigation li, #postsNavigation li, #usefulLinks li {
   list-style: none;
@@ -773,6 +749,11 @@ code.url {
 }
 #gs-group-messages-topic-admin-stickytoggle-widget {
   text-align: right;
+}
+
+.postList {
+  margin-top: 1.385em;
+  border-top: medium solid #666666;
 }
 
 #topic-index caption {
@@ -831,11 +812,6 @@ a.digg-share {
 input.full-share-input {
      margin: 0;
      width: 100%;
-}
-
-.postList {
-  margin-top: 1.385em;
-  border-top: thin solid black;
 }
 
 /* Messages: Post, both in a topic, on the posts page, or by itself. */
