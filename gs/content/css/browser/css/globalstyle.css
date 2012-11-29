@@ -696,6 +696,8 @@ code.url {
 /* Messages */
 /************/
 
+/* Topic: The work-horse page of GroupServer, the Topic page displays */
+/* all the posts in a topic. */
 /* TODO: Move to gs.group.messages.topic */
 #gs-group-messages-topic-title cite {
     font-style: normal;
@@ -707,23 +709,34 @@ code.url {
 #gs-group-messages-topic-navlinks li {
     margin: 0 0 0 1.385em;
 }
-/* Topic: The work-horse page of GroupServer, the Topic page displays */
-/* all the posts in a topic. */
 #topicNavigation li, #postsNavigation li, #usefulLinks li {
   list-style: none;
 }
 #topicNavigation .label, #postsNavigation .label, #usefulLinks .label {
   display:none;
 }
-
-#gs-group-messages-topic-summary ul {
+#gs-group-messages-topic-summary-simple {
     margin: 0;
 }
-#gs-group-messages-topic-summary li {
+#gs-group-messages-topic-summary-simple li {
     display: inline-block;
 }
-#gs-group-messages-topic-summary li + li:before {
+#gs-group-messages-topic-summary-simple li + li:before {
     content: "\2022 ";
+}
+/* The topic keywords */
+#gs-group-messages-topic-summary-keyowords * {
+    display: inline-block;
+    margin: 0;
+}
+#gs-group-messages-topic-summary-keyowords li {
+    list-style: none;
+}
+#gs-group-messages-topic-summary-keyowords li:after {
+    content: ', ';
+}
+#gs-group-messages-topic-summary-keyowords li:last-of-type:after {
+    content: '';
 }
 
 #gs-group-messages-topic-admin-stickytoggle {
