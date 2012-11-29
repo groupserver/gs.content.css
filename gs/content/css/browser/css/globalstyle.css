@@ -61,7 +61,8 @@ h1, h2 {
 h1 {
     font-size: 207.7%; /* 1.5u */
     font-weight: bold;
-    margin-bottom: 0.667em; /* 1u (when the font-size is 2.077 times bigger. */
+    /* 0.677em == 1u (when the font-size is 2.077 times bigger. */
+    margin: 0.667em 0 0.667em 0;
 }
 h2 {
     font-size: 207.7%; /* 1.5u */
@@ -87,7 +88,7 @@ cite, em {
 .minor, .minor a {
     color: #999999;
 }
-.minor em {
+.minor em, .minor strong {
   font-style: normal;
   color: black;
 }
@@ -335,6 +336,24 @@ body {
 #utilitylinks-log-out:before {
     content: "\2022 ";
 }
+
+/* Breadcrumbs (Where should this live?) */
+#breadcrumbs * {
+    display: inline-block;
+}
+#breadcrumbs ul {
+    margin: 1.385em 0 0 0; 
+}
+#breadcrumbs li {
+    list-style: none;
+}
+#breadcrumbs li:after {
+    content: " \232A";
+}
+#breadcrumbs li:last-of-type:after {
+    content: '';
+}
+
 /* The main block that contains the context navigation and the main */
 /* page content. */
 #contextnav {
