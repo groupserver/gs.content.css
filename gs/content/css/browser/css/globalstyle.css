@@ -61,8 +61,8 @@ h1, h2 {
 h1 {
     font-size: 207.7%; /* 1.5u */
     font-weight: bold;
-    /* 0.677em == 1u (when the font-size is 2.077 times bigger. */
-    margin: 0.667em 0 0.667em 0;
+    /* 0.333em == 1u (when the font-size is 2.077 times bigger. */
+    margin: 0.333em 0 0.333em 0;
 }
 h2 {
     font-size: 207.7%; /* 1.5u */
@@ -343,7 +343,7 @@ body {
     display: inline-block;
 }
 #breadcrumbs ul {
-    margin: 1.385em 0 0 0; 
+    margin: 0.692em 0 0 0; 
 }
 #breadcrumbs li {
     list-style: none;
@@ -713,7 +713,7 @@ code.url {
 
 /* Topic summary */
 #gs-group-messages-topic-summary {
-    margin: 1.385em 0 1.385em 0;
+    margin: 0.692em 0;
 }
 #gs-group-messages-topic-summary-simple {
     margin: 0;
@@ -744,11 +744,8 @@ code.url {
   position: absolute;
   right: 0;
 }
-#gs-group-messages-topic-admin-stickytoggle * {
-    margin: 0;
-}
-#gs-group-messages-topic-admin-stickytoggle-widget {
-  text-align: right;
+#gs-group-messages-topic-admin-stickytoggle label {
+    margin-top: 0;
 }
 
 .postList {
