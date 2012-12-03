@@ -704,7 +704,7 @@ code.url {
     float:right;
     margin: 0;
 }
-#gs-group-messages-topic-navlinks li {
+#topic-page-content .navlinks li, #gs-group-messages-post .navlinks li {
     margin: 0;
 }
 #topicNavigation li, #postsNavigation li, #usefulLinks li {
@@ -879,7 +879,7 @@ input.full-share-input {
 .fileMetadata {
   margin: 1.385em 0;
 }
-#single-post-page .hentry {
+#gs-group-messages-post .hentry {
   border-top: medium solid #666666;
   border-bottom: thin solid black;  
   min-height: 16.615em;
