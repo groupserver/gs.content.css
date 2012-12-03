@@ -420,11 +420,14 @@ div.noFloat {
 }
 
 /* Text Markup: The profile image, which appears everywhere. */
+/* TODO: move to gs.profile.image */
+/* */
 .userimage {
   float: left;
-  width: 6.231em;  /* 4.5u */
-  height: 8.308em; /* 6u */
+  width: 4.154em;  /* 3u */
+  height: 5.358em; /* 4.5u */
   padding: 0 0.692em 0.692em 0;
+  background: #666666;
 }
 
 /* Text Markup: Disclosure Widget */
@@ -812,33 +815,63 @@ input.full-share-input {
 }
 
 /* Messages: Post, both in a topic, on the posts page, or by itself. */
+/* TODO: move to gs.group.messages.post
+/* PP MMMMM EEEEEEEEEEEEEEEEE */
+/* PP MMMMM EEEEEEEEEEEEEEEEE */
+/*    AAAAA EEEEEEEEEEEEEEEEE */
+/*          EEEEEEEEEEEEEEEEE */
+/*          EEEEEEEEEEEEEEEEE */
+/*          EEEEEEEEEEEEEEEEE */
+/*          RRRRRRRRRRRRRRRRR */
+/*          RRRRRRRRRRRRRRRRR */
+/*          RRRRRRRRRRRRRRRRR */
+/*          FFFFF             */
+/*          FFFFF             */
+/*          FFFFF             */
+
+/* P: photo (3u); M: metadata (12.5); E: email (35.5u); R: remainder; */
+/* F: files. 0.5u gap seperates the three vertical columns. */
+
 .hentry {
   position: relative;
   border-bottom: thin solid black;
-  padding: 1.385em 0;
   margin: 0;
   min-height: 9.962em; /* 7u */
 }
 .postList .hidden {
   min-height: 0;
 }
-.email-metadata {
-  margin: 0 0 1.385em 0.692em;
+.hentry .userimage, .email-metadata {
+    position: absolute;
+    top: 0.692em;
 }
-.email-metadata .author, .email-metadata .posted, .email-metadata .share-bar {
-  padding-right: 2.077em;
+.email-metadata {
+    left: 4.846em; /* 3u for the photo, and 0.5u gap */
+    width: 17.308em;  /* 12.5u */
+}
+.email-metadata > * {
+    display: block;
+}
+.email-metadata .share-widgets, .email-metadata .hide-button {
+    display: none; /** FIXME */
 }
 .email-metadata abbr {
   border: none;
 }
+.hentry .email-message {
+    position: relative;
+    top: 0.692em;
+    left: 22.846em;
+    width: 49.154em; /* 35.5u */
+}
 .hentry .userimage {
-  position: absolute;
-  left: 0.692em;
+    padding: 0;
 }
 .hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification {
-  position: relative;
-  left: 8.308em;
-  width: 45.692em; /* 40u content minus 7u image = 33u messages */
+    width: 49.154em; /* 35.5u */
+}
+.hentry .entry-content {
+    margin: 0;
 }
 .hentry .fileNotification {
   border-top: thin solid black;
@@ -847,7 +880,7 @@ input.full-share-input {
   margin: 1.385em 0;
 }
 #single-post-page .hentry {
-  border-top: thin solid black;
+  border-top: medium solid #666666;
   border-bottom: thin solid black;  
   min-height: 16.615em;
 }
@@ -1966,7 +1999,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   }
 }
 
-#signupmethods .odd,.even {
+#signupmethods .odd, #signupmethods .even {
         border-top: 1px #999999 solid;
         background-color: #fefefe;
         padding-top: 1.378em;
