@@ -61,8 +61,8 @@ h1, h2 {
 h1 {
     font-size: 207.7%; /* 1.5u */
     font-weight: bold;
-    /* 0.333em == 1u (when the font-size is 2.077 times bigger. */
-    margin: 0.333em 0 0.333em 0;
+    /* 0.334em == 0.5u (when the font-size is 2.077 times bigger. */
+    margin: 0.667em 0 0.334em 0;
 }
 h2 {
     font-size: 207.7%; /* 1.5u */
@@ -830,10 +830,6 @@ code.url {
 .hentry .fileNotification {
   border-top: thin solid black;
 }
-.hentry + .navlinks {
-    float: none;
-    margin: 0.692em;
-}
 .fileMetadata {
   margin: 1.385em 0;
 }
@@ -841,6 +837,10 @@ code.url {
 #gs-group-messages-post .navlinks {
     float: right;
     margin: 0;
+}
+#gs-group-messages-post .hentry + .navlinks {
+    float: none;
+    margin: 0.692em;
 }
 #gs-group-messages-post .hentry {
   border-top: medium solid #666666;
