@@ -836,7 +836,6 @@ input.full-share-input {
   position: relative;
   border-bottom: thin solid black;
   margin: 0;
-  min-height: 9.962em; /* 7u */
 }
 .postList .hidden {
   min-height: 0;
@@ -860,9 +859,9 @@ input.full-share-input {
 }
 .hentry .email-message {
     position: relative;
-    top: 0.692em;
     left: 22.846em;
     width: 49.154em; /* 35.5u */
+    padding: 0.692em 0; 
 }
 .hentry .userimage {
     padding: 0;
@@ -879,10 +878,19 @@ input.full-share-input {
 .fileMetadata {
   margin: 1.385em 0;
 }
+
+/* The Post page*/
+#gs-group-messages-post .navlinks {
+    float: right;
+    margin: 0;
+}
+#gs-group-messages-post .hentry + .navlinks {
+    float: none;
+    margin: 0.692em;
+}
 #gs-group-messages-post .hentry {
   border-top: medium solid #666666;
   border-bottom: thin solid black;  
-  min-height: 16.615em;
 }
 .email-metadata .topic {
   display: block;
