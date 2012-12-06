@@ -65,10 +65,10 @@ h1 {
     margin: 0.667em 0 0.334em 0;
 }
 h2 {
-    font-size: 207.7%; /* 1.5u */
+    font-size: 138.5%; /* 1u */
+    margin: 1em 0 1em 0;
 }
 h3 {
-  font-size: 138.5%; /* 1u */
   line-height: 1.5;
 }
 /* h4, h5, h6, and strong elements all look the same: 1u high and */
@@ -205,11 +205,21 @@ textarea, input.textType, input.fileType, select {
 .form-widget .value br {
   display: none;
 }
+
 /* The submit button, which never reads "Submit". */
+/* Like buttons in dialogs on Microsoft Windows and Apple MacOS X the */
+/* buttons are right aligned. However, standard GroupServer practice is */
+/* to only have one (1) button on the page. */
 .buttons {
-  clear: left;
-  margin: 1.385em 0;
+    clear: left;
+    margin: 1.385em 0;
+    text-align: right;
+    position: relative; /* Create a new rendering context */
 }
+.buttons > * {
+    display: inline-block;
+}
+
 input.button {
   height: auto;
   font-weight: bold;
@@ -693,85 +703,6 @@ code.url {
 /* Messages */
 /************/
 
-/* Topic: The work-horse page of GroupServer, the Topic page displays */
-/* all the posts in a topic. */
-/* TODO: Move to gs.group.messages.topic */
-#gs-group-messages-topic-title cite {
-    font-style: normal;
-    font-weight: bold;
-}
-#gs-group-messages-topic-navlinks {
-    float:right;
-    margin: 0;
-}
-#topic-page-content .navlinks li, #gs-group-messages-post .navlinks li {
-    margin: 0;
-}
-#topicNavigation li, #postsNavigation li, #usefulLinks li {
-  list-style: none;
-}
-#topicNavigation .label, #postsNavigation .label, #usefulLinks .label {
-  display:none;
-}
-
-/* Topic summary */
-#gs-group-messages-topic-summary {
-    margin: 0.692em 0;
-}
-#gs-group-messages-topic-summary-simple {
-    margin: 0;
-}
-#gs-group-messages-topic-summary-simple li {
-    display: inline-block;
-}
-#gs-group-messages-topic-summary-simple li + li:before {
-    content: "\2022 ";
-}
-/* The topic keywords */
-#gs-group-messages-topic-summary-keyowords * {
-    display: inline-block;
-    margin: 0;
-}
-#gs-group-messages-topic-summary-keyowords li {
-    list-style: none;
-}
-#gs-group-messages-topic-summary-keyowords li:after {
-    content: ', ';
-}
-#gs-group-messages-topic-summary-keyowords li:last-of-type:after {
-    content: '';
-}
-
-#gs-group-messages-topic-admin-stickytoggle {
-  display: block;
-  position: absolute;
-  right: 0;
-}
-#gs-group-messages-topic-admin-stickytoggle label {
-    margin-top: 0;
-}
-
-.postList {
-  margin-top: 1.385em;
-  border-top: medium solid #666666;
-}
-
-#topic-index caption {
-  display: none;
-}
-
-#hide-the-post + .navlinks {
-    position: absolute;
-    margin: 1.385em 0;
-}
-#gs-group-messages-topic-cannotadd {
-    width: 49.154em; /*35.5u*/
-    position: relative;
-    left: 22.846em; /* 16.5u */
-    margin: 1.385em 0;
-}
-
-
 /* Messages: Post, both in a topic, on the posts page, or by itself. */
 /* TODO: move to gs.group.messages.post
 /* PP MMMMM EEEEEEEEEEEEEEEEE */
@@ -791,9 +722,10 @@ code.url {
 /* F: files. 0.5u gap seperates the three vertical columns. */
 
 .hentry {
-  position: relative;
-  border-bottom: thin solid black;
-  margin: 0;
+    position: relative;
+    border-bottom: thin solid black;
+    margin: 0;
+    min-height: 6.923em; /* 5u */
 }
 .hentry .userimage, .email-metadata {
     position: absolute;
@@ -853,14 +785,6 @@ code.url {
 }
 #single-post-page .email-metadata .topic {
   display: none;
-}
-
-/* Messages: The Multi File plugin for jQuery */
-.MultiFile-label {
-  margin: 0.692em 2.077em;
-}
-.MultiFile-remove {
-  margin: 0 0.692em 0 0;
 }
 
 /* Messages: The list of topics on the Topics page */
@@ -939,6 +863,139 @@ a.digg-share {
 input.full-share-input {
      margin: 0;
      width: 100%;
+}
+
+/* Topic: The work-horse page of GroupServer, the Topic page displays */
+/* all the posts in a topic, and an Add to Topic form to group members. */
+/* TODO: Move to gs.group.messages.topic */
+/*                                */
+/* BBB > BBBB > BBB               */
+/* Topic title               SSSS */
+/*                                */
+/* UUUUUUUUUUUUU             NNNN */
+/* UUUUUUUUUUUUU                  */
+/*                                */
+/* Posts (gs.group.message.post)  */
+/*                                */
+/* NNNN         FFFFFFFFFFFFFFFFF */
+/*              FFFFFFFFFFFFFFFFF */
+/* B: Breadcrumbs; S: sticky button; U: Topic summary; N: Navigation; */
+/* F: Form or Cannot Post message */
+
+#gs-group-messages-topic-title cite {
+    font-style: normal;
+    font-weight: bold;
+}
+#gs-group-messages-topic-navlinks {
+    float:right;
+    margin: 0;
+}
+#topic-page-content .navlinks li, #gs-group-messages-post .navlinks li {
+    margin: 0;
+}
+#topicNavigation li, #postsNavigation li, #usefulLinks li {
+  list-style: none;
+}
+#topicNavigation .label, #postsNavigation .label, #usefulLinks .label {
+  display:none;
+}
+
+/* Topic summary */
+#gs-group-messages-topic-summary {
+    margin: 0.692em 0;
+}
+#gs-group-messages-topic-summary-simple {
+    margin: 0;
+}
+#gs-group-messages-topic-summary-simple li {
+    display: inline-block;
+}
+#gs-group-messages-topic-summary-simple li + li:before {
+    content: "\2022 ";
+}
+/* The topic keywords */
+#gs-group-messages-topic-summary-keyowords * {
+    display: inline-block;
+    margin: 0;
+}
+#gs-group-messages-topic-summary-keyowords li {
+    list-style: none;
+}
+#gs-group-messages-topic-summary-keyowords li:after {
+    content: ', ';
+}
+#gs-group-messages-topic-summary-keyowords li:last-of-type:after {
+    content: '';
+}
+
+#gs-group-messages-topic-admin-stickytoggle {
+  display: block;
+  position: absolute;
+  right: 0;
+}
+#gs-group-messages-topic-admin-stickytoggle label {
+    margin-top: 0;
+}
+
+.postList {
+  margin-top: 1.385em;
+  border-top: medium solid #666666;
+}
+
+#topic-index caption {
+  display: none;
+}
+
+#hide-the-post + .navlinks {
+    position: absolute;
+    margin: 1.385em 0;
+}
+
+/* The Add to Topic form at the bottom of the page */
+#gs-group-messages-topic-cannotadd, #add-to-topic {
+    width: 49.154em; /*35.5u*/
+    position: relative;
+    left: 22.846em; /* 16.5u */
+    margin: 1.385em 0;
+}
+
+#add-to-topic #widget-form\.message label {
+    display: none;
+}
+#add-to-topic #form\.message {
+    margin: 0;
+    width: 100%;
+}
+#gs-group-messages-topic-add-from {
+    margin: 1.385em 0 0.692em 0;
+}
+#gs-group-messages-topic-add-from * {
+    display: inline-block;
+    margin: 0;
+    width: auto;
+}
+
+/* The Multi File plugin for jQuery at the bottom of the */
+#widget-form\.uploadedFile label {
+    display: block;
+    position: absolute;
+    width: auto;
+    margin: 0;
+}
+#add-to-topic .MultiFile-wrap, #add-to-topic #fileList {
+    position: relative;
+    left: 5.538em; /* 4u */
+    margin: 0.692em 0;
+}
+.MultiFile-wrap input {
+    margin: 0;
+}
+
+.MultiFile-label {
+  margin: 0.692em 0;
+}
+.MultiFile-remove {
+  margin: 0 0.692em 0 0;
 }
 
 
