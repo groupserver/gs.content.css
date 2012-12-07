@@ -340,6 +340,12 @@ body {
 #utilitylinks li {
     display: inline-block;
 }
+#utilitylinks .userimage {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-right: 0.692em;
+}
 #utilitylinks-profile {
     font-weight: bold;
 }
@@ -731,6 +737,9 @@ code.url {
     position: absolute;
     top: 0.692em;
 }
+.hentry .userimage {
+    padding: 0;
+}
 .email-metadata {
     left: 4.846em; /* 3u for the photo, and 0.5u gap */
     width: 17.308em;  /* 12.5u */
@@ -750,8 +759,8 @@ code.url {
     width: 49.154em; /* 35.5u */
     padding: 0.692em 0; 
 }
-.hentry .userimage {
-    padding: 0;
+.hentry pre {
+    font-family: inherit;
 }
 .hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification {
     width: 49.154em; /* 35.5u */
