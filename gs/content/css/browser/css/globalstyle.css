@@ -353,6 +353,7 @@ body {
 #utilitylinks-log-out:before {
     content: "\2022";
     color: #999999;
+    padding: 0 0.692em;
 }
 
 /* Breadcrumbs (Where should this live?) */
