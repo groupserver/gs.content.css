@@ -750,7 +750,7 @@ code.url {
     display: block;
 }
 .email-metadata .share-widgets, .email-metadata .hide-button {
-    display: none; /** FIXME */
+    display: inline-block;
 }
 .email-metadata abbr {
   border: none;
@@ -807,25 +807,16 @@ code.url {
 }
 
 /* Messages: The Hide a Post UI */
-.hide-button {
-
-}
+/* TODO: move to gs.group.messages.post.hide */
 #hide-the-post {
-  display: none;
-  position: absolute;
-  right:0;
-  z-index:32;
-  background-color: rgba(255, 255, 255, 0.9);
-  margin: 2.769em 0 0 8.307em; /*2u 0 0 6u*/
-  padding: 0.692em;
-  border: thin solid black;
+    text-align: left;
 }
 
 /* Messages: Share bar. Widgets to share a topic or post */
 /* TODO: move to gs.share */
 .share-bar {
   display: -moz-inline-stack;
-  display: none; /* Hiding the share bar for now */
+  display: block; /* Hiding the share bar for now */
 }
 .share-widgets a, .share-widgets span {
   min-width: 16px;
