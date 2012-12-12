@@ -84,6 +84,12 @@ cite, em {
   font-style: italic;
 }
 
+blockquote {
+    border-left: medium solid #666666;
+    padding-left: 0.689em;
+    margin-left: 0.689em;
+}
+
 /* Less important information is grey */
 .minor, .minor a {
     color: #999999;
@@ -755,7 +761,10 @@ code.url {
 .email-metadata abbr {
   border: none;
 }
-.hentry .email-message {
+.email-metadata .topic {
+  display: none;
+}
+.hentry .email-message, .hidden-post {
     position: relative;
     left: 22.846em;
     width: 49.154em; /* 35.5u */
@@ -764,10 +773,10 @@ code.url {
 .hentry pre {
     font-family: inherit;
 }
-.hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification {
+.hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification, .hidden-post {
     width: 49.154em; /* 35.5u */
 }
-.hentry .entry-content {
+.hentry .entry-content, .hidden-post > p {
     margin: 0;
 }
 .hentry .fileNotification {
@@ -788,14 +797,6 @@ code.url {
 #gs-group-messages-post .hentry {
   border-top: medium solid #666666;
   border-bottom: thin solid black;  
-}
-.email-metadata .topic {
-  display: block;
-  font-size: 138.5%; /* 1u */
-  margin: 0 0 1em 0;
-}
-#single-post-page .email-metadata .topic {
-  display: none;
 }
 
 /* Messages: The list of topics on the Topics page */
@@ -888,15 +889,20 @@ input.full-share-input {
     font-style: normal;
     font-weight: bold;
 }
-#gs-group-messages-topic-navlinks {
-    float:right;
+.gs-group-messages-topic-navlinks {
     margin: 0;
+    float: right;
+}
+.postList + .gs-group-messages-topic-navlinks {
+    margin: 1.385em 0 0 0;
+    float: none;
+    position: absolute;
 }
 #topic-page-content .navlinks li, #gs-group-messages-post .navlinks li {
     margin: 0;
 }
 #topicNavigation li, #postsNavigation li, #usefulLinks li {
-  list-style: none;
+    list-style: none;
 }
 #topicNavigation .label, #postsNavigation .label, #usefulLinks .label {
   display:none;
