@@ -844,28 +844,21 @@ a.fb-share {
 a.digg-share {
   background-position: 0 -1808px;
 }
-.full-share {
-     z-index: 16;
-     background: white;
-     margin: 0.692em 0 0 2.077em;
-     padding: 0.692em;
-     width: auto;
-     display: none;
-     border: thin solid black;
-     position: absolute;
-     float:left;
+
+.full-share-help {
+    margin: 1.385em 0 0.689em 0;
 }
-.full-share-box {
-     margin: 0.69em;
-     padding: 0.69em;
+.full-share-entry {
+    margin: 0.689em 0 0 1.385em;
 }
-.full-share-box-help {
-     margin: 0;
-     padding: 0;
+.full-share-entry input {
+    width: 100%;
+    margin: 0;
 }
-input.full-share-input {
-     margin: 0;
-     width: 100%;
+
+/* TODO Move to a sane place */
+.ui-widget-content {
+    text-align: left;
 }
 
 /* Topic: The work-horse page of GroupServer, the Topic page displays */
@@ -896,6 +889,7 @@ input.full-share-input {
 .postList + .gs-group-messages-topic-navlinks {
     margin: 1.385em 0 0 0;
     float: none;
+
     position: absolute;
 }
 #topic-page-content .navlinks li, #gs-group-messages-post .navlinks li {
