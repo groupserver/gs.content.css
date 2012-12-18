@@ -440,7 +440,7 @@ div.noFloat {
 .inline-list li {
   list-style: none;
   display: inline-block;
-  margin-right: 1.385em;
+  margin-right: 0.692em;
 }
 
 /* Text Markup: The profile image, which appears everywhere. */
@@ -719,21 +719,21 @@ code.url {
 
 /* Messages: Post, both in a topic, on the posts page, or by itself. */
 /* TODO: move to gs.group.messages.post
-/* PP MMMMM EEEEEEEEEEEEEEEEE */
-/* PP MMMMM EEEEEEEEEEEEEEEEE */
-/*    AAAAA EEEEEEEEEEEEEEEEE */
-/*          EEEEEEEEEEEEEEEEE */
-/*          EEEEEEEEEEEEEEEEE */
-/*          EEEEEEEEEEEEEEEEE */
-/*          RRRRRRRRRRRRRRRRR */
-/*          RRRRRRRRRRRRRRRRR */
-/*          RRRRRRRRRRRRRRRRR */
-/*          FFFFF             */
-/*          FFFFF             */
-/*          FFFFF             */
+/* PPP MMMMM EEEEEEEEEEEEEEEEE */
+/* PPP MMMMM EEEEEEEEEEEEEEEEE */
+/* PPP       EEEEEEEEEEEEEEEEE */
+/* PPP AAAAA EEEEEEEEEEEEEEEEE */
+/*           EEEEEEEEEEEEEEEEE */
+/*           EEEEEEEEEEEEEEEEE */
+/*           RRRRRRRRRRRRRRRRR */
+/*           RRRRRRRRRRRRRRRRR */
+/*           RRRRRRRRRRRRRRRRR */
+/*           FFFFF             */
+/*           FFFFF             */
+/*           FFFFF             */
 
-/* P: photo (3u); M: metadata (12.5); E: email (35.5u); R: remainder; */
-/* F: files. 0.5u gap seperates the three vertical columns. */
+/* P: photo (3u by 4u); M: metadata (12.5); A: Actions; E: email (35.5u); */
+/* R: remainder; F: files. 0.5u gap seperates the three vertical columns. */
 
 .hentry {
     position: relative;
@@ -764,6 +764,10 @@ code.url {
 .email-metadata .topic {
   display: none;
 }
+.gs-group-messages-post-buttons {
+    margin: 1.385em 0 0 0;
+}
+
 .hentry .email-message, .hidden-post {
     position: relative;
     left: 22.846em;
@@ -866,40 +870,38 @@ a.digg-share {
 /* TODO: Move to gs.group.messages.topic */
 /*                                */
 /* BBB > BBBB > BBB               */
-/* Topic title               SSSS */
+/* Topic title                    */
 /*                                */
-/* UUUUUUUUUUUUU             NNNN */
+/* UUUUUUUUUUUUU   SSSS TTTT NNNN */
 /* UUUUUUUUUUUUU                  */
 /*                                */
 /* Posts (gs.group.message.post)  */
 /*                                */
 /* NNNN         FFFFFFFFFFFFFFFFF */
 /*              FFFFFFFFFFFFFFFFF */
-/* B: Breadcrumbs; S: sticky button; U: Topic summary; N: Navigation; */
-/* F: Form or Cannot Post message */
+/* B: Breadcrumbs; U: Topic summary; S: Share button; T: Sticky button; */
+/* N: Navigation; F: Form or Cannot Post message */
 
 #gs-group-messages-topic-title cite {
     font-style: normal;
     font-weight: bold;
 }
-.gs-group-messages-topic-navlinks {
-    margin: 0;
+
+#gs-group-messages-topic-tasks {
     float: right;
+    width: auto;
+    position: relative; /* Create a new rendering context */
+}
+#gs-group-messages-topic-tasks > * {
+    display: inline-block;
+    margin: 0 0 0 1.385em;
+}
+.gs-group-messages-topic-navlinks li {
+    margin: 0 0 0 0;
 }
 .postList + .gs-group-messages-topic-navlinks {
     margin: 1.385em 0 0 0;
-    float: none;
-
     position: absolute;
-}
-#topic-page-content .navlinks li, #gs-group-messages-post .navlinks li {
-    margin: 0;
-}
-#topicNavigation li, #postsNavigation li, #usefulLinks li {
-    list-style: none;
-}
-#topicNavigation .label, #postsNavigation .label, #usefulLinks .label {
-  display:none;
 }
 
 /* Topic summary */
@@ -928,15 +930,6 @@ a.digg-share {
 }
 #gs-group-messages-topic-summary-keyowords li:last-of-type:after {
     content: '';
-}
-
-#gs-group-messages-topic-admin-stickytoggle {
-  display: block;
-  position: absolute;
-  right: 0;
-}
-#gs-group-messages-topic-admin-stickytoggle label {
-    margin-top: 0;
 }
 
 .postList {
