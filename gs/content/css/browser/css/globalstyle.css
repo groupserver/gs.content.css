@@ -965,7 +965,7 @@ a.digg-share {
 }
 #add-to-topic #form\.message {
     margin: 0;
-    width: 100%;
+    width: 49.154em; /* 35.5u, same as the posts */
 }
 #gs-group-messages-topic-add-from {
     margin: 1.385em 0 0.692em 0;
@@ -975,6 +975,12 @@ a.digg-share {
     margin: 0;
     width: auto;
 }
+#gs-group-messages-topic-add-privacy-summary {
+    display: inline-block;
+    margin-right: 1.385em;
+    cursor: pointer;
+}
+
 
 /* The Multi File plugin for jQuery at the bottom of the */
 #widget-form\.uploadedFile label {
