@@ -58,6 +58,12 @@ Authors
 CSS coding and egg creation was by `Michael JasonSmith 
 <mpj17@onlinegroups.net>`_.
 
+Resources
+=========
+
+- Code repository: https://source.iopen.net/groupserver/gs.content.css
+- Questions and comments to http://groupserver.org/groups/development
+- Report bugs at https://redmine.iopen.net/projects/groupserver
+
 .. _GroupServer: http://groupserver.org/
 .. _OnlineGroups.Net: http://onlinegroups.net/
-
