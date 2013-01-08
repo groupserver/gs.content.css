@@ -897,7 +897,10 @@ a.digg-share {
     margin: 0 0 0 1.385em;
 }
 .gs-group-messages-topic-navlinks li {
-    margin: 0 0 0 0;
+    margin: 0;
+}
+#gs-group-messages-topic-admin-stickytoggle-widget label {
+    margin: 0;
 }
 .postList + .gs-group-messages-topic-navlinks {
     margin: 1.385em 0 0 0;
