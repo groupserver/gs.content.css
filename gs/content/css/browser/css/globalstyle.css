@@ -1132,27 +1132,43 @@ a.digg-share {
 }  
 
 /* Posted Image Page */
+/* TODO: move to gs.group.messages.image */
 /* Because people forget to scale images before posting, GroupServer */
 /* resizes the image before displaying it on the Image Page. Besides */
 /* the image the Image Page shows some Metadata associated with the */
 /* posted file. */
-.image .share-bar {
+.gs-group-messages-image .share-bar {
   margin: 0.692em 0;
 }
-.image .metadata {
-  width: 23.538em; /*17u*/
-  position: absolute;
-  right: 0;
+.gs-group-messages-image #navigation {
+    display: none; /* For now */
 }
-.image .metadata div { /*Each line in the metadata */
-  margin-left: 1.385em;
-  text-indent: -1.385em;
+.gs-group-messages-image #scaled-image {
+    position: relative;
+    border-top: medium solid #666666;
 }
-.image .metadata .photo {
-  float: right;
-  padding: 0;
-  margin:0;
-  text-indent:0;
+.gs-group-messages-image .metadata > * {
+    position: absolute;
+    top: 0.692em;
+    left: 0;
+}
+.gs-group-messages-image .metadata .userimage {
+    padding: 0;
+}
+.gs-group-messages-image .metadata ul {
+    position: absolute;
+    left: 4.846em; /* 3u for the photo, and 0.5u gap */
+    width: 17.308em;  /* 12.5u */
+    top: 0.692em;
+    margin: 0;
+    list-style: none;
+}
+.gs-group-messages-image #scaled-image .enclosure {
+    display: block;
+    position: relative;
+    left: 22.846em;
+    top: 0.692em;
+    width: 49.154em; /* 35.5u */
 }
 
 /* Invitations Pages */
