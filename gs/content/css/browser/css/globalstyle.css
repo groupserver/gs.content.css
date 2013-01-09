@@ -1137,11 +1137,9 @@ a.digg-share {
 /* resizes the image before displaying it on the Image Page. Besides */
 /* the image the Image Page shows some Metadata associated with the */
 /* posted file. */
-.gs-group-messages-image .share-bar {
-  margin: 0.692em 0;
-}
-.gs-group-messages-image #navigation {
-    display: none; /* For now */
+#gs-group-messages-image-navigation {
+    float: right;
+    margin: 0;
 }
 .gs-group-messages-image #scaled-image {
     position: relative;
@@ -1162,6 +1160,9 @@ a.digg-share {
     top: 0.692em;
     margin: 0;
     list-style: none;
+}
+#gs-group-messages-image-share {
+  margin: 1.385em 0 0 0;
 }
 .gs-group-messages-image #scaled-image .enclosure {
     display: block;
