@@ -433,6 +433,35 @@ div.noFloat {
   height: 0;
 }
 
+/* Columns */
+/* TODO: Move to gs.content.layout */
+.gs-content-layout-cols {
+    position: relative; /* Create a new positioning context */
+}
+.gs-content-layout-cols .main {
+    position: relative;
+    width: 45.692em; /*33u*/
+}
+.gs-content-layout-cols .secondary {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 21.462em; /*15.5u*/
+}
+
+
+/* More widget */
+/* TODO: Move to gs.content.js.more */
+.gs-content-js-more-content {
+    overflow: hidden;
+}
+.gs-content-js-more-content-small {
+    max-height: 5.538em;
+}
+.gs-content-js-more-content-large {
+    max-height: none;
+}
+
 /* Text Markup: Inline Lists. Usually used for navigating between pages */
 .inline-list {
   margin-left: 0;
@@ -668,19 +697,10 @@ code.url {
   margin-bottom: 0;
 }
 
-/* Group Page (gs.group.home) */
-/******************************/
-
-/* The Info-boxes on the group page are mostly for the admin. */
-.info {
-  margin: 0 0 0.689em 0;
-}
-.info p {
-  margin: 1.385em;
-}
-.info .ui-icon {
-  float: left; 
-  margin-right: 0.0.689em;
+/* About box on the Group page */
+/* TODO: Move to gs-group-about */
+#gs-group-about-tab-intro-more {
+    text-align: right;
 }
 
 /* Search (gs.search.base) */
