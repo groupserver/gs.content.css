@@ -454,6 +454,7 @@ div.noFloat {
 /* TODO: Move to gs.content.js.more */
 .gs-content-js-more-content {
     overflow: hidden;
+    transition: all 600ms ease;
 }
 .gs-content-js-more-content-small {
     max-height: 5.538em;
@@ -699,7 +700,7 @@ code.url {
 
 /* About box on the Group page */
 /* TODO: Move to gs-group-about */
-#gs-group-about-tab-intro-more {
+#gs-group-about-tab-intro-buttons {
     text-align: right;
 }
 
