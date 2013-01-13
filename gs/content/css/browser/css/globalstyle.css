@@ -66,10 +66,19 @@ h1 {
 }
 h2 {
     font-size: 138.5%; /* 1u */
-    margin: 1em 0 1em 0;
+    margin: 1em 0 0.5em 0; /* 1u 0.5u */
+    padding: 0 0 0.5em 0;
 }
 h3 {
   line-height: 1.5;
+}
+
+h2, h3, h4, h5, h6 {
+    border-bottom: medium solid #666666;
+}
+h3, h4, h5, h6 {
+  margin: 0.689em 0 0.689em 0; /* 1u */
+  padding: 0 0 0.689em 0;
 }
 /* h4, h5, h6, and strong elements all look the same: 1u high and */
 /* bold. The YUI code takes care of this.  */
@@ -462,6 +471,12 @@ div.noFloat {
 .gs-content-js-more-content-large {
     max-height: none;
 }
+.gs-content-js-more-buttons {
+    position: relative;
+    margin: 0;
+    top: -1.385em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 255));
+}
 
 /* Text Markup: Inline Lists. Usually used for navigating between pages */
 .inline-list {
@@ -698,14 +713,22 @@ code.url {
   margin-bottom: 0;
 }
 
+#gs-group-home-stats p {
+    margin-top: 0;
+}
+
 /* About box on the Group page */
 /* TODO: Move to gs-group-about */
 #gs-group-about-tab-intro-buttons {
     text-align: right;
 }
+#gs-group-about-tab-intro .gs-content-js-more-content > p {
+    margin-top: 0;
+}
 
-/* Search (gs.search.base) */
-/***************************/
+/* Search */
+/**********/
+/* TODO: move to gs.search.base */
 
 /* The search entry box */
 .gs-search-entry input {
@@ -721,9 +744,24 @@ code.url {
 }
 
 /* The results */
+.searchResults {
+  margin-left: 0;
+}
+.searchResults .tags li {
+    margin: 0;
+}
+.searchResults .tags li a {
+    color: #666666;
+}
 /*Sticky-topic icons need the .gs-search to over-ride the .ui-icon config */
 .gs-search .gs-search-sticky {
   display: inline-block;
+}
+.gs-search-result {
+    border-bottom: thin solid #dddddd;
+    padding-bottom: 1.385em;
+    margin-bottom: 1.385em;
+    list-style: none;
 }
 .gs-search-keyword {
   text-decoration: none;
@@ -1087,15 +1125,10 @@ a.digg-share {
 /* Search */
 /**********/
 /* Search Lists: Topic, Post, and File */
-/* Lists of search results used by the group homepage, the site */
-/* homepage, profile page and the search page. */
-.searchResults {
-  margin-left: 0;
-}
-.searchResults li {
-  list-style: none;
-  margin: 1.385em 0;
-}
+/* Lists of search results used by the group homepage, the site homepage, */
+/* profile page and the search page. */
+/* TODO: Move to gs.search.base */
+
 .searchResults .fileResult .fileIcon, .fileMetadata .fileIcon, #topicsSummary .fileIcon {
   margin: 0;
   padding: 0;
@@ -1110,18 +1143,6 @@ a.digg-share {
 }
 .searchResults .fileName {
   font-family: monospace;
-}
-.searchResults .tags ul, .searchResults .metadata, .searchResults .groupInfo, .searchResults .email-summary {
-  margin: 0 0 0 1.385em;
-}
-.searchResults .tags li {
-  margin: 0 1.385em 0 0;
-}
-.searchResults .postCount {
-  font-weight: bold;
-}
-.searchResults .fileIcon {
-  margin-right: 0.692em;
 }
 .searchResults .figure {
   margin: 0.692em 0 0.692em 1.385em;
