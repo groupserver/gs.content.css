@@ -62,24 +62,23 @@ h1 {
     font-size: 207.7%; /* 1.5u */
     font-weight: bold;
     /* 0.334em == 0.5u (when the font-size is 2.077 times bigger. */
-    margin: 0.667em 0 0.334em 0;
+    margin: 0.334em 0;
 }
 h2 {
     font-size: 138.5%; /* 1u */
     margin: 1em 0 0.5em 0; /* 1u 0.5u */
-    padding: 0 0 0.5em 0;
+    border-bottom: 3px solid #666666;
+    padding: 0 0 0.333em 0; /* 0.5u - the border */
 }
 h3 {
-  line-height: 1.5;
+    font-size: 100%; /* 13px */
+    font-weight: bold;
+    line-height: 2.077; /* 1.5u */
+    border-bottom: 3px solid #666666;
+    margin: 0.692em 0 0.462em 0; /* 1u */
+    padding: 0;
 }
 
-h2, h3, h4, h5, h6 {
-    border-bottom: medium solid #666666;
-}
-h3, h4, h5, h6 {
-  margin: 0.689em 0 0.689em 0; /* 1u */
-  padding: 0 0 0.689em 0;
-}
 /* h4, h5, h6, and strong elements all look the same: 1u high and */
 /* bold. The YUI code takes care of this.  */
 
@@ -87,16 +86,22 @@ h3, h4, h5, h6 {
 /* TOOD: move to a viewlet in gs.content.layout */
 
 p, ul, ol, dl, fieldset, table, pre {
-  margin: 1.385em 0; /* 1u */
+    margin: 1.385em 0; /* 1u */
 }
+
+h2 + :not(div), h3 + :not(div), h4 + :not(div), h5 + :not(div), h6 + :not(div), h2 + div :not(div), h3 + div :not(div), h4 + div :not(div), h5 + div :not(div), h6 + div :not(div) {
+    margin-top: 0;
+}
+
+
 cite, em {
   font-style: italic;
 }
 
 blockquote {
-    border-left: medium solid #666666;
-    padding-left: 0.689em;
-    margin-left: 0.689em;
+    border-left: 3px solid #666666;
+    padding-left: 0.462em;
+    margin-left: 0.692em;
 }
 
 /* Less important information is grey */
@@ -457,6 +462,9 @@ div.noFloat {
     right: 0;
     width: 21.462em; /*15.5u*/
 }
+.gs-content-layout-cols .main :first-child, .gs-content-layout-cols .secondary :first-child {
+    margin-top: 0;
+}
 
 
 /* More widget */
@@ -479,13 +487,23 @@ div.noFloat {
 }
 
 /* Text Markup: Inline Lists. Usually used for navigating between pages */
-.inline-list {
-  margin-left: 0;
+.inline-list, .dotted-inline-list {
+    margin-left: 0;
+}
+.inline-list li, .dotted-inline-list li {
+    list-style: none;
+    display: inline-block;
 }
 .inline-list li {
-  list-style: none;
-  display: inline-block;
-  margin-right: 0.692em;
+    margin-right: 0.692em;
+}
+.dotted-inline-list li:before {
+    content: "\2022";
+    color: #999999;
+    padding: 0 0.692em;
+}
+.dotted-inline-list li:first-child:before {
+    content: none;
 }
 
 /* Text Markup: The profile image, which appears everywhere. */
@@ -713,10 +731,6 @@ code.url {
   margin-bottom: 0;
 }
 
-#gs-group-home-stats p {
-    margin-top: 0;
-}
-
 /* About box on the Group page */
 /* TODO: Move to gs-group-about */
 #gs-group-about-tab-intro-buttons {
@@ -724,6 +738,32 @@ code.url {
 }
 #gs-group-about-tab-intro .gs-content-js-more-content > p {
     margin-top: 0;
+}
+
+/* The Recently Active members list */
+/* TODO: move to gs.group.member.active */
+.gs-group-member-active-members-member {
+    position: relative; /* Create a new positioning context */
+    margin: 0 0 0.692em 0;
+}
+.gs-group-member-active-members-member .userimage {
+    padding: 0;
+    float: none;
+    max-width:  2.769em; /* 2u */
+    max-height: 2.769em;
+    overflow: hidden;
+    /*max-height: 4.154em;*/ /* 3u */
+}
+.gs-group-member-active-members-member .fn {
+    position: absolute;
+    top: 0;
+    left: 3.467em; /* 2.5u */
+    font-weight: bold;
+}
+#gs-group-member-active-stats {
+    border-top: 1px solid  #dddddd;
+    margin: 0.692em 0 1.385em 0;
+    padding: 0.615em 0 0 0; /* 0.5u - 1px */
 }
 
 /* Search */
@@ -758,7 +798,7 @@ code.url {
   display: inline-block;
 }
 .gs-search-result {
-    border-bottom: thin solid #dddddd;
+    border-bottom: 1px solid #dddddd;
     padding-bottom: 1.385em;
     margin-bottom: 1.385em;
     list-style: none;
@@ -796,8 +836,9 @@ code.url {
 
 .hentry {
     position: relative;
-    border-bottom: thin solid black;
+    border-bottom: 0.077em solid black;
     margin: 0;
+    padding: 0 0 0.615em 0;
     min-height: 6.923em; /* 5u */
 }
 .hentry .userimage, .email-metadata {
@@ -831,7 +872,7 @@ code.url {
     position: relative;
     left: 22.846em;
     width: 49.154em; /* 35.5u */
-    padding: 0.692em 0; 
+    padding: 0.692em 0 0 0; 
 }
 .hentry pre {
     font-family: inherit;
@@ -846,7 +887,7 @@ code.url {
   border-top: thin solid black;
 }
 .fileMetadata {
-  margin: 1.385em 0;
+  margin: 1.385em 0 0 0;
 }
 
 #gs-group-messages-post .navlinks {
@@ -995,8 +1036,8 @@ a.digg-share {
 }
 
 .postList {
-  margin-top: 1.385em;
-  border-top: medium solid #666666;
+  margin: 1.154em 0 0 0; /* 1u - 3px border */
+  border-top: 0.231em solid #666666;
 }
 
 #topic-index caption {
