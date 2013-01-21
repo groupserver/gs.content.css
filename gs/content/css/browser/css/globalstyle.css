@@ -506,6 +506,14 @@ div.noFloat {
     content: none;
 }
 
+/* Text Markup: labels for lists */
+p.label {
+    margin-bottom: 0;
+}
+p.label + ul {
+    margin-top: 0;
+}
+
 /* Text Markup: The profile image, which appears everywhere. */
 /* TODO: move to gs.profile.image */
 /* */
