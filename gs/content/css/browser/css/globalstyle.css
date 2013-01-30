@@ -11,12 +11,6 @@
 /* GroupServer Typeface Setup */
 /******************************/
 
-h1 {
-    font-size: 36px;
-    line-height: 1;
-    margin: 0.25em 0; /* 0.5u */
-}
-
 pre {
     background: inherit;
     font-size: 13px;
@@ -69,7 +63,7 @@ blockquote {
 /* Less important information is grey */
 .muted em, .muted strong {
   font-style: normal;
-  color: black;
+  color: #333333;
 }
 
 /* Text: Lists */
@@ -127,7 +121,7 @@ label {
   background: white;
 }
 .popup-help h3 {
-  border-bottom: thin solid black;
+  border-bottom: thin solid #333333;
   margin: 0;
 }
 .required label:before {
@@ -308,7 +302,7 @@ body {
   margin: 1.385em 0;
 }
 #contextnav .label {
-  border-top: thin solid black;
+  border-top: thin solid #333333;
 }
 #contextnav .label, #contextnav a {
   padding: 0.692em 0 0.692em 1.385em;
@@ -749,14 +743,14 @@ code.url {
 
 .hentry {
     position: relative;
-    border-bottom: 0.077em solid black;
+    border-bottom: 0.077em solid #333333;
     margin: 0;
-    padding: 0 0 0.615em 0;
+    padding: 0 0 1.385em 0;
     min-height: 6.923em; /* 5u */
 }
 .hentry .userimage, .email-metadata {
     position: absolute;
-    top: 0.692em;
+    top: 1.385em;
 }
 .hentry .userimage {
     padding: 0;
@@ -782,7 +776,7 @@ code.url {
     position: relative;
     left: 22.846em;
     width: 49.154em; /* 35.5u */
-    padding: 0.692em 0 0 0; 
+    padding: 1.385em 0 0 0; 
 }
 .hentry pre {
     font-family: inherit;
@@ -794,7 +788,7 @@ code.url {
     margin: 0;
 }
 .hentry .fileNotification {
-  border-top: thin solid black;
+  border-top: thin solid #333333;
 }
 .fileMetadata {
   margin: 1.385em 0 0 0;
@@ -806,7 +800,7 @@ code.url {
 }
 #gs-group-messages-post .hentry {
   border-top: medium solid #666666;
-  border-bottom: thin solid black;  
+  border-bottom: thin solid #333333;  
 }
 
 /* Messages: The list of topics on the Topics page */
@@ -895,13 +889,15 @@ a.digg-share {
 
 #gs-group-messages-topic-tasks {
     float: right;
-    margin: 0 0 0.692em 0;
+    margin: 0.692em 0 0 0;
 }
 
 .modal + .gs-group-messages-topic-navlinks {
-    font-size: 13px;
     position: relative;
     top: 0.692em;
+}
+.modal + .gs-group-messages-topic-navlinks .btn {
+    margin-top: 1.385em;
 }
 
 /* Topic summary */
@@ -951,7 +947,7 @@ a.digg-share {
     width: 49.154em; /*35.5u*/
     position: relative;
     left: 22.846em; /* 16.5u */
-    top: -1.358em;
+    top: -2.077em; /* 1.5u */
 }
 #add-to-topic h2 {
     margin-top: 0;
@@ -989,22 +985,22 @@ a.digg-share {
 }
 
 
-/* The Multi File plugin for jQuery at the bottom of the */
-#widget-form\.uploadedFile label {
-    display: block;
+/* The Multi File plugin for jQuery at the bottom of the Add to Topic form */
+.gs-group-messages-topic-add-file {
+    position: relative;
+    margin-top: 0.692em;
+}
+#gs-group-messages-topic-add-file-label {
     position: absolute;
-    width: auto;
     margin: 0;
 }
-#add-to-topic .MultiFile-wrap, #add-to-topic #fileList {
-    position: relative;
-    left: 5.538em; /* 4u */
-    margin: 0.692em 0;
+#gs-group-messages-topic-add-file-files {
+    padding: 0 0 0 4.154em;
 }
+
 .MultiFile-wrap input {
     margin: 0;
 }
-
 .MultiFile-label {
     margin: 0.692em 0;
 }
@@ -1193,8 +1189,8 @@ a.digg-share {
 }      
 #manage-members .statusActions {
   position: relative;
-  border-top: thin solid black;
-  border-bottom: thin solid black;
+  border-top: thin solid #333333;
+  border-bottom: thin solid #333333;
   padding-bottom: 1.385em;
   padding-left: 0.692em;
   overflow: hidden;
@@ -1285,16 +1281,16 @@ a.digg-share {
   margin: 1.385em 0 0 0;
 }
 #gs-profile-view #membership .current {
-  border-top: thin solid black;
-  border-right: thin solid black;
-  border-bottom: thin solid black;
+  border-top: thin solid #333333;
+  border-right: thin solid #333333;
+  border-bottom: thin solid #333333;
 }
 #gs-profile-view #membership .manage {
   padding: 0;
   margin: 0 0 0 1.385em;
 }
 #gs-profile-view #siteMembership {
-  border-left: 0.692em solid black;
+  border-left: 0.692em solid #333333;
 }
 #gs-profile-view #siteMembership a, #gs-profile-view #siteMembership .current {
   padding: 0.692em;
@@ -1396,7 +1392,7 @@ a, a:hover, a:visited {
    *  page. */
   #toparea, #titlebar a {
     color: white;
-    background: black;
+    background: #333333;
   }
   
   #titlebar .division, h1 {
