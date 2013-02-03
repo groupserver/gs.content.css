@@ -748,6 +748,11 @@ code.url {
     padding: 0 0 1.385em 0;
     min-height: 6.923em; /* 5u */
 }
+.hentry:last-child {
+    border-bottom: 0.231em solid #666666;
+    padding: 0 0 1.154em 0;
+}
+
 .hentry .userimage, .email-metadata {
     position: absolute;
     top: 1.385em;
@@ -787,11 +792,25 @@ code.url {
 .hentry .entry-content, .hidden-post > p {
     margin: 0;
 }
+/* File list at the bottom of a post. */
 .hentry .fileNotification {
-  border-top: thin solid #333333;
+    margin: 1.385em 0 0 0;
+    padding: 1.308em 0 0 0;
+    border-top: 0.077em solid #dddddd;
 }
 .fileMetadata {
-  margin: 1.385em 0 0 0;
+    margin: 0 1.385em 0 0;
+    display: inline-block;
+    max-width: 15.231em; /* 11u */
+    vertical-align: top;
+}
+.fileMetadata .thumb {
+    max-width: 15.077em; /* 196px: 11u - 2px for the border*/ 
+    max-height: 15.077em; 
+    border: 0.077em solid #eeeeee;
+}
+.fileMetadata .info {
+    margin: 0.692em 0 0 0;
 }
 
 #gs-group-messages-post .hentry + .navlinks {
