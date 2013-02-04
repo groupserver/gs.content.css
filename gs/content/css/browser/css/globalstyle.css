@@ -31,6 +31,11 @@ pre {
     padding: 0.615em; /* for now */
 }
 
+/* Fix for popups in a toolbar */
+.btn-toolbar > .popover + .btn {
+    margin-left: 5px;
+}
+
 /* TODO: Move to a viewlet within gs.content.css */
 
 /* First the typeface: Helvetica, on an 18px grid */
