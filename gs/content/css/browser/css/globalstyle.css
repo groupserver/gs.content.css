@@ -19,6 +19,13 @@ pre {
 .muted pre, pre.muted {
     color: #999999;
 }
+h1 code, h2 code, h3 code, h3 code {
+    /* If I use a code in a heading I want it to look like the heading .*/
+    font-size: inherit;
+    color: inherit;
+    border: inherit;
+    background: inherit;
+}
 
 .modal {
     width: 42.923em; /* 31u*/
@@ -828,9 +835,16 @@ code.url {
     margin: 0.692em 0 0 0;
 }
 
-#gs-group-messages-post .hentry + .navlinks {
-    float: none;
-    margin: 0.692em;
+/* The single post page */
+.gs-group-messages-post-navigation {
+    position: absolute;
+    right: 0;
+}
+#gs-group-messages-post .hentry  {
+    margin-bottom: 0.692em;
+}
+.hentry + .gs-group-messages-post-navigation {
+    position: static;
 }
 #gs-group-messages-post .hentry {
   border-top: medium solid #666666;
@@ -1161,17 +1175,19 @@ a.digg-share {
 /* resizes the image before displaying it on the Image Page. Besides */
 /* the image the Image Page shows some Metadata associated with the */
 /* posted file. */
-#gs-group-messages-image-navigation {
-    float: right;
-    margin: 0;
+.gs-group-messages-image-navlinks {
+    position: absolute;
+    right: 0;
 }
 .gs-group-messages-image #scaled-image {
     position: relative;
-    border-top: medium solid #666666;
+    border-top: 0.231em solid #666666;
+    border-bottom: 0.231em solid #666666;
+    padding: 1.154em 0;
 }
 .gs-group-messages-image .metadata > * {
     position: absolute;
-    top: 0.692em;
+    top: 1.154em;
     left: 0;
 }
 .gs-group-messages-image .metadata .userimage {
@@ -1181,9 +1197,14 @@ a.digg-share {
     position: absolute;
     left: 4.846em; /* 3u for the photo, and 0.5u gap */
     width: 17.308em;  /* 12.5u */
-    top: 0.692em;
+    top: 1.154em;
     margin: 0;
     list-style: none;
+}
+.gs-group-messages-image .metadata .gs-group-messages-image-buttons {
+    position: absolute;
+    left: 4.846em; /* 3u for the photo, and 0.5u gap */
+    top: 4.615em;
 }
 #gs-group-messages-image-share {
   margin: 1.385em 0 0 0;
@@ -1192,7 +1213,6 @@ a.digg-share {
     display: block;
     position: relative;
     left: 22.846em;
-    top: 0.692em;
     width: 49.154em; /* 35.5u */
 }
 
