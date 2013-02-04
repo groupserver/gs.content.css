@@ -16,6 +16,9 @@ pre {
     font-size: 13px;
     border: none;
 }
+.muted pre, pre.muted {
+    color: #999999;
+}
 
 .modal {
     width: 42.923em; /* 31u*/
@@ -917,6 +920,13 @@ a.digg-share {
 }
 .modal + .gs-group-messages-topic-navlinks .btn {
     margin-top: 1.385em;
+}
+#gs-group-messages-topic-admin-stickytoggle button {
+    transition-property: width;
+    transition-duration: 250ms; /* A guess at the ping-distance */
+}
+#gs-group-messages-topic-admin-stickytoggle button.disabled {
+    width: 5.538em; /* Set the width to 4u by CSS so there is a transition */
 }
 
 /* Topic summary */
