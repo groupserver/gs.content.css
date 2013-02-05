@@ -43,6 +43,11 @@ h1 code, h2 code, h3 code, h3 code {
     margin-left: 5px;
 }
 
+select {
+    font-size: 12px; 
+    padding: 0;
+}
+
 /* TODO: Move to a viewlet within gs.content.css */
 
 /* First the typeface: Helvetica, on an 18px grid */
@@ -432,11 +437,12 @@ p.label + ul {
 /* TODO: move to gs.profile.image */
 /* */
 .userimage {
-  float: left;
-  width: 4.154em;  /* 3u */
-  height: 5.358em; /* 4.5u */
-  padding: 0 0.692em 0.692em 0;
-  background: #666666;
+    float: left;
+    width: 4.154em;  /* 3u */
+    height: 5.538em; /* 4u */
+    padding: 0 0.692em 0.692em 0;
+    background: #666666;
+    overflow: hidden;
 }
 
 /* Text Markup: Disclosure Widget */
@@ -800,6 +806,7 @@ code.url {
 }
 .hentry pre {
     font-family: inherit;
+    text-overflow: ellipsis;
 }
 .hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification, .hidden-post {
     width: 49.154em; /* 35.5u */
@@ -826,20 +833,26 @@ code.url {
 }
 .hentry .normalFileList {
     vertical-align: top;
-    margin: 0 1.385em 0 0;
+    margin: 0;
 }
-.mediaFile {
-    margin: 0 1.385em 0 0;
+.normalFileList + .mediaFileList .hmedia {
+    margin: 0 0 1.385em 1.385em;
+}
+.mediaFileList .hmedia {
+    margin: 0 0 1.385em 0;
     display: inline-block;
     max-width: 15.231em; /* 11u */
     vertical-align: top;
 }
-.mediaFile img {
+.mediaFileList .hmedia + .hmedia {
+    margin: 0 0 1.385em 1.385em;
+}
+.mediaFileList .hmedia img {
     max-width: 15.077em; /* 196px: 11u - 2px for the border*/ 
     max-height: 15.077em; 
     border: 0.077em solid #eeeeee;
 }
-.mediaFile .info {
+.mediaFileList .hmedia .info {
     margin: 0.692em 0 0 0;
 }
 
@@ -1021,16 +1034,20 @@ a.digg-share {
     height: auto;
     padding: 0;
     margin-right: 0.692em;
+    height: 1.389em;
+    overflow: hidden;
 }
 #add-to-topic #widget-form\.message label {
     display: none;
 }
 #add-to-topic #form\.message {
     margin: 0;
-    width: 49.154em; /* 35.5u, same as the posts */
+    padding: 0.615em;
+    width: 47.768em; /* 33.5u */
 }
 #gs-group-messages-topic-add-from {
-    margin: 1.385em 0 0.692em 0;
+    vertical-align: top;
+    margin: 0 0 0.692em 0; /* 16px, because of the height of the select */
 }
 #gs-group-messages-topic-add-from * {
     display: inline-block;
@@ -1187,11 +1204,12 @@ a.digg-share {
     position: absolute;
     right: 0;
 }
-.gs-group-messages-image #scaled-image {
+.gs-group-messages-image .scaled-image {
     position: relative;
     border-top: 0.231em solid #666666;
     border-bottom: 0.231em solid #666666;
     padding: 1.154em 0;
+    margin: 0 0 1.385em 0;
 }
 .gs-group-messages-image .metadata > * {
     position: absolute;
@@ -1217,11 +1235,20 @@ a.digg-share {
 #gs-group-messages-image-share {
   margin: 1.385em 0 0 0;
 }
-.gs-group-messages-image #scaled-image .enclosure {
+.gs-group-messages-image .preview {
     display: block;
     position: relative;
     left: 22.846em;
     width: 49.154em; /* 35.5u */
+}
+.gs-group-messages-image .preview img {
+    border: 0.077em solid #eeeeee;
+}
+.gs-group-messages-image .enclosure {
+    margin: 0.615em 0 0 0;
+}
+.gs-group-messages-image .scaled-image + .gs-group-messages-image-navlinks {
+    left: 0;
 }
 
 /* Invitations Pages */
