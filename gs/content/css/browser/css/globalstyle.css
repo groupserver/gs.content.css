@@ -741,6 +741,40 @@ code.url {
 }
 
 
+/* Topic Search */
+/****************/
+
+/* The number of posts is shown in a speech balloon. The balloon is made of */
+/* two parts: the number in the balloon and a tail. */
+/* Thanks to <http://cssarrowplease.com/> and  */
+/*  <http://nicolasgallagher.com/pure-css-speech-bubbles/demo/> */
+/* The bubble */
+.gs-search-result .postCount {
+    color: #666666;
+    background: #dddddd;
+    padding: 0 0.615em;
+    text-decoration: none;
+    border: 0.077em solid #dddddd;
+    border-radius: 0.231em;
+    display: inline-block;
+    position: relative;
+    top: -0.231em;
+    line-height: 1;
+}
+/* The tail */
+.gs-search-result .postCount:after {
+    position: absolute;
+    top: 100%;
+    left: 0.692em;
+    content: " ";
+    width: 0; 
+    height: 0;
+    border: none;
+    border-left: 0 solid transparent;
+    border-right: 0.692em solid transparent;
+        
+    border-top: 0.462em solid #dddddd;
+}
 /* Messages */
 /************/
 
