@@ -19,6 +19,10 @@ pre {
 .muted pre, pre.muted {
     color: #999999;
 }
+abbr.value {
+    text-decoration: none;
+    border: none;
+}
 h1 code, h2 code, h3 code, h3 code {
     /* If I use a code in a heading I want it to look like the heading .*/
     font-size: inherit;
@@ -381,7 +385,8 @@ div.noFloat {
     right: 0;
     width: 21.462em; /*15.5u*/
 }
-.gs-content-layout-cols .main :first-child, .gs-content-layout-cols .secondary :first-child {
+.gs-content-layout-cols .main > :first-child, 
+.gs-content-layout-cols .secondary > :first-child {
     margin-top: 0;
 }
 
@@ -713,7 +718,7 @@ code.url {
 
 /* The results */
 .searchResults {
-  margin-left: 0;
+  margin: 1.385em 0 0 0;
 }
 .searchResults .tags li {
     margin: 0;
@@ -726,8 +731,8 @@ code.url {
   display: inline-block;
 }
 .gs-search-result {
-    border-bottom: 1px solid #dddddd;
-    padding-bottom: 1.385em;
+    border-bottom: 0.077em solid #dddddd;
+    padding-bottom: 1.308em;
     margin-bottom: 1.385em;
     list-style: none;
 }
@@ -752,29 +757,45 @@ code.url {
 .gs-search-result .postCount {
     color: #666666;
     background: #dddddd;
-    padding: 0 0.615em;
+    font-size: 10px;
+    line-height: 1;
+    /* 1px == 0.1em */
+    padding: 0.1em 0.8em;
     text-decoration: none;
-    border: 0.077em solid #dddddd;
-    border-radius: 0.231em;
+    border: 0.1em solid #dddddd;
+    border-radius: 0.3em;
     display: inline-block;
     position: relative;
-    top: -0.231em;
-    line-height: 1;
+    top: -0.2em;
 }
 /* The tail */
 .gs-search-result .postCount:after {
     position: absolute;
     top: 100%;
-    left: 0.692em;
+    left: 0.6em; /* 6px */
     content: " ";
     width: 0; 
     height: 0;
     border: none;
     border-left: 0 solid transparent;
-    border-right: 0.692em solid transparent;
+    border-right: 0.9em solid transparent;
         
-    border-top: 0.462em solid #dddddd;
+    border-top: 0.6em solid #dddddd;
 }
+
+.gs-search-result .files {
+    margin-left: 0.389em;
+    border: none;
+    display: inline-block;
+}
+.gs-search-result .files .value {
+    font-size: 10px;
+    line-height: 1.8;
+    display: inline-block;
+    position: relative;
+    top: -0.2em; /* 2px */
+}
+
 /* Messages */
 /************/
 
@@ -796,14 +817,15 @@ code.url {
 /* P: photo (3u by 4u); M: metadata (12.5); A: Actions; E: email (35.5u); */
 /* R: remainder; F: files. 0.5u gap seperates the three vertical columns. */
 
-.hentry {
+#gs-group-messages-topic-page-content .hentry,  
+#gs-group-messages-post .hentry {
     position: relative;
     border-bottom: 0.077em solid #333333;
     margin: 0;
     padding: 0 0 1.385em 0;
     min-height: 6.923em; /* 5u */
 }
-.hentry:last-child {
+#gs-group-messages-topic-page-content .hentry:last-child {
     border-bottom: 0.231em solid #666666;
     padding: 0 0 1.154em 0;
 }
@@ -842,7 +864,8 @@ code.url {
     font-family: inherit;
     text-overflow: ellipsis;
 }
-.hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification, .hidden-post {
+.hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification, 
+.hidden-post {
     width: 49.154em; /* 35.5u */
 }
 .hentry .entry-content, .hidden-post > p {
@@ -1190,8 +1213,7 @@ a.digg-share {
 }
 .searchResults .topic, .searchResults .fileName {
   display: inline-block;
-  font-size: 138.5%; /* 1u */
-  line-height: 1.5;
+  font-weight: 900;
 }
 .searchResults .topic {
   margin-right: 1em;
