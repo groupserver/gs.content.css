@@ -74,8 +74,9 @@ h2 + :not(div), h3 + :not(div), h4 + :not(div), h5 + :not(div), h6 + :not(div), 
 }
 
 h3 {
-    padding: 0 0 0.462em 0;
-    border-bottom: 0.231em solid #666666;
+    /* 13px line*/ 
+    padding: 0 0 0.154em 0; /* + 2px padding = 15px */
+    border-bottom: 0.231em solid #666666; /* + 3px border = 18px = 1u */
 }
 
 cite, em {
@@ -701,7 +702,7 @@ code.url {
 }
 
 #gs-group-home h1 {
-    margin-bottom: 0.333em; /* 0.5u */
+    margin-bottom: 0.334em; /* 0.5u */
 }
 #gs-group-home-stats p {
     margin-top: 0.692em;
@@ -837,6 +838,7 @@ code.url {
     margin-left: 0.389em;
     border: none;
     display: inline-block;
+    height: 1.389em;
 }
 .gs-search-result .files .value {
     font-size: 10px;
