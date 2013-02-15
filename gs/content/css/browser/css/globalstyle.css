@@ -52,6 +52,12 @@ select {
     padding: 0;
 }
 
+code {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 /* TODO: Move to a viewlet within gs.content.css */
 
 /* First the typeface: Helvetica, on an 18px grid */
@@ -486,6 +492,11 @@ p.label + ul {
     background: #666666;
     overflow: hidden;
 }
+.userimage img {
+    /* --=mpj17=-- Because I can */
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
 
 /* Text Markup: Disclosure Widget */
 .disclosureButton {
@@ -848,20 +859,20 @@ code.url {
     top: -0.2em; /* 2px */
 }
 
-#gs-group-messages-topics-toolbar {
+#gs-group-home .main .gs-search .gs-search-toolbar {
     position: relative;
     text-align: center;
 }
-#gs-group-messages-topics-toolbar-prev {
+#gs-group-home .main .gs-search-toolbar-previous {
     position: absolute;
     left: 0;
 }
-#gs-group-messages-topics-toolbar ul {
+#gs-group-home .main .gs-search-toolbar ul {
     display: inline-block;
     margin: 0 auto 0 auto;
     line-height: 2.077; /* 1.5u, the same height as the buttons */
 }
-#gs-group-messages-topics-toolbar-next {
+#gs-group-home .main .gs-search-toolbar-next {
     position: absolute;
     right: 0;
 }
