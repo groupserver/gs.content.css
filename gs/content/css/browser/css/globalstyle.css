@@ -1251,11 +1251,14 @@ a.digg-share {
     display: block;
 }
 #gs-group-messages-posts-page .entry-title:before {
-    content: "Topic: ";
+    content: "Post in ";
     color: #999999;
 }
 #gs-group-messages-posts-page .gs-group-messages-post-buttons {
     margin-top: 0;
+}
+#gs-group-messages-posts-page .hide-button {
+    display: none;
 }
 
 /***********/
