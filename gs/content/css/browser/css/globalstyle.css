@@ -898,8 +898,7 @@ code.url {
 /* P: photo (3u by 4u); M: metadata (12.5); A: Actions; E: email (35.5u); */
 /* R: remainder; F: files. 0.5u gap seperates the three vertical columns. */
 
-#gs-group-messages-topic-page-content .hentry,  
-#gs-group-messages-post .hentry {
+.hentry {
     position: relative;
     border-bottom: 0.077em solid #333333;
     margin: 0;
@@ -921,6 +920,7 @@ code.url {
 .email-metadata {
     left: 4.846em; /* 3u for the photo, and 0.5u gap */
     width: 17.308em;  /* 12.5u */
+    text-overflow: ellipsis;
 }
 .email-metadata > * {
     display: block;
@@ -1228,6 +1228,34 @@ a.digg-share {
 .MultiFile-remove abbr {
     text-decoration: none;
     border: none;
+}
+
+/*********/
+/* Posts */
+/*********/
+/* An obscure page, a bit like a topic, but not */
+
+#gs-group-messages-posts-page .nav {
+    position: absolute;
+    right: 0;
+    margin: 0;
+}
+#gs-group-messages-posts-page .hatom {
+    margin-bottom: 1.389em
+}
+#gs-group-messages-posts-page .hatom + .nav {
+    position: static;
+}
+
+#gs-group-messages-posts-page .entry-title {
+    display: block;
+}
+#gs-group-messages-posts-page .entry-title:before {
+    content: "Topic: ";
+    color: #999999;
+}
+#gs-group-messages-posts-page .gs-group-messages-post-buttons {
+    margin-top: 0;
 }
 
 /***********/
