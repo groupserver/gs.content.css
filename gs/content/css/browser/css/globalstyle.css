@@ -419,6 +419,8 @@ div.noFloat {
 .gs-content-layout-cols .main {
     position: relative;
     width: 45.692em; /*33u*/
+    border-right: 0.077em solid #cccccc;
+    padding: 0 3.467em 0 0; /*2.5u (NOT - border) */
 }
 .gs-content-layout-cols .secondary {
     position: absolute;
@@ -785,11 +787,12 @@ code.url {
 .gs-search .gs-search-sticky {
   display: inline-block;
 }
-.gs-search-result {
+.gs-search-results .gs-search-result {
     border-bottom: 0.077em solid #dddddd;
     padding-bottom: 1.308em;
     margin-bottom: 1.385em;
     list-style: none;
+    min-height: auto;
 }
 .gs-search-keyword {
   text-decoration: none;
