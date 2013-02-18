@@ -329,6 +329,8 @@ body {
     height: auto;
     padding: 0;
     margin-right: 0.692em;
+    max-height: 1.389em;
+    overflow: none;
 }
 #utilitylinks-profile {
     font-weight: bold;
@@ -715,10 +717,10 @@ code.url {
 }
 
 #gs-group-home h1 {
-    margin-bottom: 0.334em; /* 0.5u */
+    margin-bottom: 0;
 }
 #gs-group-home-stats p {
-    margin-top: 0.692em;
+    margin-top: 0;
 }
 
 /* About box on the Group page */
@@ -1130,20 +1132,6 @@ a.digg-share {
 #gs-group-messages-topic-summary-simple li + li:before {
     content: "\2022 ";
 }
-/* The topic keywords */
-#gs-group-messages-topic-summary-keyowords * {
-    display: inline-block;
-    margin: 0;
-}
-#gs-group-messages-topic-summary-keyowords li {
-    list-style: none;
-}
-#gs-group-messages-topic-summary-keyowords li:after {
-    content: ', ';
-}
-#gs-group-messages-topic-summary-keyowords li:last-of-type:after {
-    content: '';
-}
 
 .postList {
   margin: 1.154em 0 0 0; /* 1u - 3px border */
@@ -1333,9 +1321,6 @@ a.digg-share {
 .searchResults .topic {
   margin-right: 1em;
 }
-.searchResults .fileName {
-  font-family: monospace;
-}
 .searchResults .figure {
   margin: 0.692em 0 0.692em 1.385em;
 }
@@ -1364,6 +1349,28 @@ a.digg-share {
   margin: 0;
   clear: both;
 }  
+
+/* TODO: move to gs.group.messages.files */
+#gs-group-messages-files {
+    text-overflow: ellipsis;
+}
+#gs-group-messages-files .gs-search-result {
+    position: relative;
+    border: none;
+    padding: 0;
+}
+#gs-group-messages-files .gs-search-result img {
+    max-height: 2.769em; /* 2u */
+    max-width: 2.769em;
+    overflow: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#gs-group-messages-files .gs-search-result div {
+    padding-left: 3.467em; /* 2.5u */
+    text-overflow: ellipsis;
+}
 
 /* Posted Image Page */
 /* TODO: move to gs.group.messages.image */
