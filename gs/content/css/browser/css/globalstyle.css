@@ -458,10 +458,10 @@ div.noFloat {
 }
 
 /* Text Markup: Inline Lists. Usually used for navigating between pages */
-.inline-list, .dotted-inline-list {
+.inline-list, .dotted-inline-list, .comma-inline-list {
     margin-left: 0;
 }
-.inline-list li, .dotted-inline-list li {
+.inline-list li, .dotted-inline-list li, .comma-inline-list li {
     list-style: none;
     display: inline-block;
 }
@@ -474,6 +474,13 @@ div.noFloat {
     padding: 0 0.692em;
 }
 .dotted-inline-list li:first-child:before {
+    content: none;
+}
+.comma-inline-list li:after {
+    content: ", ";
+    color: #999999;
+}
+.comma-inline-list li:last-child:after {
     content: none;
 }
 
@@ -725,6 +732,15 @@ code.url {
 
 /* About box on the Group page */
 /* TODO: Move to gs-group-about */
+#gs-group-about {
+    position: relative;
+}
+#gs-group-about-change-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 #gs-group-about-tab-intro-buttons {
     text-align: right;
 }
@@ -1015,14 +1031,6 @@ code.url {
   border-bottom: thin solid #333333;  
 }
 
-/* Messages: The list of topics on the Topics page */
-#topicsSummary caption {
-  display: none;
-}
-#topicsSummary th {
-  text-align: left;
-}
-
 /* Messages: The Hide a Post UI */
 /* TODO: move to gs.group.messages.post.hide */
 #hide-the-post {
@@ -1131,6 +1139,10 @@ a.digg-share {
 }
 #gs-group-messages-topic-summary-simple li + li:before {
     content: "\2022 ";
+}
+#gs-group-messages-topic-summary-keyowords * {
+    display: inline-block;
+    margin: 0;
 }
 
 .postList {
@@ -1353,6 +1365,9 @@ a.digg-share {
 /* TODO: move to gs.group.messages.files */
 #gs-group-messages-files {
     text-overflow: ellipsis;
+}
+#gs-group-messages-files .gs-search-results {
+    border-bottom: 0.077em solid #dddddd;
 }
 #gs-group-messages-files .gs-search-result {
     position: relative;
