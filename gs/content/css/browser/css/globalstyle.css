@@ -237,15 +237,24 @@ textarea[readonly] {
     display: inline-block;
 }
 
-.radioItem {
+.radioItem, .checkboxGroup {
+    display: block;
     margin-bottom: 0.692em;
 }
-.radioItem > * {
+.radioItem > *, .checkboxGroup > *,  input.checkboxType, label.checkboxLabel {
     display: inline-block;
 }
-input.radioType, label.radioLabel {
+input.radioType, label.radioLabel, input.checkboxType, label.checkboxLabel {
     margin: 0;
     font-weight: 200;
+}
+
+.form-widget input.textType, .form-widget textarea, .form-widget select {
+    margin-left: 1.385em;
+}
+
+input[type=text], textarea, input.textType {
+   width: 47.768em; /* 33.5u */
 }
 
 /*Messages at the top of forms*/
