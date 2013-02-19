@@ -58,6 +58,27 @@ code {
     padding-bottom: 0;
 }
 
+.well {
+    padding: 0.615em;
+    border-width: 0.077em;
+}
+
+.well > :first-child, .well > :first-child > :first-child {
+    margin-top: 0;
+}
+.well > :last-child, .well > :last-child > :last-child {
+    margin-bottom: 0;
+}
+
+input[disabled], 
+select[disabled], 
+textarea[disabled], 
+input[readonly], 
+select[readonly], 
+textarea[readonly] {
+    background: #dddddd;
+}
+
 /* TODO: Move to a viewlet within gs.content.css */
 
 /* First the typeface: Helvetica, on an 18px grid */
