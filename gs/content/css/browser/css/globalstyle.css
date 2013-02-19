@@ -70,15 +70,6 @@ code {
     margin-bottom: 0;
 }
 
-input[disabled], 
-select[disabled], 
-textarea[disabled], 
-input[readonly], 
-select[readonly], 
-textarea[readonly] {
-    background: #dddddd;
-}
-
 /* TODO: Move to a viewlet within gs.content.css */
 
 /* First the typeface: Helvetica, on an 18px grid */
@@ -163,11 +154,11 @@ tbody th {
 
 /* Tabs Override */
 .nav-tabs {
-    margin: 0 0 1.389em 0;
+    margin: 0 0 1.385em 0;
     border-bottom: 0.231em solid #666666;
 }
 .nav-tabs > li {
-    margin: 0 1.389em -0.231em 0; /* The bottom border width */
+    margin: 0 1.385em -0.231em 0; /* The bottom border width */
 }
 .nav-tabs > li > a {
     color: #ababab;
@@ -199,6 +190,16 @@ label {
   font-weight: bold;
   margin: 1.385em 0 0.692em 0;
 }
+input[disabled], 
+select[disabled], 
+textarea[disabled], 
+input[readonly], 
+select[readonly], 
+textarea[readonly] {
+    background: #dddddd;
+}
+
+
 .popup-help {
   float: right;
   width: 16.615em; /* 12u */
@@ -234,6 +235,17 @@ label {
 }
 .buttons > * {
     display: inline-block;
+}
+
+.radioItem {
+    margin-bottom: 0.692em;
+}
+.radioItem > * {
+    display: inline-block;
+}
+input.radioType, label.radioLabel {
+    margin: 0;
+    font-weight: 200;
 }
 
 /*Messages at the top of forms*/
@@ -350,7 +362,7 @@ body {
     height: auto;
     padding: 0;
     margin-right: 0.692em;
-    max-height: 1.389em;
+    max-height: 1.385em;
     overflow: none;
 }
 #utilitylinks-profile {
@@ -891,7 +903,7 @@ code.url {
     margin-left: 0.389em;
     border: none;
     display: inline-block;
-    height: 1.389em;
+    height: 1.385em;
 }
 .gs-search-result .files .value {
     font-size: 10px;
@@ -1196,7 +1208,7 @@ a.digg-share {
     height: auto;
     padding: 0;
     margin-right: 0.692em;
-    height: 1.389em;
+    height: 1.385em;
     overflow: hidden;
 }
 #add-to-topic #widget-form\.message label {
@@ -1265,7 +1277,7 @@ a.digg-share {
     margin: 0;
 }
 #gs-group-messages-posts-page .hatom {
-    margin-bottom: 1.389em
+    margin-bottom: 1.385em
 }
 #gs-group-messages-posts-page .hatom + .nav {
     position: static;
