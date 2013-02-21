@@ -322,19 +322,21 @@ input[type=text], textarea, input.textType {
 /* FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
 
 body {
-  text-align: center; /* HACK for IE. Bless it. */ 
+    text-align: center; /* HACK for IE < 9. Bless it. */ 
 }
 #toparea {
-  border-bottom: thick solid #cccccc;
-  background: #eeeeee;
-  height: 5.625em; /*4.5u (90px); orig 87px*/
+    background: #eeeeee;
+    height: 5.250em; /*4.5u - thick*/
+    border-bottom: 0.375em solid #cccccc;
+}
+#toparea, #titlebar, #bodyblock {
+    position: relative; /* Create a new positioning context */
 }
 /* Center the three main elements */
 #titlebar, #bodyblock {
-  position: relative; /* Create a new positioning context */
-  margin: 0 auto 0 auto;
-  width: 65.000em; /* 52u CHECK */
-  text-align: left;
+    margin: 0 auto 0 auto;
+    width: 65.000em; /* 52u CHECK */
+    text-align: left;
 }
 
 #titlebar-home-link {
