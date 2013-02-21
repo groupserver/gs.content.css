@@ -7,15 +7,12 @@
 /* For now just import the Bootstrap CSS */
 @import url('/++resource++bootstrap-2.2.2/css/bootstrap.css');
 
+
 /******************************/
 /* GroupServer Typeface Setup */
 /******************************/
+/* http://alistapart.com/article/fluidgrids */
 
-pre {
-    background: inherit;
-    font-size: 13px;
-    border: none;
-}
 .muted pre, pre.muted {
     color: #999999;
 }
@@ -23,7 +20,7 @@ abbr, abbr[title], abbr[data-original-title]{
     text-decoration: none;
     border: none;
 }
-h1 code, h2 code, h3 code, h3 code {
+h1 code, h2 code, h3 code, h3 code, h4 code {
     /* If I use a code in a heading I want it to look like the heading .*/
     font-size: inherit;
     color: inherit;
@@ -32,23 +29,23 @@ h1 code, h2 code, h3 code, h3 code {
 }
 
 .modal {
-    width: 42.923em; /* 31u*/
+    width: 38.75em; /* 31u*/
 }
 
 .modal textarea {
     margin-left: 1.385em;
-    width: 37.3846em; /* 27u */
-    height: 13.846em; /* 10u */
-    padding: 0.615em; /* for now */
+    width: 33.75em; /* 27u */
+    height: 12.5em; /* 10u */
+    padding: 0.562em; /* 0.5u - 1px (for now) */
 }
 
 /* Fix for popups in a toolbar */
 .btn-toolbar > .popover + .btn {
-    margin-left: 5px;
+    margin-left: 5px; /* Check */
 }
 
 select {
-    font-size: 12px; 
+    /*font-size: 12px; */ /* Fixme */
     padding: 0;
 }
 
@@ -59,8 +56,8 @@ code {
 }
 
 .well {
-    padding: 0.615em;
-    border-width: 0.077em;
+    padding: 0.562em;
+    border-width: 0.063em;
 }
 
 .well > :first-child, .well > :first-child > :first-child {
@@ -84,7 +81,7 @@ code {
 /* TOOD: move to a viewlet in gs.content.layout */
 
 p, ul, ol, dl, fieldset, table, pre {
-    margin: 1.385em 0; /* 1u */
+    margin: 1.250em 0; /* 1u */
 }
 
 h2 + :not(div), h3 + :not(div), h4 + :not(div), h5 + :not(div), h6 + :not(div), h2 + div :not(div), h3 + div :not(div), h4 + div :not(div), h5 + div :not(div), h6 + div :not(div) {
@@ -94,7 +91,7 @@ h2 + :not(div), h3 + :not(div), h4 + :not(div), h5 + :not(div), h6 + :not(div), 
 h3 {
     /* 13px line*/ 
     padding: 0 0 0.154em 0; /* + 2px padding = 15px */
-    border-bottom: 0.231em solid #666666; /* + 3px border = 18px = 1u */
+    border-bottom: 0.188em solid #666666; /* + 3px border = 18px = 1u */
 }
 
 cite, em {
@@ -102,9 +99,9 @@ cite, em {
 }
 
 blockquote {
-    border-left: 3px solid #666666;
-    padding-left: 0.462em;
-    margin-left: 0.692em;
+    border-left: 0.375em solid #666666;
+    padding-left: 0.438em;
+    margin-left: 0.625em;
 }
 
 /* Less important information is grey */
@@ -115,7 +112,7 @@ blockquote {
 
 /* Text: Lists */
 ul, ol {
-  margin-left: 2.077em; /*1.5u*/
+  margin-left: 1.875em; /*1.5u*/
 }
 ul ol li {
   list-style:decimal outside;
@@ -135,15 +132,15 @@ ul ul, ul ol, ol ol, ol ul {
 
 dt {
   font-weight: bold;
-  margin-top: 1.385em;
+  margin: 1.250em 0 0 0;
 }
 dl dd {
-  margin-left: 1.385em;
+  margin-left: 1.250em;
 }
 
 /* Text: Tables */
 td, th {
-  padding: 0.692em; /*0.5u*/
+  padding: 0.625em; /*0.5u*/
   border: none;
 }
 /*TODO: Captions */
@@ -154,16 +151,16 @@ tbody th {
 
 /* Tabs Override */
 .nav-tabs {
-    margin: 0 0 1.385em 0;
-    border-bottom: 0.231em solid #666666;
+    margin: 0 0 1.250em 0;
+    border-bottom: 0.188em solid #666666;
 }
 .nav-tabs > li {
-    margin: 0 1.385em -0.231em 0; /* The bottom border width */
+    margin: 0 1.250em -0.188em 0; /* The bottom border width */
 }
 .nav-tabs > li > a {
     color: #ababab;
-    padding: 0 0 0.462em 0;
-    line-height: 1.385;
+    padding: 0 0 0.438em 0;
+    line-height: 1.250;
     border: none;
 }
 .nav-tabs > li > a:hover {
@@ -176,9 +173,9 @@ tbody th {
   color: #333333;
   border-top: none;
   border-right: none;
-  border-bottom: 0.462em solid #333333;
+  border-bottom: 0.438em solid #333333;
   border-left: none;
-  padding-bottom: 0.231em;
+  padding-bottom: 0.188em; /* 3px border*/
 }
 
 /*********/
@@ -188,7 +185,7 @@ tbody th {
 label {
   display: block;
   font-weight: bold;
-  margin: 1.385em 0 0.692em 0;
+  margin: 1.250em 0 0.625em 0;
 }
 input[disabled], 
 select[disabled], 
@@ -199,15 +196,15 @@ textarea[readonly] {
     background: #dddddd;
 }
 
-
+/* TODO: move to gs.content.js.popuphelp */
 .popup-help {
   float: right;
-  width: 16.615em; /* 12u */
+  width: 15.0em; /* 12u */
   z-index: 512;
   background: white;
 }
 .popup-help h3 {
-  border-bottom: thin solid #333333;
+  border-bottom: 0.063em solid #333333;
   margin: 0;
 }
 .required label:before {
@@ -229,7 +226,7 @@ textarea[readonly] {
 /* to only have one (1) button on the page. */
 .buttons {
     clear: left;
-    margin: 1.385em 0;
+    margin: 1.250em 0;
     text-align: right;
     position: relative; /* Create a new rendering context */
 }
@@ -239,7 +236,7 @@ textarea[readonly] {
 
 .radioItem, .checkboxGroup {
     display: block;
-    margin-bottom: 0.692em;
+    margin-bottom: 0.625em;
 }
 .radioItem > *, .checkboxGroup > *,  input.checkboxType, label.checkboxLabel {
     display: inline-block;
@@ -250,28 +247,28 @@ input.radioType, label.radioLabel, input.checkboxType, label.checkboxLabel {
 }
 
 .form-widget input.textType, .form-widget textarea, .form-widget select {
-    margin-left: 1.385em;
+    margin-left: 1.250em;
 }
 
 input[type=text], textarea, input.textType {
-   width: 47.768em; /* 33.5u */
+   width: 41.875em; /* 33.5u */
 }
 
 /*Messages at the top of forms*/
 #form-message, .form-widget-message {
-  padding: 0.692em;
+  padding: 0.625em; /* 0.5u */
 }
 #form-message {
-  margin: 1.385em 0;
+  margin: 1.250em 0; /* 1u */
 }
 .form-widget-message {
-  margin: 1.385em 0 1.385em 2.077em;
-  padding: 0.692em;
-  width: 33.231em;
+  margin: 1.250em 0 1.250em 1.875em; /* 1u 0 1u 1.5u */
+  padding: 0.625em; /* 0.5u */
+  width: 30.0em; /* 24u */
 }
 #form-message .ui-icon, .form-widget-message .ui-icon {
   float: left;
-  margin: 0 0.692em 0 0; 
+  margin: 0 0.625em 0 0; 
 }
 
 /* WYMeditor */
@@ -330,13 +327,13 @@ body {
 #toparea {
   border-bottom: thick solid #cccccc;
   background: #eeeeee;
-  height: 6.923em; /*5u (90px); orig 87px*/
+  height: 5.625em; /*4.5u (90px); orig 87px*/
 }
 /* Center the three main elements */
 #titlebar, #bodyblock {
   position: relative; /* Create a new positioning context */
   margin: 0 auto 0 auto;
-  width: 72.000em; /* 52u */
+  width: 65.000em; /* 52u CHECK */
   text-align: left;
 }
 
@@ -344,24 +341,24 @@ body {
   text-decoration: none;
   border: none;
   display: block;
-  padding-top: 2.077em;
+  padding-top: 1.875em;
 }
 #titlebar .logo {
   display: none;
 }
 #titlebar .site {
-  font: bold  278%/1 arial,helvetica,clean,sans-serif; /* 2u */
+  font: bold 250%/1 arial,helvetica,clean,sans-serif; /* 2u */
 }
 
 /* TODO: Move to wherever the utility-links viewlet will live */
 #utilitylinks {
     margin: 0;
-    padding: 2.769em 0 0 0;
+    padding: 2.5em 0 0 0; /* 2u */
     position: absolute;
     top: 0;
     right: 0;
     z-index: 10;
-    line-height: 2.077em;
+    line-height: 1.875em;
 }
 #utilitylinks li {
     display: inline-block;
@@ -370,8 +367,8 @@ body {
     width: auto;
     height: auto;
     padding: 0;
-    margin-right: 0.692em;
-    max-height: 1.385em;
+    margin-right: 0.625em;
+    max-height: 1.250em;
     overflow: none;
 }
 #utilitylinks-profile {
@@ -380,7 +377,7 @@ body {
 #utilitylinks-log-out:before {
     content: "\2022";
     color: #999999;
-    padding: 0 0.692em;
+    padding: 0 0.625em;
 }
 
 /* Breadcrumbs (Where should this live?) */
@@ -388,7 +385,7 @@ body {
     display: inline-block;
 }
 #breadcrumbs ul {
-    margin: 0.692em 0 0 0; 
+    margin: 0.625em 0 0 0; 
 }
 #breadcrumbs li {
     list-style: none;
@@ -403,17 +400,17 @@ body {
 /* The main block that contains the context navigation and the main */
 /* page content. */
 #contextnav {
-  width: 12.462em;  /* 9u */
+  width: 11.250em;  /* 9u */
   position: absolute;
   top: 0;
   left: 0;
-  margin: 1.385em 0;
+  margin: 1.250em 0;
 }
 #contextnav .label {
   border-top: thin solid #333333;
 }
 #contextnav .label, #contextnav a {
-  padding: 0.692em 0 0.692em 1.385em;
+  padding: 0.625em 0 0.625em 1.250em;
 }
 #contextnav .label a {
   padding: 0;
@@ -429,11 +426,11 @@ body {
   margin: 0;
 }
 #contextnav li li a {
-  padding: 0.692em 0 0.692em 2.8em; 
+  padding: 0.625em 0 0.625em 2.5em; 
 }
 
 #content {
-  width: 55.385em; /* 40u */
+  width: 50em; /* 40u */
   position: absolute;
   top: 0;
   right: 0;
@@ -441,10 +438,10 @@ body {
 /* Text Markup */
 p.label {
   font-weight: bold;
-  margin-bottom: 0.692em;
+  margin-bottom: 0.625em;
 }
 p.label + ul {
-  margin-top: 0.692em;
+  margin-top: 0.625em;
 }
 
 .noFloat {
@@ -458,45 +455,25 @@ div.noFloat {
 /* TODO: Move to gs.content.layout */
 .gs-content-layout-cols {
     position: relative; /* Create a new positioning context */
-    margin-top: 1.385em;
+    margin-top: 1.250em;
 }
 .gs-content-layout-cols .main {
     position: relative;
-    width: 45.692em; /*33u*/
-    border-right: 0.077em solid #cccccc;
-    padding: 0 3.467em 0 0; /*2.5u (NOT - border) */
+    width: 41.25em; /*33u*/
+    border-right: 0.063em solid #cccccc;
+    padding: 0 3.125em 0 0; /*2.5u (NOT - border) */
 }
 .gs-content-layout-cols .secondary {
     position: absolute;
     top: 0;
     right: 0;
-    width: 21.462em; /*15.5u*/
-    padding: 0 0 0 1.308em;
-    border-left: 0.077em solid #cccccc;
+    width: 19.375em; /*15.5u*/
+    padding: 0 0 0 1.108em; /* 0 0 0 1u - thin border */
+    border-left: 0.063em solid #cccccc;
 }
 .gs-content-layout-cols > * > :first-child,
 .gs-content-layout-cols > * > :first-child > :first-child {
     margin-top: 0;
-}
-
-
-/* More widget */
-/* TODO: Move to gs.content.js.more */
-.gs-content-js-more-content {
-    overflow: hidden;
-    transition: all 600ms ease;
-}
-.gs-content-js-more-content-small {
-    max-height: 5.538em;
-}
-.gs-content-js-more-content-large {
-    max-height: none;
-}
-.gs-content-js-more-buttons {
-    position: relative;
-    margin: 0;
-    top: -1.385em;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 255));
 }
 
 /* Text Markup: Inline Lists. Usually used for navigating between pages */
@@ -508,12 +485,12 @@ div.noFloat {
     display: inline-block;
 }
 .inline-list li {
-    margin-right: 0.692em;
+    margin-right: 0.625em; /* 0.5u */
 }
 .dotted-inline-list li:before {
     content: "\2022";
     color: #999999;
-    padding: 0 0.692em;
+    padding: 0 0.625em;1
 }
 .dotted-inline-list li:first-child:before {
     content: none;
@@ -539,9 +516,9 @@ p.label + ul {
 /* */
 .userimage {
     float: left;
-    width: 4.154em;  /* 3u */
-    height: 5.538em; /* 4u */
-    padding: 0 0.692em 0.692em 0;
+    width: 3.750em;  /* 3u */
+    height: 5em; /* 4u */
+    padding: 0 0.625em 0.625em 0; /* 0 0.5u 0.5u 0 */
     background: #666666;
     overflow: hidden;
 }
@@ -560,11 +537,11 @@ p.label + ul {
 /* Text Markup: Columns */
 /* Two columns with a 2u gap */
 #content .leftColumn, #content .rightColumn {
-  width: 26.308em; /* 19u */
+  width: 23.75em; /* 19u */
 }
 /* Two columns with a 1.5u gap */
 #divisionHomeContent .leftColumn, #divisionHomeContent .rightColumn {
-  width: 34.615em; /* 25u */
+  width: 31.25em; /* 25u */
 }
 .leftColumn {
     float: left;
@@ -577,194 +554,14 @@ p.label + ul {
 .allupper {
   font-family: serif;
 }
-/*********/
-/* Icons */
-/*********/
-/* GroupServer uses CSS sprites to show the icons. The central icon */
-/* file holds *all* the icons. To show different images the background */
-/* is moved up and down, so a different part of the image is visible */
-/* in the 1u gap. */
-/* http://www.smashingmagazine.com/2009/04/27/the-mystery-of-css-sprites-techniques-tools-and-tutorials/ */
-
-/* Links: URLs that link to different things.*/
-code.url, .alternateATOM, .email, .pdflink, .fileIcon {
-  display: inline-block;
-  padding-left: 1.385em;
-  line-height: 1.385; 
-  background: transparent url("/++resource++icons.png") no-repeat scroll;
-}
-code.url {
-  background-position: 0 -16px;
-}
-.email {
-  background-position: 0 -80px;
-}
-.alternateATOM {
-  background-position: 0 -48px;
-}
-/* File icon sprites. */
-.fileIcon {
-  width: 16px; /* These are images, so I switch to px */
-  height: 16px;
-  margin: 0; 
-  padding: 2px; /* 16px + 2px = 1u */
-  text-decoration: none;
-  border: none;
-}
-.fileIcon {
-  /* Default file icon */
-  background-position: 0 -112px;
-}
-.ascii, .text, .text-richtext, .text-x-generic, .text-x-generic-template,
-.text-x-log, .text-plain {
-  /* Plain text */
-  background-position: 0 -144px;
-}
-.text-html, .application-xhtml-xml, .application-xml, .html, .text-html,
-.text-vnd-wap-wml, .text-xml  {
-  /* Web */
-  background-position: 0 -176px;
-}
-.video-x-generic {
-  /* Video */
-  background-position: 0 -208px; 
-}
-.application-x-perl, .application-x-php, .application-x-python-bytecode,
-.application-x-shellscript, .application-x-shockwave-flash,
-.application-xslt-xml, .application-xslt+xml, .shellscript, .text-x-csh,
-.text-x-python, .text-x-script, .text-x-sh, .text-x-zsh
-{
-  /* Script */
-  background-position: 0 -240px;
-}
-.application-x-tex, .text-x-bibtex, .text-x-tex {
-  /* TeX */
-  background-position: 0 -272px;
-}
-.application-x-7z-compressed, .application-x-archive,
-.application-x-arj, .application-x-bzip-compressed-tar,
-.application-x-bzip, .application-x-compressed-tar, .application-x-compress,
-.application-x-cpio-compressed, .application-x-cpio, .application-x-deb,
-.application-x-gzip, .application-x-jar, .application-x-lha, 
-.application-x-lhz, application-x-stuffit, .application-x-tar,
-.application-x-tarz, .application-x-zip-compressed, .application-zip,
-.application-x-rar, .application-x-rpm, .deb, .folder_tar, .gnome-package,
-.plan, .package_editors, .package, .package_wordprocessing, 
-.package-x-generic, .rpm, .tar {
-  /* Compressed */
-  background-position: 0 -304px;
-}
-.application-ogg, .audio, .audio-x-generic, .audio-mpeg, .audio-x-wav, .audio-x-mpeg {
-  /* Audio/Sound */
-  background-position: 0 -336px;
-}
-/* word-processor: -3698px */
-.image-png, .application-vnd-oasis-opendocument-image, .image-bmp,
-.image-gif, .image-jpeg, .image-pjpeg, .image, .image, .image-svg-xml,
-.image-svg+xml, .image-tiff, .image-x-generic, .image-x, .image-x-xpixmap {
-  /* Images */
-  background-position: 0 -400px;
-}
-.application-x-executable, .application-x-ms-dos-executable, .exec, 
-.gnome-fs-executable  {
-  /* Executable */
-  background-position: 0 -432px;
-}
-/* skip 5 */
-.application-magicpoint, .application-vnd-ms-powerpoint, 
-.application-vnd-oasis-opendocument-presentation, 
-.application-vnd-oasis-opendocument-presentation-template,
-.application-vnd-oasis-opendocument-text-web, 
-.application-vnd-stardivision-impress, .application-x-kpresenter {
-  /* Presentation */
-  background-position: 0 -624px;
-}
-.application-msexcel, .application-vnd-lotus-1-2-3, .application-vnd-ms-excel,
-.application-vnd-oasis-opendocument-spreadsheet, 
-.application-vnd-oasis-opendocument-spreadsheet-template, 
-.application-vnd-openxmlformats-officedocument-spreadsheetml-sheet, 
-.application-vnd-stardivision-calc, .application-vnd-sun-xml-calc,
-.application-vnd-sun-xml-calc-template, .application-vnd-sun-xml-calc,
-.application-vnd-sun-xml-calc-template, .application-x-applix-spreadsheet,
-.application-x-applix-spreadsheet, .application-x-gnumeric, 
-.application-x-msexcel, .application-x-kspread, 
-.text-x-comma-separated-values, .x-office-spreadsheet, 
-.x-office-spreadsheet-template
- {
-  /* Spreadsheet*/
-  background-position: 0 -656px;
-}
-.application-vnd-ms-publisher, .application-vnd-oasis-opendocument-graphics,
-.application-vnd-oasis-opendocument-graphics-template, .application-vnd-sun-xml-draw,
-.application-vnd-sun-xml-draw-template, .application-x-killustrator,
-.x-office-drawing, .x-office-drawing-template, .x-office-presentation,
-.x-office-presentation-template {
-  /* Drawing and publishing */
-  background-position: 0 -688px;
-}
-.x-office-document, .application-ms-tnef, .x-office-document-template {
-  /* Generic Office Document */
-  background-position: 0 -608px;
-}
-/* Skip 2\ldots */
-.application-msword, .application-rtf, .application-vnd-lotus-wordpro, 
-.application-vnd-ms-word-document-macroEnabled-12, 
-.application-vnd-oasis-opendocument-text, 
-.application-vnd-oasis-opendocument-text-template, 
-.application-vnd-openxmlformats-officedocument-wordprocessingml-document,
-.application-vnd-sun-xml-impress, .application-vnd-sun-xml-impress-template
-.application-vnd-stardivision-writer, .application-vnd-sun-xml-writer,
-.application-vnd-sun-xml-writer-template, .application-wordperfect,
-.application-x-abiword, application-x-applix-word, .application-x-abiword,
-.application-x-applix-word, .application-x-kword {
-  /* Wordprocessor */
-  background-position: 0 -815px;
-}
-.text-x-vcalendar, .text-x-vcard, .x-office-address-book, 
-.x-office-calendar {
-  /* VCard and Calendar */
-  background-position: 0 -848px;
-}
-/*Skip 1\ldots*/
-.application-x-font-afm, .application-x-font-bdf, 
-.application-x-font-linux-psf, .application-x-font-pcf, 
-.application-x-font-sunos-news, .application-x-font-ttf, .font-x-generic,
-.x-font-afm {
-  /* Font */
-  background-position: 0 -912px;
-}
-/*Skip 1\ldots*/
-.application-pdf, .pdflink {
-  background-position: 0 -976px;
-}
-.application-certificate {
-  background-position: 0 -1008px;
-}
-.application-postscript, .application-x-dvi {
-  background-position: 0 -1039px;
-}
-/*End of icons */
 
 /************************/
 /* Page-specific styles */
 /************************/
 
-/* Site Homepage */
-/*****************/
-
-#gs-login-easy-login {
-  padding: 0.692em;
-  margin: 0 0 1.385em 0;
-}
-
-#gs-login-easy-login .textType {
-  width: 27.692em; /* 20u */
-}
-
-#gs-login-easy-login .buttons {
-  margin-bottom: 0;
-}
-
+/* Group page */
+/**************/
+/* TODO: move to gs.group.home */
 #gs-group-home h1 {
     margin-bottom: 0;
 }
@@ -773,7 +570,7 @@ code.url {
 }
 
 /* About box on the Group page */
-/* TODO: Move to gs-group-about */
+/* TODO: Move to gs.group.about */
 #gs-group-about {
     position: relative;
 }
@@ -786,34 +583,31 @@ code.url {
 #gs-group-about-tab-intro-buttons {
     text-align: right;
 }
-#gs-group-about-tab-intro .gs-content-js-more-content > p {
-    margin-top: 0;
-}
 
 /* The Recently Active members list */
 /* TODO: move to gs.group.member.active */
 .gs-group-member-active-members-member {
     position: relative; /* Create a new positioning context */
-    margin: 0 0 0.692em 0;
+    margin: 0 0 0.625em 0;
 }
 .gs-group-member-active-members-member .userimage {
     padding: 0;
     float: none;
-    max-width:  2.769em; /* 2u */
-    max-height: 2.769em;
+    max-width:  2.5em; /* 2u */
+    max-height: 2.5em;
     overflow: hidden;
     /*max-height: 4.154em;*/ /* 3u */
 }
 .gs-group-member-active-members-member .fn {
     position: absolute;
     top: 0;
-    left: 3.467em; /* 2.5u */
+    left: 3.125em; /* 2.5u */
     font-weight: bold;
 }
 #gs-group-member-active-stats {
     border-top: 1px solid  #dddddd;
-    margin: 0.692em 0 1.385em 0;
-    padding: 0.615em 0 0 0; /* 0.5u - 1px */
+    margin: 0.625em 0 1.250em 0;
+    padding: 0.562em 0 0 0; /* 0.5u - 1px */
 }
 
 /* Search */
@@ -822,20 +616,20 @@ code.url {
 
 /* The search entry box */
 .gs-search-entry input {
-  width:  27.692em;
+  width:  25em; /* 20u */
   margin-left: 0;
   display: inline-block;
 }
 
 /* The Loading message */
 .gs-search-loading img {
-  margin: 0 0.692em 0 0;
+  margin: 0 0.625em 0 0;
   padding:0;
 }
 
 /* The results */
 .searchResults {
-  margin: 1.385em 0 0 0;
+  margin: 1.250em 0 0 0;
 }
 .searchResults .tags li {
     margin: 0;
@@ -848,21 +642,15 @@ code.url {
   display: inline-block;
 }
 .gs-search-results .gs-search-result {
-    border-bottom: 0.077em solid #dddddd;
-    padding-bottom: 1.308em;
-    margin-bottom: 1.385em;
+    border-bottom: 0.063em solid #dddddd;
+    padding-bottom: 1.188em; /* 1u - border */
+    margin-bottom: 1.250em;
     list-style: none;
     min-height: auto;
 }
 .gs-search-keyword {
   text-decoration: none;
 }
-
-/* The Next and Previous buttons */
-.gs-search-toolbar > span {
-  padding: 0.9em 0.2em; /*Similar to padding set by jQuery.ui*/
-}
-
 
 /* Topic Search */
 /****************/
@@ -872,7 +660,7 @@ code.url {
 /* Thanks to <http://cssarrowplease.com/> and  */
 /*  <http://nicolasgallagher.com/pure-css-speech-bubbles/demo/> */
 /* The bubble */
-.gs-search-result .postCount {
+.gs-search-result .postCount { /* FIXME */
     color: #666666;
     background: #dddddd;
     font-size: 10px;
@@ -912,7 +700,7 @@ code.url {
     margin-left: 0.389em;
     border: none;
     display: inline-block;
-    height: 1.385em;
+    height: 1.250em;
 }
 .gs-search-result .files .value {
     font-size: 10px;
@@ -963,26 +751,26 @@ code.url {
 
 .hentry {
     position: relative;
-    border-bottom: 0.077em solid #333333;
+    padding: 0 0 1.250em 0; /* TODO: check the 1.250 */
+    border-bottom: 0.063em solid #dddddd;
     margin: 0;
-    padding: 0 0 1.385em 0;
-    min-height: 6.923em; /* 5u */
+    min-height: 6.250em; /* 5u */
 }
 #gs-group-messages-topic-page-content .hentry:last-child {
-    border-bottom: 0.231em solid #666666;
-    padding: 0 0 1.154em 0;
+    border-bottom: 0.188em solid #666666;
+    padding: 0 0 1.062em 0;
 }
 
 .hentry .userimage, .email-metadata {
     position: absolute;
-    top: 1.385em;
+    top: 1.250em;
 }
 .hentry .userimage {
     padding: 0;
 }
 .email-metadata {
-    left: 4.846em; /* 3u for the photo, and 0.5u gap */
-    width: 17.308em;  /* 12.5u */
+    left: 3.750em; /* 3.5u: 3u for the photo, and 0.5u gap */
+    width: 15.625em;  /* 12.5u */
     text-overflow: ellipsis;
 }
 .email-metadata > * {
@@ -995,14 +783,14 @@ code.url {
   display: none;
 }
 .gs-group-messages-post-buttons {
-    margin: 1.385em 0 0 0;
+    margin: 1.250em 0 0 0;
 }
 
 .hentry .email-message, .hidden-post {
     position: relative;
-    left: 22.846em;
-    width: 49.154em; /* 35.5u */
-    padding: 1.385em 0 0 0; 
+    left: 20.625em; /* 16.5u */
+    width: 44.375em; /* 35.5u */
+    padding: 1.250em 0 0 0; 
 }
 .hentry pre {
     font-family: inherit;
@@ -1010,13 +798,13 @@ code.url {
 }
 .hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification, 
 .hidden-post {
-    width: 49.154em; /* 35.5u */
+    width: 44.375em; /* 35.5u */
 }
 .hentry .entry-content, .hidden-post > p {
     margin: 0;
 }
 .email-remainder p {
-    margin: 1.385em 0 0 0;
+    margin: 1.250em 0 0 0;
 }
 .email-remainder pre {
     margin: 0;
@@ -1024,9 +812,9 @@ code.url {
 
 /* File list at the bottom of a post. */
 .hentry .fileNotification {
-    margin: 1.385em 0 0 0;
-    padding: 1.308em 0 0 0;
-    border-top: 0.077em solid #dddddd;
+    margin: 1.250em 0 0 0;
+    padding: 1.188em 0 0 0;
+    border-top: 0.063em solid #dddddd;
     vertical-align: top;
 }
 .hentry .fileNotification > * {
@@ -1037,24 +825,24 @@ code.url {
     margin: 0;
 }
 .normalFileList + .mediaFileList .hmedia {
-    margin: 0 0 1.385em 1.385em;
+    margin: 0 0 1.250em 1.250em;
 }
 .mediaFileList .hmedia {
-    margin: 0 0 1.385em 0;
+    margin: 0 0 1.250em 0;
     display: inline-block;
     max-width: 15.231em; /* 11u */
     vertical-align: top;
 }
 .mediaFileList .hmedia + .hmedia {
-    margin: 0 0 1.385em 1.385em;
+    margin: 0 0 1.250em 1.250em;
 }
 .mediaFileList .hmedia img {
-    max-width: 15.077em; /* 196px: 11u - 2px for the border*/ 
-    max-height: 15.077em; 
-    border: 0.077em solid #eeeeee;
+    max-width: 13.687em; /* 196px: 11u - 1px for the border*/ 
+    max-height:1 13.687em; 
+    border: 0.063em solid #eeeeee;
 }
 .mediaFileList .hmedia .info {
-    margin: 0.692em 0 0 0;
+    margin: 0.625em 0 0 0;
 }
 
 /* The single post page */
@@ -1063,63 +851,20 @@ code.url {
     right: 0;
 }
 #gs-group-messages-post .hentry  {
-    margin-bottom: 0.692em;
+    margin-bottom: 0.625em;
 }
 .hentry + .gs-group-messages-post-navigation {
     position: static;
 }
 #gs-group-messages-post .hentry {
-  border-top: medium solid #666666;
-  border-bottom: thin solid #333333;  
+  border-top: 0.188em solid #666666;
+  border-bottom: 0.063em solid #333333;  
 }
 
 /* Messages: The Hide a Post UI */
 /* TODO: move to gs.group.messages.post.hide */
 #hide-the-post {
     text-align: left;
-}
-
-/* Messages: Share bar. Widgets to share a topic or post */
-/* TODO: move to gs.share */
-.share-bar {
-  display: -moz-inline-stack;
-  display: block; /* Hiding the share bar for now */
-}
-.share-widgets a, .share-widgets span {
-  min-width: 16px;
-  min-height: 16px;
-  width: 16px;
-  height: 16px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  background: transparent url("/++resource++icons.png") no-repeat scroll;
-  margin: 0 2px;
-}
-span.email-share {
-  background-position: 0 -16px; /* Globe, not email */
-}
-a.twitter-share {
-  background-position: 0 -1744px;
-}
-a.fb-share {
-  background-position: 0 -1776px;
-}
-a.digg-share {
-  background-position: 0 -1808px;
-}
-
-.full-share-help {
-    margin: 1.385em 0 0.689em 0;
-}
-.full-share-entry {
-    margin: 0.692em 0 0 0;
-}
-.full-share-entry input {
-    width: 100%;
-    margin: 0;
 }
 
 /* TODO Move to a sane place */
@@ -1151,27 +896,27 @@ a.digg-share {
 
 #gs-group-messages-topic-tasks {
     float: right;
-    margin: 0.692em 0 0 0;
+    margin: 0.625em 0 0 0;
 }
 
 .modal + .gs-group-messages-topic-navlinks {
     position: relative;
-    top: 0.692em;
+    top: 0.625em;
 }
 .modal + .gs-group-messages-topic-navlinks .btn {
-    margin-top: 1.385em;
+    margin-top: 1.250em;
 }
 #gs-group-messages-topic-admin-stickytoggle button {
     transition-property: width;
     transition-duration: 250ms; /* A guess at the ping-distance */
 }
 #gs-group-messages-topic-admin-stickytoggle button.disabled {
-    width: 5.538em; /* Set the width to 4u by CSS so there is a transition */
+    width: 5em; /* Set the width to 4u by CSS so there is a transition */
 }
 
 /* Topic summary */
 #gs-group-messages-topic-summary {
-    margin: 0.692em 0;
+    margin: 0.625em 0;
 }
 #gs-group-messages-topic-summary-simple {
     margin: 0;
@@ -1188,8 +933,8 @@ a.digg-share {
 }
 
 .postList {
-  margin: 1.154em 0 0 0; /* 1u - 3px border */
-  border-top: 0.231em solid #666666;
+  margin: 1.062em 0 0 0; /* 1u - 3px border */
+  border-top: 0.188em solid #666666;
 }
 
 #topic-index caption {
@@ -1198,15 +943,15 @@ a.digg-share {
 
 #hide-the-post + .navlinks {
     position: absolute;
-    margin: 1.385em 0;
+    margin: 1.250em 0;
 }
 
 /* The Add to Topic form at the bottom of the page */
 #gs-group-messages-topic-cannotadd, #add-to-topic {
-    width: 49.154em; /*35.5u*/
+    width: 44.375em; /*35.5u*/
     position: relative;
-    left: 22.846em; /* 16.5u */
-    top: -2.077em; /* 1.5u */
+    left: 20.625; /* 16.5u */
+    top: -1.875em; /* 1.5u */
 }
 #add-to-topic h2 {
     margin-top: 0;
@@ -1216,8 +961,8 @@ a.digg-share {
     width: auto;
     height: auto;
     padding: 0;
-    margin-right: 0.692em;
-    height: 1.385em;
+    margin-right: 0.625em;
+    height: 1.250em;
     overflow: hidden;
 }
 #add-to-topic #widget-form\.message label {
@@ -1225,12 +970,12 @@ a.digg-share {
 }
 #add-to-topic #form\.message {
     margin: 0;
-    padding: 0.615em;
+    padding: 0.562em; /* .5u - thin */
     width: 47.768em; /* 33.5u */
 }
 #gs-group-messages-topic-add-from {
     vertical-align: top;
-    margin: 0 0 0.692em 0; /* 16px, because of the height of the select */
+    margin: 0 0 0.625em 0; /* 16px, because of the height of the select */
 }
 #gs-group-messages-topic-add-from * {
     display: inline-block;
@@ -1243,32 +988,33 @@ a.digg-share {
 }
 #gs-group-messages-topic-add-privacy-summary {
     display: inline-block;
-    margin-right: 1.385em;
+    margin-right: 1.250em;
     cursor: pointer;
 }
 
 
 /* The Multi File plugin for jQuery at the bottom of the Add to Topic form */
+/* TODO: move to gs.content.js.multifile */
 .gs-group-messages-topic-add-file {
     position: relative;
-    margin-top: 0.692em;
+    margin-top: 0.625em;
 }
 #gs-group-messages-topic-add-file-label {
     position: absolute;
     margin: 0;
 }
 #gs-group-messages-topic-add-file-files {
-    padding: 0 0 0 4.154em;
+    padding: 0 0 0 3.75em; /* 0 0 0 3u */
 }
 
 .MultiFile-wrap input {
     margin: 0;
 }
 .MultiFile-label {
-    margin: 0.692em 0;
+    margin: 0.625em 0; /* 0.5u */
 }
 .MultiFile-remove {
-    margin: 0 0.692em 0 0;
+    margin: 0 0.625em 0 0; /* 0.5u */
 }
 .MultiFile-remove abbr {
     text-decoration: none;
@@ -1279,6 +1025,7 @@ a.digg-share {
 /* Posts */
 /*********/
 /* An obscure page, a bit like a topic, but not */
+/* TODO: move to gs.group.messages.posts */
 
 #gs-group-messages-posts-page .nav {
     position: absolute;
@@ -1286,7 +1033,7 @@ a.digg-share {
     margin: 0;
 }
 #gs-group-messages-posts-page .hatom {
-    margin-bottom: 1.385em
+    margin-bottom: 1.250em
 }
 #gs-group-messages-posts-page .hatom + .nav {
     position: static;
@@ -1313,49 +1060,6 @@ a.digg-share {
   margin-top: 0;
 }
 
-/******************/
-/* Group Homepage */
-/******************/
-
-/* UUUUUUUUUUUUUUUUUU */
-/* U H2 PPPPPP AAAA U  */
-/* UUUUUUUUUUUUUUUUUU */
-
-/* IIIIIIII  TTTTTTTT */
-/* IIIIIIII  TTTTTTTT */
-/* IIIIIIII  TTTTTTTT */
-/* IIIIIIII  TTTTTTTT */
-/* U: Us Bar; P: user photos, A: Us Bar tasks, I: Info Tabs, T: Task */
-/* Tabs*/
-
-#us-bar {
-  margin: 1.385em 0;
-  height: 4.846em; /* 3.5u */
-  padding: 0.692em;
-  background-image: none;
-  background: white;
-}
-#us-bar h2, #us-photos, #us-tasks {
-  float: left;
-  margin: 0;
-  padding-right: 1.385em;
-}
-#us-photos a {
-  display: inline-block;
-  width: 3.462em;
-  height: 4.846em;
-  background: #999;
-}
-#us-photos img {
-  height: 4.846em;
-}
-#us-tasks ul {
-  font-weight: normal;
-  margin-top: 0;
-}
-.ui-tabs .ui-tabs-hide {
-  display: none;
-}
 /**********/
 /* Search */
 /**********/
@@ -1376,28 +1080,28 @@ a.digg-share {
   margin-right: 1em;
 }
 .searchResults .figure {
-  margin: 0.692em 0 0.692em 1.385em;
+  margin: 0.625em 0 0.625em 1.250em;
 }
 
 /* Search Page */
 #searchInput {
-  margin: 1.385em 0 2.769em 0;
+  margin: 1.250em 0 2.5em 0;
 }
 #searchInput input {
-  margin: 0 1.385em 0 0;
+  margin: 0 1.250em 0 0;
   display: inline-block;
 }
 #searchInput .button {
-  padding: 0 0.692em;
+  padding: 0 0.625em;
 }
 .searchResults .disclosureWidget {
-  margin-left: 1.385em;
+  margin-left: 1.250em;
 }
 .refineButton {
-  margin: 0.692em 0 0 0;
+  margin: 0.625em 0 0 0;
 }
 .refinement {
-  margin: 0 0 0 1.385em;
+  margin: 0 0 0 1.250em;
 }
 .refinement li {
   margin: 0;
@@ -1407,9 +1111,20 @@ a.digg-share {
 /* TODO: move to gs.group.messages.files */
 #gs-group-messages-files {
     text-overflow: ellipsis;
+    position: relative;
 }
-#gs-group-messages-files .gs-search-results {
-    border-bottom: 0.077em solid #dddddd;
+#gs-group-messages-files-nav {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    height: 13px; /* FIX ME*/
+}
+#gs-group-messages-files-nav * {
+    line-height: 13px; /* FIX ME*/
+    height: 13px;
+    overflow: none;
 }
 #gs-group-messages-files .gs-search-result {
     position: relative;
@@ -1417,15 +1132,15 @@ a.digg-share {
     padding: 0;
 }
 #gs-group-messages-files .gs-search-result img {
-    max-height: 2.769em; /* 2u */
-    max-width: 2.769em;
+    max-height: 2.5em; /* 2u */
+    max-width: 2.5em;
     overflow: none;
     position: absolute;
     left: 0;
     top: 0;
 }
 #gs-group-messages-files .gs-search-result div {
-    padding-left: 3.467em; /* 2.5u */
+    padding-left: 3.125em; /* 2.5u */
     text-overflow: ellipsis;
 }
 
@@ -1441,14 +1156,14 @@ a.digg-share {
 }
 .gs-group-messages-image .scaled-image {
     position: relative;
-    border-top: 0.231em solid #666666;
-    border-bottom: 0.231em solid #666666;
-    padding: 1.154em 0;
-    margin: 0 0 1.385em 0;
+    border-top: 0.188em solid #666666;
+    border-bottom: 0.188em solid #666666;
+    padding: 1.062em 0; /* 1u - medium */
+    margin: 0 0 1.250em 0;
 }
 .gs-group-messages-image .metadata > * {
     position: absolute;
-    top: 1.154em;
+    top: 1.062em;
     left: 0;
 }
 .gs-group-messages-image .metadata .userimage {
@@ -1456,31 +1171,31 @@ a.digg-share {
 }
 .gs-group-messages-image .metadata ul {
     position: absolute;
-    left: 4.846em; /* 3u for the photo, and 0.5u gap */
-    width: 17.308em;  /* 12.5u */
-    top: 1.154em;
+    left: 4.375em; /* 3u for the photo, and 0.5u gap */
+    width: 15.625em;  /* 12.5u */
+    top: 1.062em; /* 1u - medium */
     margin: 0;
     list-style: none;
 }
 .gs-group-messages-image .metadata .gs-group-messages-image-buttons {
     position: absolute;
-    left: 4.846em; /* 3u for the photo, and 0.5u gap */
-    top: 4.615em;
+    left: 4.375em; /* 3.5u: 3u for the photo, and 0.5u gap */
+    top: 4.188em; /* 3.5u - medium */
 }
 #gs-group-messages-image-share {
-  margin: 1.385em 0 0 0;
+  margin: 1.250em 0 0 0;
 }
 .gs-group-messages-image .preview {
     display: block;
     position: relative;
-    left: 22.846em;
-    width: 49.154em; /* 35.5u */
+    left: 20.625; /* 16.5u */
+    width: 44.375em; /* 35.5u */
 }
 .gs-group-messages-image .preview img {
-    border: 0.077em solid #eeeeee;
+    border: 0.063em solid #eeeeee;
 }
 .gs-group-messages-image .enclosure {
-    margin: 0.615em 0 0 0;
+    margin: 0.562em 0 0 0; /* 0.5u - thin 0 0 0*/
 }
 .gs-group-messages-image .scaled-image + .gs-group-messages-image-navlinks {
     left: 0;
@@ -1488,14 +1203,14 @@ a.digg-share {
 
 /* Invitations Pages */
 .group-invitation p {
-  margin-left: 1.385em; 
+  margin-left: 1.250em; 
 }
 .group-invitation ul {
-  margin-left: 3.47em;
+  margin-left: 3.125em; /* 2.5u */
 }
 .group-invitation fieldset {
   padding-left: 0;
-  margin-left: 1.385em;
+  margin-left: 1.250em;
 }
 
 /* Login */
@@ -1509,7 +1224,7 @@ a.digg-share {
 /* However, this throws out the column-code. So, I lay this page out */
 /* manually. */
 #changeprivacy .rightColumn .value {
-  margin-top: 2.769em;
+  margin-top: 2.5em; /* 2u */
 }
 
 /* Manage Members */
@@ -1520,10 +1235,9 @@ a.digg-share {
 }      
 #manage-members .statusActions {
   position: relative;
-  border-top: thin solid #333333;
-  border-bottom: thin solid #333333;
-  padding-bottom: 1.385em;
-  padding-left: 0.692em;
+  border-top: 0.063em solid #333333;
+  border-bottom: 0.063em solid #333333;
+  padding: 1.188em 0 1.188em 0; /* 1u - thin */
   overflow: hidden;
 }
 #manage-members .userimage {
@@ -1531,38 +1245,38 @@ a.digg-share {
   float: none;
   top: 0;
   right: 0;
-  padding: 1.385em;
+  padding: 1.250em; /* 1u */
 }
 #manage-members .radioItem {
-  margin: 0.692em 0;
+  margin: 0.625em 0; /* 0.5u */
 }
 #manage-members .statusActions h3 {
-  padding-right: 6.923em; /* 5u gap for the profile photo */
+  padding-right: 6.25em; /* 5u gap for the profile photo */
 }
 
 /* Members List */
 #gs-group-member-list li.vcard {
   display: inline-block;
-  width: 18.000em; /*13u*/
-  height: 2.769em; /* 2u*/
-  margin: 1.385em;
+  width: 16.25em; /*13u*/
+  height: 2.5em; /* 2u*/
+  margin: 1.250em; /* 1u */
 }
 #gs-group-member-list li.vcard img {
-  height: 2.769em;
+  height: 2.5em;
 }
 #gs-group-member-list .vcard li {
   list-style: none;
 }
 #gs-group-member-list .photo {
-  width:  2.077em; /* 1.5u */
-  height: 2.769em; /* 2.0u */
+  width:  1.875em; /* 1.5u */
+  height: 2.5em; /* 2.0u */
   padding: 0;
   display: inline-block;
   float: left;
   background: #999;
 }
 #gs-group-member-list .vcard ul {
-  margin-left: 2.769em;
+  margin-left: 2.5em; /* 2u */
 }
 
 /* Sign Up */
@@ -1570,7 +1284,7 @@ a.digg-share {
 /* sign up. */
 #signup-progress li {
   list-style: none;
-  padding-left: 2.077em;
+  padding-left: 1.875em; /* 1.5u */
 }
 #signup-progress .done:before {
   content: "\2713 "; /*A check box*/
@@ -1582,59 +1296,59 @@ a.digg-share {
   content: "\2023 "; /*A triangle*/
 }
 #signup-progress .done {
-  padding-left: 1.385em;
+  padding-left: 1.250em; /* 1u */
 }
 #signup-progress .current {
-  padding-left: 0.692px;
+  padding-left: 0.625em; /* 0.5u */
 }
 
 /* Invitations */
 #invite-message-preview-button {
-  padding: 0.692em; 
-  margin: 1.385em 0;
+  padding: 0.625em; /* 0.5u */
+  margin: 1.250em 0; /* 1u */
   cursor: pointer;
 }
 /* Invite by CSV */
 #gs-group-member-invite-csv select {
-  margin: 0 0 1.385em 1.385em;
+  margin: 0 0 1.250em 1.250em; /* 0 0 1u 1u */
 }
 
 /* View Profile: Membership List */
 #gs-profile-view #membership ul {
-  margin: 1.385em 0;
+  margin: 1.250em 0 1.250em 0;/* 1u 0 1u 0 */
 }
 #gs-profile-view #membership li {
   list-style: none;  
 }
 #gs-profile-view #membership a, #gs-profile-view #membership .current {
   display: block;
-  padding: 0.692em 0;
-  margin: 1.385em 0 0 0;
+  padding: 0.625em 0 0.625em 0; /* 0.5u */
+  margin: 1.250em 0 0 0;  /* 1u 0 0 0 */
 }
 #gs-profile-view #membership .current {
-  border-top: thin solid #333333;
-  border-right: thin solid #333333;
-  border-bottom: thin solid #333333;
+  border-top: 0.063em solid #333333;
+  border-right: 0.063em solid #333333;
+  border-bottom: 0.063em solid #333333;
 }
 #gs-profile-view #membership .manage {
   padding: 0;
-  margin: 0 0 0 1.385em;
+  margin: 0 0 0 1.250em; /* 0 0 0 1u */
 }
 #gs-profile-view #siteMembership {
-  border-left: 0.692em solid #333333;
+  border-left: 0.625em solid #333333; /* 0.5u */
 }
 #gs-profile-view #siteMembership a, #gs-profile-view #siteMembership .current {
-  padding: 0.692em;
+  padding: 0.625em; /* 0.5u */
 }
 
 #gs-profile-view #membership .rightColumn,  #gs-profile-view #membership .leftColumn{
-  margin: 1.385em 0;
+  margin: 1.250em 0; /* 1u */
 }
 #gs-profile-view #groups h2 {
-  margin: 0 0 0.692em 0; /*0.5u*/
+  margin: 0 0 0.625em 0; /* 0 0 0.5u 0 */
 }
 #gs-profile-view #siteMembership h2 {
-  margin: 0 0 0.692em 0.692em; /*0.5u*/
+  margin: 0 0 0.625em 0.625em; /* 0 0 0.5u 0.5u */
 }
 
 /* Group Member Log */
@@ -1652,12 +1366,12 @@ a.digg-share {
 #gs-group-member-log li.join-event:before {
   content: "+ ";
   font-weight: bold;
-  font-size: 138.5%;
+  font-size: 125%;
 }
 #gs-group-member-log li.leave-event:before {
   content: "\2212  "; /* Hex Code for the minus sign &#8722; */
   font-weight: bold;
-  font-size: 138.5%;
+  font-size: 125%;
 }
 #gs-group-member-log .join .leave-event {
   display: None;
@@ -1668,19 +1382,19 @@ a.digg-share {
 
 /* Change Site Greeting Page */
 #gs-greeting-changegreeting #preview {
-  margin: 1.385em 0 0 1.385em;
+  margin: 1.250em 0 0 1.250em; /* 1u 0 0 1u */
 }
 #gs-greeting-changegreeting li {
   list-style: none;
-  margin-bottom: 0.692em;
+  margin-bottom: 0.625em; /* 0.5u */
 }
 
 /* Error Pages */
 /* The technical message goes at the end of the page. It is mostly */
 /* there for developers, so it is de-emphasized. */
 #technical {
-  padding: 0.692em 0;
-  border-top: thin solid #999;
+  padding: 0.625em 0; /* 0.5u */
+  border-top: 0.063em solid #999;
   color: #999;
 }
 
@@ -1690,7 +1404,7 @@ a.digg-share {
   width: auto;
 }
 #gs-profile-email-change .change input {
-  padding: 0 0.692em;
+  padding: 0 0.625em; /* 0.5u */
 }
 
 /* Colour is for happy people */
@@ -1726,32 +1440,6 @@ a, a:hover, a:visited {
     background: #333333;
   }
   
-  #titlebar .division, h1 {
-    margin: 0 0 0 0.250em; /* 0.692em / 2.769 = 0.5u */
-  }
-  h2 {
-    margin: 0 0 0 0.333em; /* 0.692em / 2.077 = 0.5u */
-  }
-  h3 {
-    margin: 0 0 0 0.450em; /* 0.692em / 1.385 = 0.5u */
-  }
-  h4, h5, p, pre, .email-metadata, .hentry .fileNotification {
-    margin: 0 0 0 0.692em; /* 0.5u */
-  }
-  
-  /* Group Homepage */
-  #us-photos li, .searchResults .tags li {
-    padding: 0;
-  }
-  #us-tasks {
-    position: absolute;
-    right: 0;
-  }
-  
-  .cols .leftColumn {
-    margin-top: 1.385em;
-  }
-  
   /*  Make the navigation links wider, so they are easier for fingers 
    *  to hit. The background does not work then, so replace the arrows
    *  with Unicode characters. */
@@ -1760,11 +1448,11 @@ a, a:hover, a:visited {
     padding: 0;
  }
  .navlinks li {
-    padding: 1.385em 0;
+    padding: 1.250em 0;
     margin: 0;
    }
   .navlinks a, .navlinks span, .navlinks .next, .navlinks .last, .navlinks .first, .navlinks .prev {
-    padding: 1.385em 0.692em;
+    padding: 1.250em 0.625em;
     background: none;
   }
   .navlinks .prev:before {
@@ -1779,10 +1467,10 @@ a, a:hover, a:visited {
   
   /* Topic page */
   .email-metadata {
-    margin-bottom: 1.385em;
+    margin-bottom: 1.250em;
   }
   input, select, textarea, label {
-    margin-left:  0.692em;
+    margin-left:  0.625em;
   }
   .hentry .userimage {
      left: auto;
@@ -1799,14 +1487,14 @@ a, a:hover, a:visited {
     left: 0;
   }
   .hentry .userimage img {
-    height: 4.154em; /*3u*/
+    height: 3.75em; /*3u*/
   }
   .hentry .entry-content {
     width: auto;
   }
   
   input.textType, input.fileType, select {
-    width: 22.154em; /*16u*/
+    width: 20em; /*16u*/
   }
   textarea {
     width: 90%; /* Hack */
@@ -1826,13 +1514,13 @@ a, a:hover, a:visited {
   .image .metadata {
     position: static;
     width: auto;
-    margin: 0 0.692em 1.385em 0.692em;
+    margin: 0 0.625em 1.250em 0.625em;
   }
   .image img {
     width: 100%;
   }
   .image .metadata .photo {
-    padding-left: 0.692em;
+    padding-left: 0.625em;
   }
   
   /* Site Homepage */
