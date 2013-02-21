@@ -13,6 +13,11 @@
 /******************************/
 /* http://alistapart.com/article/fluidgrids */
 
+.small {
+    font-size: 14px;
+    line-height: 1.429; /* 20px */
+}
+
 .muted pre, pre.muted {
     color: #999999;
 }
