@@ -352,6 +352,10 @@ body {
   font: bold 250%/1 arial,helvetica,clean,sans-serif; /* 2u */
 }
 
+#bodyblock {
+    padding: 1.25em 0 0 0;
+}
+
 /* TODO: Move to wherever the utility-links viewlet will live */
 /* <https://redmine.iopen.net/issues/3432> */
 #utilitylinks {
@@ -388,7 +392,7 @@ body {
     display: inline-block;
 }
 #breadcrumbs ul {
-    margin: 0.625em 0 0 0; 
+    margin: 0; 
 }
 #breadcrumbs li {
     list-style: none;
