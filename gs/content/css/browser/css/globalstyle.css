@@ -343,7 +343,7 @@ body {
   text-decoration: none;
   border: none;
   display: block;
-  padding-top: 1.875em;
+  padding-top: 1.25em; /* 1u */
 }
 #titlebar .logo {
   display: none;
@@ -353,9 +353,10 @@ body {
 }
 
 /* TODO: Move to wherever the utility-links viewlet will live */
+/* <https://redmine.iopen.net/issues/3432> */
 #utilitylinks {
     margin: 0;
-    padding: 2.5em 0 0 0; /* 2u */
+    padding: 1.875em 0 0 0; /* 1.5u */
     position: absolute;
     top: 0;
     right: 0;
@@ -952,7 +953,7 @@ p.label + ul {
 #gs-group-messages-topic-cannotadd, #add-to-topic {
     width: 41.25em; /*33u*/
     position: relative;
-    left: 20.625; /* 16.5u */
+    left: 17.5em; /* 14u */
     top: -1.875em; /* 1.5u */
 }
 #add-to-topic h2 {
@@ -1190,7 +1191,7 @@ p.label + ul {
 .gs-group-messages-image .preview {
     display: block;
     position: relative;
-    left: 20.625; /* 16.5u */
+    left: 17.5em; /* 14u */
     width: 41.25em; /* 33u */
 }
 .gs-group-messages-image .preview img {
