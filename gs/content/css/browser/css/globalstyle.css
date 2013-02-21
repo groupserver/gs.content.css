@@ -335,7 +335,7 @@ body {
 /* Center the three main elements */
 #titlebar, #bodyblock {
     margin: 0 auto 0 auto;
-    width: 65.000em; /* 52u CHECK */
+    width: 58.75em; /* 47u = 940px */
     text-align: left;
 }
 
@@ -748,7 +748,7 @@ p.label + ul {
 /*           FFFFF             */
 /*           FFFFF             */
 
-/* P: photo (3u by 4u); M: metadata (12.5); A: Actions; E: email (35.5u); */
+/* P: photo (3u by 4u); M: metadata (12.5); A: Actions; E: email (33u); */
 /* R: remainder; F: files. 0.5u gap seperates the three vertical columns. */
 
 .hentry {
@@ -790,8 +790,8 @@ p.label + ul {
 
 .hentry .email-message, .hidden-post {
     position: relative;
-    left: 20.625em; /* 16.5u */
-    width: 44.375em; /* 35.5u */
+    left: 17.5em; /* 14u */
+    width: 41.25em; /* 33u */
     padding: 1.250em 0 0 0; 
 }
 .hentry pre {
@@ -800,7 +800,7 @@ p.label + ul {
 }
 .hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification, 
 .hidden-post {
-    width: 44.375em; /* 35.5u */
+    width: 41.25em; /* 33u */
 }
 .hentry .entry-content, .hidden-post > p {
     margin: 0;
@@ -950,7 +950,7 @@ p.label + ul {
 
 /* The Add to Topic form at the bottom of the page */
 #gs-group-messages-topic-cannotadd, #add-to-topic {
-    width: 44.375em; /*35.5u*/
+    width: 41.25em; /*33u*/
     position: relative;
     left: 20.625; /* 16.5u */
     top: -1.875em; /* 1.5u */
@@ -1191,7 +1191,7 @@ p.label + ul {
     display: block;
     position: relative;
     left: 20.625; /* 16.5u */
-    width: 44.375em; /* 35.5u */
+    width: 41.25em; /* 33u */
 }
 .gs-group-messages-image .preview img {
     border: 0.063em solid #eeeeee;
