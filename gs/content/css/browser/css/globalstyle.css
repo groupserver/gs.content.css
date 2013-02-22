@@ -8,6 +8,10 @@
 @import url('/++resource++bootstrap-2.2.2/css/bootstrap.css');
 
 
+#footerLinks, #footerLinks+*, hr {
+    display: none;
+}
+
 /******************************/
 /* GroupServer Typeface Setup */
 /******************************/
@@ -15,8 +19,21 @@
 
 h1 {
     font-size: 187.5%;
-    line-height: 1;
     margin: 0;
+}
+h2 {
+    font-size: 125%;
+    margin: 0 0 1em 0; /* 1u */
+}
+h3, h4 {
+    font-size: 100%;
+}
+h3 {
+    padding: 0 0 0.438em 0; /* 0.5u - medium */
+    border-bottom: 0.188em solid #666666;
+}
+h1, h2, h3, h4 {
+    line-height: 1;
 }
 h1 cite, h2 cite, h3 cite, h4 cite {
     font-size: inherit;
@@ -52,6 +69,15 @@ abbr, abbr[title], abbr[data-original-title]{
     width: 33.75em; /* 27u */
     height: 12.5em; /* 10u */
     padding: 0.562em; /* 0.5u - 1px (for now) */
+}
+
+.btn {
+    background-image: none; /* A flat button*/
+    background-color: #ebebeb;
+    border-color: #dddddd;
+}
+.btn:hover {
+    background-color: #dddddd;
 }
 
 /* Fix for popups in a toolbar */
@@ -97,6 +123,9 @@ code {
 
 p, ul, ol, dl, fieldset, table, pre {
     margin: 1.250em 0; /* 1u */
+}
+p.small, ul.small, ol.small, dl.small, fieldset.small, table.small, pre.small {
+    margin: 1.429em 0; /* 1u @ 14px */
 }
 
 h2 + :not(div), h3 + :not(div), h4 + :not(div), h5 + :not(div), h6 + :not(div), h2 + div :not(div), h3 + div :not(div), h4 + div :not(div), h5 + div :not(div), h6 + div :not(div) {
@@ -166,7 +195,7 @@ tbody th {
 
 /* Tabs Override */
 .nav-tabs {
-    margin: 0 0 1.250em 0;
+    margin: 0 0 1.250em 0; /* 1u */
     border-bottom: 0.188em solid #666666;
 }
 .nav-tabs > li {
@@ -174,9 +203,13 @@ tbody th {
 }
 .nav-tabs > li > a {
     color: #ababab;
-    padding: 0 0 0.438em 0;
+    padding: 0 0 1.062em 0;
     line-height: 1.250;
     border: none;
+}
+.nav-tabs > li > a * {
+    margin: 0;
+    padding: 0;
 }
 .nav-tabs > li > a:hover {
     color: #333333;
@@ -190,7 +223,12 @@ tbody th {
   border-right: none;
   border-bottom: 0.438em solid #333333;
   border-left: none;
-  padding-bottom: 0.188em; /* 3px border*/
+  padding-bottom: 0.875em; /* 3px border*/
+}
+
+pre {
+    font-size: 16px;
+    background: none;
 }
 
 /*********/
@@ -487,16 +525,16 @@ div.noFloat {
 }
 .gs-content-layout-cols .main {
     position: relative;
-    width: 41.25em; /*33u*/
+    width: 37.5em; /*30u*/
     border-right: 0.063em solid #cccccc;
-    padding: 0 3.125em 0 0; /*2.5u (NOT - border) */
+    padding: 0 2.5em 0 0; /*2.5u (NOT - border) */
 }
 .gs-content-layout-cols .secondary {
     position: absolute;
     top: 0;
     right: 0;
-    width: 19.375em; /*15.5u*/
-    padding: 0 0 0 1.108em; /* 0 0 0 1u - thin border */
+    width: 17.5em; /*14u*/
+    padding: 0 0 0 1.188em; /* 0 0 0 1u - thin */
     border-left: 0.063em solid #cccccc;
 }
 .gs-content-layout-cols > * > :first-child,
@@ -544,8 +582,8 @@ p.label + ul {
 /* */
 .userimage {
     float: left;
-    width: 3.750em;  /* 3u */
-    height: 5em; /* 4u */
+    width: 3.125em;  /* 3u */
+    height: 3.125em;  /* 3u */
     padding: 0 0.625em 0.625em 0; /* 0 0.5u 0.5u 0 */
     background: #666666;
     overflow: hidden;
@@ -590,17 +628,16 @@ p.label + ul {
 /* Group page */
 /**************/
 /* TODO: move to gs.group.home */
-#gs-group-home h1 {
-    margin-bottom: 0;
-}
-#gs-group-home-stats p {
-    margin-top: 0;
-}
 
 /* About box on the Group page */
 /* TODO: Move to gs.group.about */
 #gs-group-about {
+    margin: 1.875em 0 0 0; /* 1.5u */
     position: relative;
+}
+#gs-group-about h2 {
+    border-bottom: 0.15em solid #666666;
+    padding: 0 0 0.35em 0;
 }
 #gs-group-about-change-link {
     position: absolute;
@@ -798,7 +835,7 @@ p.label + ul {
 }
 .email-metadata {
     left: 3.750em; /* 3.5u: 3u for the photo, and 0.5u gap */
-    width: 15.625em;  /* 12.5u */
+    width: 12.5em /* 10u */
     text-overflow: ellipsis;
 }
 .email-metadata > * {
@@ -810,9 +847,6 @@ p.label + ul {
 .email-metadata .topic {
   display: none;
 }
-.gs-group-messages-post-buttons {
-    margin: 1.250em 0 0 0;
-}
 
 .hentry .email-message, .hidden-post {
     position: relative;
@@ -823,6 +857,9 @@ p.label + ul {
 .hentry pre {
     font-family: inherit;
     text-overflow: ellipsis;
+    padding: 0;
+    border: none;
+    margin: 0;
 }
 .hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification, 
 .hidden-post {
@@ -831,8 +868,8 @@ p.label + ul {
 .hentry .entry-content, .hidden-post > p {
     margin: 0;
 }
-.email-remainder p {
-    margin: 1.250em 0 0 0;
+.email-remainder p.small {
+    margin: 1.429em 0 0 0;
 }
 .email-remainder pre {
     margin: 0;
@@ -865,8 +902,8 @@ p.label + ul {
     margin: 0 0 1.250em 1.250em;
 }
 .mediaFileList .hmedia img {
-    max-width: 13.687em; /* 196px: 11u - 1px for the border*/ 
-    max-height:1 13.687em; 
+    max-width: 11.812em; /* 9.5u - thin;*/
+    max-height: 11.812em; 
     border: 0.063em solid #eeeeee;
 }
 .mediaFileList .hmedia .info {
@@ -998,8 +1035,8 @@ p.label + ul {
 }
 #add-to-topic #form\.message {
     margin: 0;
+    width: 40em; /* 33u - 1u padding = 32u*/
     padding: 0.562em; /* .5u - thin */
-    width: 47.768em; /* 33.5u */
 }
 #gs-group-messages-topic-add-from {
     vertical-align: top;
@@ -1047,6 +1084,7 @@ p.label + ul {
 .MultiFile-remove abbr {
     text-decoration: none;
     border: none;
+    cursor: pointer;
 }
 
 /*********/
@@ -1200,7 +1238,7 @@ p.label + ul {
 .gs-group-messages-image .metadata ul {
     position: absolute;
     left: 4.375em; /* 3u for the photo, and 0.5u gap */
-    width: 15.625em;  /* 12.5u */
+    width: 12.5em /* 10u */
     top: 1.062em; /* 1u - medium */
     margin: 0;
     list-style: none;
