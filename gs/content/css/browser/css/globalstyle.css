@@ -924,7 +924,7 @@ p.label + ul {
 
 #gs-group-messages-topic-tasks {
     float: right;
-    margin: 0.625em 0 0 0;
+    margin-bottom: 0;
 }
 
 .modal + .gs-group-messages-topic-navlinks {
