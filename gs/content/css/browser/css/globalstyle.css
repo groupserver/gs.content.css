@@ -13,6 +13,23 @@
 /******************************/
 /* http://alistapart.com/article/fluidgrids */
 
+h1 {
+    font-size: 187.5%;
+    line-height: 1;
+    margin: 0;
+}
+h1 cite, h2 cite, h3 cite, h4 cite {
+    font-size: inherit;
+    line-height: inherit;
+}
+h1 code, h2 code, h3 code, h3 code, h4 code {
+    /* If I use a code in a heading I want it to look like the heading .*/
+    font-size: inherit;
+    color: inherit;
+    border: inherit;
+    background: inherit;
+}
+
 .small {
     font-size: 14px;
     line-height: 1.429; /* 20px */
@@ -24,13 +41,6 @@
 abbr, abbr[title], abbr[data-original-title]{
     text-decoration: none;
     border: none;
-}
-h1 code, h2 code, h3 code, h3 code, h4 code {
-    /* If I use a code in a heading I want it to look like the heading .*/
-    font-size: inherit;
-    color: inherit;
-    border: inherit;
-    background: inherit;
 }
 
 .modal {
@@ -393,6 +403,12 @@ body {
 }
 
 /* Breadcrumbs (Where should this live?) */
+#breadcrumbs {
+    margin: 0 0 1.25em 0;
+}
+#breadcrumbs.small {
+    margin: 0 0 1.429em 0;
+}
 #breadcrumbs * {
     display: inline-block;
 }
