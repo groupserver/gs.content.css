@@ -203,7 +203,7 @@ tbody th {
 }
 .nav-tabs > li > a {
     color: #ababab;
-    padding: 0 0 1.062em 0;
+    padding: 0 0 0.438em 0;
     line-height: 1.250;
     border: none;
 }
@@ -217,13 +217,14 @@ tbody th {
     background: none;
 }
 .nav-tabs > .active > a,
-.nav-tabs > .active > a:hover {
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
   color: #333333;
   border-top: none;
   border-right: none;
   border-bottom: 0.438em solid #333333;
   border-left: none;
-  padding-bottom: 0.875em; /* 3px border*/
+  padding-bottom: 0.250em; /* 3px border*/
 }
 
 pre {
@@ -681,7 +682,7 @@ p.label + ul {
 
 /* The search entry box */
 .gs-search-entry input {
-  width:  25em; /* 20u */
+  width:  22.5em; /* 18u */
   margin-left: 0;
   display: inline-block;
 }
