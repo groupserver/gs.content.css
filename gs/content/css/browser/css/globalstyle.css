@@ -17,6 +17,35 @@
 /******************************/
 /* http://alistapart.com/article/fluidgrids */
 
+.small {
+    font-size: 14px;
+    line-height: 1.429; /* 20px */
+}
+
+.muted pre, pre.muted {
+    color: #999999;
+}
+
+a, a:hover, a:focus, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1;
+}
+    /* If I use a code in a heading I want it to look like the heading .*/
+h1 cite, h2 cite, h3 cite, h4 cite {
+    font-size: inherit;
+    line-height: inherit;
+}
+h1 code, h2 code, h3 code, h3 code, h4 code {
+    font-size: inherit;
+    color: inherit;
+    border: inherit;
+    background: inherit;
+}
+
 h1 {
     font-size: 187.5%;
     margin: 0;
@@ -32,29 +61,13 @@ h3 {
     padding: 0 0 0.438em 0; /* 0.5u - medium */
     border-bottom: 0.188em solid #666666;
 }
-h1, h2, h3, h4 {
-    line-height: 1;
-}
-h1 cite, h2 cite, h3 cite, h4 cite {
-    font-size: inherit;
-    line-height: inherit;
-}
-h1 code, h2 code, h3 code, h3 code, h4 code {
-    /* If I use a code in a heading I want it to look like the heading .*/
-    font-size: inherit;
-    color: inherit;
-    border: inherit;
-    background: inherit;
+/* Only h3 and h4 headings make sense at small sizes*/
+h3.small, .small h3 {
+    padding: 0 0 0.5em 0; /* 0.5u - medium */
+    border-bottom: 0.214em solid #666666;
 }
 
-.small {
-    font-size: 14px;
-    line-height: 1.429; /* 20px */
-}
 
-.muted pre, pre.muted {
-    color: #999999;
-}
 abbr, abbr[title], abbr[data-original-title]{
     text-decoration: none;
     border: none;
@@ -90,10 +103,13 @@ select {
     padding: 0;
 }
 
-code {
+code, pre {
     border: none;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
+    color: inherit;
+    background: none;
+    font-weight: 500; /* --mpj17=-- Or maybe 600. I am unsure*/
+    font-size: inherit;
 }
 
 .well {
@@ -430,7 +446,7 @@ body {
     padding: 0;
     margin-right: 0.625em;
     max-height: 1.250em;
-    overflow: none;
+    overflow: hidden;
 }
 #utilitylinks-profile {
     font-weight: bold;
@@ -538,6 +554,12 @@ div.noFloat {
     padding: 0 0 0 1.188em; /* 0 0 0 1u - thin */
     border-left: 0.063em solid #cccccc;
 }
+.gs-content-layout-cols .secondary.small {
+    width: 20em; /*14u*/
+    padding: 0 0 0 1.357em; /* 0 0 0 1u - thin */
+    border-left: 0.071em solid #cccccc;
+}
+
 .gs-content-layout-cols > * > :first-child,
 .gs-content-layout-cols > * > :first-child > :first-child {
     margin-top: 0;
@@ -554,11 +576,23 @@ div.noFloat {
 .inline-list li {
     margin-right: 0.625em; /* 0.5u */
 }
+.small .inline-list li,
+.inline-list.small li,
+.inline-list li.small {
+    margin-right: 0.714em; /* 0.5u */
+}
+
 .dotted-inline-list li:before {
     content: "\2022";
     color: #999999;
-    padding: 0 0.625em;1
+    padding: 0 0.625em; /* 0.5u */
 }
+.small .dotted-inline-list li:before, 
+.dotted-inline-list.small li:before, 
+.dotted-inline-list li.small:before {
+   padding: 0 0.714em; /* 0.5u */
+}
+
 .dotted-inline-list li:first-child:before {
     content: none;
 }
@@ -695,7 +729,11 @@ p.label + ul {
 
 /* The results */
 .searchResults {
-  margin: 1.250em 0 0 0;
+    margin: 1.250em 0 0 0; /* 1u */
+}
+.small .searchResults,
+.searchResults.small {
+    margin: 1.429em 0 0 0; /* 1u */
 }
 .searchResults .tags li {
     margin: 0;
@@ -710,10 +748,16 @@ p.label + ul {
 .gs-search-results .gs-search-result {
     border-bottom: 0.063em solid #dddddd;
     padding-bottom: 1.188em; /* 1u - border */
-    margin-bottom: 1.250em;
+    margin-bottom: 1.250em; /* 1u */
     list-style: none;
     min-height: auto;
 }
+.small .gs-search-result, .gs-search-result.small {
+    border-bottom: 0.071em solid #dddddd;
+    padding-bottom: 1.357em; /* 1u - border */
+    margin-bottom: 1.429em; /* 1u */
+}
+
 .gs-search-keyword {
   text-decoration: none;
 }
@@ -753,6 +797,12 @@ p.label + ul {
     border-right: 0.9em solid transparent;
         
     border-top: 0.6em solid #dddddd;
+}
+.gs-search-result .tags {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 #gs-group-messages-topics-search-form {
@@ -837,6 +887,8 @@ p.label + ul {
 .email-metadata {
     left: 3.750em; /* 3.5u: 3u for the photo, and 0.5u gap */
     width: 12.5em /* 10u */
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 .email-metadata > * {
@@ -857,6 +909,9 @@ p.label + ul {
 }
 .hentry pre {
     font-family: inherit;
+    font-weight: normal;
+    width: 100%;
+    overflow: hidden;
     text-overflow: ellipsis;
     padding: 0;
     border: none;
@@ -1177,21 +1232,30 @@ p.label + ul {
 
 /* TODO: move to gs.group.messages.files */
 #gs-group-messages-files {
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
     position: relative;
 }
 #gs-group-messages-files-nav {
     position: absolute;
-    top: -4px;
+    top: 0.625em;
     right: 0;
     margin: 0;
     padding: 0;
-    height: 13px; /* FIX ME*/
+}
+#gs-group-messages-files-nav {
+    top: 0.438em; /* 0.5u - medium */
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+.small #gs-group-messages-files-nav {
+    top: 0.5em; /* 0.5u  - medium */ 
 }
 #gs-group-messages-files-nav * {
-    line-height: 13px; /* FIX ME*/
-    height: 13px;
-    overflow: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #gs-group-messages-files .gs-search-result {
     position: relative;
@@ -1201,7 +1265,7 @@ p.label + ul {
 #gs-group-messages-files .gs-search-result img {
     max-height: 2.5em; /* 2u */
     max-width: 2.5em;
-    overflow: none;
+    overflow: hidden;
     position: absolute;
     left: 0;
     top: 0;
