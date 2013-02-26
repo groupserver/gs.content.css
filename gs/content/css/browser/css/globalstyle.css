@@ -875,6 +875,16 @@ p.label + ul {
     margin: 0;
     min-height: 6.250em; /* 5u */
 }
+.hentry pre a, 
+.hentry pre a:visited, 
+.hentry pre a:hover, 
+.hentry pre a:focus {
+    color: black;
+    text-decoration: underline;
+    -moz-text-decoration-color: #cccccc;
+    text-decoration-color: #cccccc;
+}
+
 #gs-group-messages-topic-page-content .hentry:last-child {
     border-bottom: 0.188em solid #666666;
     padding: 0 0 1.062em 0;
@@ -977,15 +987,16 @@ p.label + ul {
     position: absolute;
     right: 0;
 }
-#gs-group-messages-post .hentry  {
-    margin-bottom: 0.625em;
-}
 .hentry + .gs-group-messages-post-navigation {
     position: static;
 }
 #gs-group-messages-post .hentry {
-  border-top: 0.188em solid #666666;
-  border-bottom: 0.063em solid #333333;  
+    margin: 1.25em 0; /* 1u */
+    border-top: 0.188em solid #666666;
+    border-bottom: 0.188em solid #666666;
+}
+#gs-group-messages-post .email-metadata {
+    top: ; /* 1u - medium */
 }
 
 /* Messages: The Hide a Post UI */
@@ -1293,31 +1304,33 @@ p.label + ul {
 }
 .gs-group-messages-image .scaled-image {
     position: relative;
+    margin: 1.062em 0 1.25em 0; /* 1u - medium, 1u */
     border-top: 0.188em solid #666666;
     border-bottom: 0.188em solid #666666;
-    padding: 1.062em 0; /* 1u - medium */
-    margin: 0 0 1.250em 0;
+    padding: 1.25em 0 1.062em 0; /* 1u, 1u - medium */
 }
 .gs-group-messages-image .metadata > * {
     position: absolute;
-    top: 1.062em;
+    top: 1.25em;/* 1u*/
     left: 0;
 }
 .gs-group-messages-image .metadata .userimage {
     padding: 0;
 }
-.gs-group-messages-image .metadata ul {
+.gs-group-messages-image .metadata ul,
+.gs-group-messages-image .metadata .gs-group-messages-image-buttons {
     position: absolute;
-    left: 4.375em; /* 3u for the photo, and 0.5u gap */
-    width: 12.5em /* 10u */
-    top: 1.062em; /* 1u - medium */
+    left: 3.75em; /* 2.5u for the photo, and 0.5u gap */
+    width: 12.5em; /* 10u */
     margin: 0;
+}
+.gs-group-messages-image .metadata ul {
+    top: 1.25em; /* 1u - medium */
     list-style: none;
 }
 .gs-group-messages-image .metadata .gs-group-messages-image-buttons {
-    position: absolute;
-    left: 4.375em; /* 3.5u: 3u for the photo, and 0.5u gap */
-    top: 4.188em; /* 3.5u - medium */
+    top: 4.375em; /* 3.5u */
+    font-size: 16px;
 }
 #gs-group-messages-image-share {
   margin: 1.250em 0 0 0;
