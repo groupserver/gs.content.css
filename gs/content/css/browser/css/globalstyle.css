@@ -54,7 +54,7 @@ h1 {
 }
 h2 {
     font-size: 125%;
-    margin: 0 0 1em 0; /* 1u */
+    margin: 1em 0 1em 0; /* 1u */
 }
 h3, h4 {
     font-size: 100%;
@@ -115,8 +115,12 @@ code, pre {
 }
 
 .well {
-    padding: 0.562em;
+    padding: 0.562em; /* 0.5u - thin */
     border-width: 0.063em;
+}
+.small .well, .well.small {
+    padding: 0.562em; /* 0.5u@14px - thin */
+    border-width: 0.071em;
 }
 
 .well > :first-child, .well > :first-child > :first-child {
@@ -661,6 +665,27 @@ p.label + ul {
 /************************/
 /* Page-specific styles */
 /************************/
+
+/* Site Homepage */
+#gs-groups-list h2, #gs-groups-list h4 {
+    margin: 0;
+}
+.gs-group-list {
+    margin: 1.062em 0 1.875em 0; /* 1u - medium, 0, 1.5u, 0 */
+    border-top: 0.188em solid #666666;
+    padding: 0;
+}
+.gs-group-list .vcard {
+    position: relative;
+    margin: 0.625em 0 0 0; /* 0.5u */
+    padding: 0 0 0.562em 0; /* 0.5u - thin */
+    border-bottom: 0.063em solid #cccccc;
+}
+.gs-group-list-membership {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
 /* Group page */
 /**************/
