@@ -149,6 +149,9 @@ p, ul, ol, dl, fieldset, table, pre {
 p.small, ul.small, ol.small, dl.small, fieldset.small, table.small, pre.small {
     margin: 1.429em 0; /* 1u @ 14px */
 }
+ul ul.small, ul ol.small, ol.small, ol.small {
+    margin-top: 0;
+}
 
 h2 + :not(div), h3 + :not(div), h4 + :not(div), h5 + :not(div), h6 + :not(div), h2 + div :not(div), h3 + div :not(div), h4 + div :not(div), h5 + div :not(div), h6 + div :not(div) {
     margin-top: 0;
@@ -443,9 +446,6 @@ body {
     z-index: 10;
     line-height: 1.875em;
 }
-#utilitylinks li {
-    display: inline-block;
-}
 #utilitylinks .userimage {
     width: auto;
     height: auto;
@@ -456,11 +456,6 @@ body {
 }
 #utilitylinks-profile {
     font-weight: bold;
-}
-#utilitylinks-log-out:before {
-    content: "\2022";
-    color: #999999;
-    padding: 0 0.625em;
 }
 
 /* Breadcrumbs (Where should this live?) */
@@ -591,7 +586,7 @@ div.noFloat {
 .dotted-inline-list li:before {
     content: "\2022";
     color: #999999;
-    padding: 0 0.625em; /* 0.5u */
+    padding: 0 0.0.188em; /* medium */
 }
 .small .dotted-inline-list li:before, 
 .dotted-inline-list.small li:before, 
@@ -853,22 +848,24 @@ p.label + ul {
     top: -0.2em; /* 2px */
 }
 
-#gs-group-home .main .gs-search .gs-search-toolbar {
+.gs-search-toolbar.btn-toolbar {
     position: relative;
     text-align: center;
     font-size: 16px;
 }
-#gs-group-home .main .gs-search-toolbar-previous {
+.gs-search-toolbar.btn-toolbar .btn {
     position: absolute;
+    top: 0;
+}
+.gs-search-toolbar.btn-toolbar .gs-search-toolbar-previous {
     left: 0;
 }
-#gs-group-home .main .gs-search-toolbar ul {
+.gs-search-toolbar.btn-toolbar .gs-search-toolbar ul {
     display: inline-block;
     margin: 0 auto 0 auto;
     line-height: 2.077; /* 1.5u, the same height as the buttons */
 }
-#gs-group-home .main .gs-search-toolbar-next {
-    position: absolute;
+.gs-search-toolbar.btn-toolbar .gs-search-toolbar-next {
     right: 0;
 }
 
