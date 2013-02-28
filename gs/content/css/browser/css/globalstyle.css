@@ -275,6 +275,37 @@ textarea[readonly] {
     background: #dddddd;
 }
 
+#gs-content-form-message a {
+    text-decoration: underline;
+}
+
+/* TODO: move to gs.content.js.more */
+.gs-content-js-more-content {
+    overflow: hidden;
+}
+.gs-content-js-more-content-small {
+    height: 5em; /* 4u */
+}
+.gs-content-js-more-content-large {
+    height: auto;
+}
+.gs-content-js-more-buttons {
+    border-top: 0.063em solid #dddddd;
+    position: relative;
+    text-align: center;
+}
+.gs-content-js-more-buttons a {
+    display: inline-block;
+    background: white;
+    padding: 0 0.625em;
+    position: relative;
+    top: -0.786em; /* 0.5u - thin, visually selected. */
+    width: 2.5em;
+}
+.gs-content-js-more-buttons a:hover {
+    background: #dddddd;
+}
+
 /* TODO: move to gs.content.js.popuphelp */
 .popup-help {
   float: right;
@@ -304,10 +335,11 @@ textarea[readonly] {
 /* buttons are right aligned. However, standard GroupServer practice is */
 /* to only have one (1) button on the page. */
 .buttons {
+    position: relative; /* Create a new rendering context */
     clear: left;
     margin: 1.250em 0;
     text-align: right;
-    position: relative; /* Create a new rendering context */
+    width: 43.75em; /* 34em */
 }
 .buttons > * {
     display: inline-block;
@@ -697,11 +729,14 @@ p.label + ul {
     padding: 0 0 0.35em 0;
 }
 #gs-group-about-change-link {
+    display: block;
     position: absolute;
     top: 0;
     right: 0;
 }
-
+#gs-group-about-tab-intro-text :first-child{
+    margin-top: 0;
+}
 #gs-group-about-tab-intro-buttons {
     text-align: right;
 }
