@@ -184,8 +184,8 @@ ul, ol {
   margin-left: 1.875em; /*1.5u*/
 }
 ul ol li {
-  list-style:decimal outside;
-}
+  list-style:decimal outside;}
+
 
 ol ol li {
   list-style:lower-alpha outside;
@@ -286,6 +286,9 @@ textarea[readonly] {
 .gs-content-js-more-content-small {
     height: 5em; /* 4u */
 }
+.small .gs-content-js-more-content-small {
+    height: 5.712em; /* 4u */    
+}
 .gs-content-js-more-content-large {
     height: auto;
 }
@@ -294,6 +297,9 @@ textarea[readonly] {
     position: relative;
     text-align: center;
 }
+.small .gs-content-js-more-buttons {
+    border-top: 0.071em solid #dddddd;
+}
 .gs-content-js-more-buttons a {
     display: inline-block;
     background: white;
@@ -301,6 +307,10 @@ textarea[readonly] {
     position: relative;
     top: -0.786em; /* 0.5u - thin, visually selected. */
     width: 2.5em;
+}
+.small .gs-content-js-more-buttons a {
+    padding: 0 0.714em;
+    width: 2.8157em;
 }
 .gs-content-js-more-buttons a:hover {
     background: #dddddd;
@@ -735,7 +745,7 @@ p.label + ul {
     right: 0;
 }
 #gs-group-about-tab-intro-text :first-child{
-    margin-top: 0;
+    margin-top: ;0
 }
 #gs-group-about-tab-intro-buttons {
     text-align: right;
@@ -765,6 +775,18 @@ p.label + ul {
     border-top: 1px solid  #dddddd;
     margin: 0.625em 0 1.250em 0;
     padding: 0.562em 0 0 0; /* 0.5u - 1px */
+}
+
+/* About box on the site homepage */
+/* TODO: move to gs.site.about */
+/* If anyone puts something in front of the About box there will be */
+/*   hell to pay*/
+#gs-site-about-home-change-link {
+    display: block;
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 /* Search */
