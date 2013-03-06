@@ -7,11 +7,6 @@
 /* For now just import the Bootstrap CSS */
 @import url('/++resource++bootstrap-2.3.0/css/bootstrap.min.css');
 
-
-#footerLinks, #footerLinks+*, hr {
-    display: none;
-}
-
 /******************************/
 /* GroupServer Typeface Setup */
 /******************************/
@@ -472,7 +467,7 @@ body {
     position: relative; /* Create a new positioning context */
 }
 /* Center the three main elements */
-#titlebar, #bodyblock {
+#titlebar, #bodyblock, #gs-content-layout-footer-content {
     margin: 0 auto 0 auto;
     width: 58.75em; /* 47u = 940px */
     text-align: left;
@@ -492,7 +487,30 @@ body {
 }
 
 #bodyblock {
-    padding: 1.25em 0 0 0;
+    padding: 1.25em 0 0 0; /* 1u 0 1u 0 */
+}
+
+#gs-content-layout-footer {
+    background: #eeeeee;
+    height: 5.250em; /*4.5u - thick*/
+    border-top: 0.375em solid #cccccc;
+    position: relative;
+    clear: both;
+    margin: 1.25em 0 0 0;
+}
+/* The Footer */
+#gs-content-layout-footer-content {
+    position: relative;
+}
+#gs-content-layout-footer-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#gs-content-layout-footer-ad {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* TODO: Move to wherever the utility-links viewlet will live */
@@ -600,30 +618,37 @@ div.noFloat {
 .gs-content-layout-cols {
     position: relative; /* Create a new positioning context */
     margin-top: 1.250em;
+    width: width: 58.813em; /* 47u + thin, for complex float reasons*/
 }
 .gs-content-layout-cols .main {
     position: relative;
+    float: left;
     width: 37.5em; /*30u*/
     border-right: 0.063em solid #cccccc;
     padding: 0 2.5em 0 0; /*2.5u (NOT - border) */
 }
 .gs-content-layout-cols .secondary {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 17.5em; /*14u*/
-    padding: 0 0 0 1.188em; /* 0 0 0 1u - thin */
+    position: relative;
+    float: right;
+    width: 17.5em; /*14u (not - thin) */
+    padding: 0 0 0 1.125em; /* 0 0 0 1u - 2 * thin */
     border-left: 0.063em solid #cccccc;
+    left: -0.063em; /* - thin */
 }
 .gs-content-layout-cols .secondary.small {
-    width: 20em; /*14u*/
-    padding: 0 0 0 1.357em; /* 0 0 0 1u - thin */
+    width: 20em; /*14u @ 14px */
+    padding: 0 0 0 1.286em; /* 0 0 0 1u (- 2 * thin) */
     border-left: 0.071em solid #cccccc;
+    left: -0.071em;
 }
 
 .gs-content-layout-cols > * > :first-child,
 .gs-content-layout-cols > * > :first-child > :first-child {
     margin-top: 0;
+}
+
+.gs-content-layout-cols + * {
+    clear: both;
 }
 
 /* Text Markup: Inline Lists. Usually used for navigating between pages */
@@ -717,6 +742,7 @@ p.label + ul {
   font-family: serif;
 }
 
+
 /************************/
 /* Page-specific styles */
 /************************/
@@ -763,7 +789,7 @@ p.label + ul {
     right: 0;
 }
 #gs-group-about-tab-intro-text :first-child{
-    margin-top: ;0
+    margin-top: 0;
 }
 #gs-group-about-tab-intro-buttons {
     text-align: right;
@@ -1208,6 +1234,9 @@ p.label + ul {
     left: 17.5em; /* 14u */
     top: -1.875em; /* 1.5u */
 }
+#add-to-topic {
+    margin: 0;
+}
 #add-to-topic h2 {
     margin-top: 0;
 }
@@ -1227,6 +1256,10 @@ p.label + ul {
     margin: 0;
     width: 40em; /* 33u - 1u padding = 32u*/
     padding: 0.562em; /* .5u - thin */
+}
+#add-to-topic .buttons {
+    margin-bottom: 0;
+    width: 41.25em;
 }
 #gs-group-messages-topic-add-from {
     vertical-align: top;
