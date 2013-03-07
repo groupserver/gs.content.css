@@ -28,6 +28,8 @@ a, a:hover, a:focus, a:visited {
 
 h1, h2, h3, h4 {
     line-height: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
     /* If I use a code in a heading I want it to look like the heading .*/
 h1 cite, h2 cite, h3 cite, h4 cite {
@@ -295,6 +297,7 @@ textarea[readonly] {
 /* TODO: move to gs.content.js.more */
 .gs-content-js-more-content {
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 .gs-content-js-more-content-small {
     height: 5em; /* 4u */
@@ -478,6 +481,8 @@ body {
   border: none;
   display: block;
   padding-top: 1.25em; /* 1u */
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 #titlebar .logo {
   display: none;
@@ -490,6 +495,7 @@ body {
     padding: 1.25em 0 0 0; /* 1u 0 1u 0 */
 }
 
+/* The Footer */
 #gs-content-layout-footer {
     background: #eeeeee;
     height: 5.250em; /*4.5u - thick*/
@@ -498,7 +504,6 @@ body {
     clear: both;
     margin: 1.25em 0 0 0;
 }
-/* The Footer */
 #gs-content-layout-footer-content {
     position: relative;
 }
@@ -1138,9 +1143,6 @@ p.label + ul {
     border-top: 0.188em solid #666666;
     border-bottom: 0.188em solid #666666;
 }
-#gs-group-messages-post .email-metadata {
-    top: ; /* 1u - medium */
-}
 
 /* Messages: The Hide a Post UI */
 /* TODO: move to gs.group.messages.post.hide */
@@ -1448,6 +1450,10 @@ p.label + ul {
 /* resizes the image before displaying it on the Image Page. Besides */
 /* the image the Image Page shows some Metadata associated with the */
 /* posted file. */
+.gs-group-messages-image  h1 {
+    max-width: 25.333em; /* 47.5u */
+    white-space: nowrap; /* Because of the code element */
+}
 .gs-group-messages-image-navlinks {
     position: absolute;
     right: 0;
@@ -1725,123 +1731,6 @@ p.label + ul {
     cursor: text;
 }
 
-
-/*  Small-screen browsing, for phones (iPhone). The main three pages
-  * that are handled by this CSS are the site homepage, group page,
-  * and the Topic page. */
-/* TODO: Break up. */
-@media screen and (max-width: 960px) {
-  /* The main job of the small-screen CSS is to hide stuff */
-  #mainnav, #externalbar, #searcharea, #contextnav, #gs-group-messages-topic-admin-stickytoggle, .share-bar, .hide-button, .popup-help *, #us-bar h2 {
-    display: none;
-  }
-  /* And make other stuff wider */
-  #toparea, #titlebar, #titlebanner, #bodyblock, #content, .hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification {
-    width: auto;
-    position: relative;
-    left: 0;
-  }
-  #titlebanner, #mainnav, #bodyblock {
-    margin-top: 0;
-  }
-  
-  /*  The top area is smaller, without search nor menus. It is in 
-   *  reverse-colours so it is seperated out from the rest of the 
-   *  page. */
-  #toparea, #titlebar a {
-    color: white;
-    background: #333333;
-  }
-  
-  /*  Make the navigation links wider, so they are easier for fingers 
-   *  to hit. The background does not work then, so replace the arrows
-   *  with Unicode characters. */
- .navlinks, .postList {
-    margin: 0;
-    padding: 0;
- }
- .navlinks li {
-    padding: 1.250em 0;
-    margin: 0;
-   }
-  .navlinks a, .navlinks span, .navlinks .next, .navlinks .last, .navlinks .first, .navlinks .prev {
-    padding: 1.250em 0.625em;
-    background: none;
-  }
-  .navlinks .prev:before {
-    content: "\0021D0\ ";
-  }
-  .navlinks .up:before {
-    content: "\0021D1 ";
-  }
-  .navlinks .next:after {
-    content: " \0021D2";
-  }
-  
-  /* Topic page */
-  .email-metadata {
-    margin-bottom: 1.250em;
-  }
-  input, select, textarea, label {
-    margin-left:  0.625em;
-  }
-  .hentry .userimage {
-     left: auto;
-     top: 0;
-     right: 0;
-     width: auto;
-     height: auto;
-     padding: 0;
-  }
-  .posted {
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  .hentry .userimage img {
-    height: 3.75em; /*3u*/
-  }
-  .hentry .entry-content {
-    width: auto;
-  }
-  
-  input.textType, input.fileType, select {
-    width: 20em; /*16u*/
-  }
-  textarea {
-    width: 90%; /* Hack */
-  }
-  .hentry .entry-content {
-    white-space: pre-wrap;
-  }
-
-  /*Image page*/ 
-  .image h1 {
-    width: auto;
-    overflow-x: hidden;
-  }
-  .image h1 code {
-    white-space: pre;
-  }
-  .image .metadata {
-    position: static;
-    width: auto;
-    margin: 0 0.625em 1.250em 0.625em;
-  }
-  .image img {
-    width: 100%;
-  }
-  .image .metadata .photo {
-    padding-left: 0.625em;
-  }
-  
-  /* Site Homepage */
-  #page- #latestTopics {
-    padding-left: 0.689em;
-  }
-}
-
 #signupmethods .odd, #signupmethods .even {
         border-top: 1px #999999 solid;
         background-color: #fefefe;
@@ -1849,6 +1738,8 @@ p.label + ul {
         padding-bottom: 1.378em;
 }
 
+/* Register */
+/* TODO: move to gs.profile.register */
 #signupmethods .even {
         margin-top: 1.378em;
 }
@@ -1862,3 +1753,162 @@ p.label + ul {
         padding-left: 1.387em;
 }
 
+
+/*  Small-screen browsing, for phones (iPhone). The main three pages
+  * that are handled by this CSS are the site homepage, group page,
+  * and the Topic page. */
+@media screen and (max-width: 940px) {
+    /* Tablet or Small desktop */
+
+    /* Take up the full width of the screen*/
+    #titlebar, #bodyblock, #gs-content-layout-footer-content {
+        width: 100%;
+    }
+    /* Dynamically size the columns*/
+    .gs-content-layout-cols .main,
+    .gs-content-layout-cols .secondary, 
+    .gs-content-layout-cols .secondary.small {
+        padding: 0;
+        border: none;
+    }
+    .gs-content-layout-cols .main {
+        width: 62%;
+    }
+    .gs-content-layout-cols .secondary, 
+    .gs-content-layout-cols .secondary.small {
+        width: 35%;
+    }
+
+    /* Place the email body in a single column with the email body */
+    .email-metadata, .hentry .email-message, .hidden-post {
+        position: static;
+    }
+    .email-metadata {
+        padding: 0.689em 0 0 3.750em;
+    }
+    /* Flick the "Post a reply" form into a single column, with the email. */
+    #gs-group-messages-topic-cannotadd, #add-to-topic {
+        width: 100%;
+        position: static;
+        margin-top: 1.25em;
+    }
+
+    /* Place the image below its metadata */
+    .gs-group-messages-image .metadata > *, 
+    .gs-group-messages-image .metadata ul,
+    .gs-group-messages-image .metadata .gs-group-messages-image-buttons {
+        position: static;
+    }
+    .gs-group-messages-image .metadata ul,
+    .gs-group-messages-image .metadata .gs-group-messages-image-buttons {
+        width: auto;
+        padding: 0 0 0  3.750em;
+    }
+    .gs-group-messages-image .preview {
+        position: static;
+        width: auto;
+        max-width: 100%;
+        padding: 1.25em 0 0 0;
+    }
+    
+}
+
+@media screen and (max-width: 790px) {
+    /* Mini tablet */
+    /* Dynamically the size of the top area and the footer */
+    #toparea, #gs-content-layout-footer {
+        height: auto;
+    }
+    /* Reduce the size of the site banner */
+    #titlebar .site {
+        font-size: 187.5%;
+    }
+    /* Flick everything that is on the right into a single column */
+    #utilitylinks,
+    #gs-content-layout-footer-links,
+    #gs-content-layout-footer-ad,
+    .gs-group-messages-post-navigation,
+    #gs-group-messages-topic-tasks,
+    .gs-group-messages-image-navlinks,
+    .gs-group-list-membership {
+        position: static;
+        padding: 0.625em 0 0.250em 0;
+    }
+    /* Remove the columns */
+    .gs-content-layout-cols, 
+    .gs-content-layout-cols .main, 
+    .gs-content-layout-cols .secondary, 
+    .gs-content-layout-cols .secondary.small,
+    #gs-group-messages-topic-tasks {
+        float: none;
+        width: 100%
+    }
+    /* But place a seperator between them */
+    .gs-content-layout-cols .main {
+        padding: 0 0 0.250em 0;
+        border-bottom: 0.375em solid #eeeeee;
+        margin: 0 0 1.25em 0;
+    }
+
+    /* Navigation buttons have a font-size of 0, so we have to use px. */
+    .gs-group-messages-post-navigation, .gs-group-messages-image-navlinks {
+        margin: 0 0 10px 0;
+    }
+    #gs-group-messages-topic-tasks {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    /* Start shrinking the size of the forms. */
+    .form-widget input.textType, .form-widget textarea, .form-widget select {
+        margin: 0 0 1.25em 0;
+    }
+    input[type=text], textarea, input.textType {
+        width: 95%;
+        max-width: 41.875em; /* 33.5u */
+    }
+    .radioItem > *, .checkboxGroup > *,  input.checkboxType, 
+    label.checkboxLabel {
+        display: inline;
+    }
+    .buttons {
+        width: 97%;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+    /* Allow the text in the email messages to wrap. */
+    .hentry .entry-content, .hentry .email-remainder, 
+    .hentry .fileNotification, 
+    .hidden-post,
+    .hentry .email-message, .hidden-post {
+        width: 100%;
+    }
+    .hentry pre {
+        white-space: pre-wrap;
+    }
+    .hentry .normalFileList .hmedia {
+        margin-bottom: 1.25em; /* Make standard? */
+    }
+    /* Get the Post a reply form to follow the size of the posts */
+    #add-to-topic #form\.message {
+        width: 95%;
+    }
+    #add-to-topic .buttons {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .gs-search-entry input {
+        width: auto;
+    }    
+}
+@media screen and (max-width: 410px) {
+    #gs-group-messages-topics-search-form-new-topic {
+        position: static;
+        margin: 0.625em 0 0.625em 0;
+    }
+}
