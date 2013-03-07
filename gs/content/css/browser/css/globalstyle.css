@@ -299,6 +299,10 @@ textarea[readonly] {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.gs-content-js-more-content :last-child {
+    margin-bottom: 0;
+}
+
 .gs-content-js-more-content-small {
     height: 5em; /* 4u */
 }
@@ -312,9 +316,11 @@ textarea[readonly] {
     border-top: 0.063em solid #dddddd;
     position: relative;
     text-align: center;
+    margin: 1.188em 0 1.25em 0;
 }
 .small .gs-content-js-more-buttons {
     border-top: 0.071em solid #dddddd;
+    margin: 1.357em 0 1.429em 0;
 }
 .gs-content-js-more-buttons a {
     display: inline-block;
@@ -322,14 +328,19 @@ textarea[readonly] {
     padding: 0 0.625em;
     position: relative;
     top: -0.786em; /* 0.5u - thin, visually selected. */
-    width: 2.5em;
 }
 .small .gs-content-js-more-buttons a {
     padding: 0 0.714em;
-    width: 2.8157em;
 }
 .gs-content-js-more-buttons a:hover {
-    background: #dddddd;
+    color: #333333;
+}
+
+.gs-content-js-more-buttons.hide {
+    display: block;
+    visibility: hidden;
+    border: none;
+    margin: 0;
 }
 
 /* TODO: move to gs.content.js.popuphelp */
