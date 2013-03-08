@@ -1253,7 +1253,7 @@ p.label + ul {
 #add-to-topic h2 {
     margin-top: 0;
 }
-#add-to-topic .userimage {
+.gs-group-messages-topic-add .userimage {
     display: inline-block;
     width: auto;
     height: auto;
@@ -1262,19 +1262,19 @@ p.label + ul {
     height: 1.250em;
     overflow: hidden;
 }
-#add-to-topic #widget-form\.message label {
+.gs-group-messages-topic-add #widget-form\.message label {
     display: none;
 }
-#add-to-topic #form\.message {
+.gs-group-messages-topic-add #form\.message {
     margin: 0;
     width: 40em; /* 33u - 1u padding = 32u*/
     padding: 0.562em; /* .5u - thin */
 }
-#add-to-topic .buttons {
+.gs-group-messages-topic-add .buttons {
     margin-bottom: 0;
     width: 41.25em;
 }
-#gs-group-messages-topic-add-from {
+#gs-group-messages-topic-add-from { /* NOTE: from, not form */
     vertical-align: top;
     margin: 0 0 0.625em 0; /* 16px, because of the height of the select */
 }
@@ -1293,18 +1293,17 @@ p.label + ul {
     cursor: pointer;
 }
 
-
 /* The Multi File plugin for jQuery at the bottom of the Add to Topic form */
 /* TODO: move to gs.content.js.multifile */
 .gs-group-messages-topic-add-file {
     position: relative;
     margin-top: 0.625em;
 }
-#gs-group-messages-topic-add-file-label {
+.gs-group-messages-topic-add-file label {
     position: absolute;
     margin: 0;
 }
-#gs-group-messages-topic-add-file-files {
+.gs-group-messages-topic-add-file-files {
     padding: 0 0 0 3.75em; /* 0 0 0 3u */
 }
 
@@ -1321,6 +1320,23 @@ p.label + ul {
     text-decoration: none;
     border: none;
     cursor: pointer;
+}
+
+/* Start a Topic, alias New topic */
+/* TODO: move to gs.group.messages.starttopic, 
+   or gs.group.messages.topic.start */
+#gs-group-messages-startopic-new {
+    margin: 1.25em 0 0 0;
+}
+#gs-group-messages-starttopic-new-topic {
+    margin: 0 0 0.625em 0;
+}
+#gs-group-messages-starttopic-new-topic label {
+    width: 3.125em; /* 2.5u */
+}
+#gs-group-messages-starttopic-new-topic input {
+    padding: inherit 0.562em; /* .5u - thin */
+    width: 36.875em; /* 29.5u */
 }
 
 /*********/
@@ -1904,10 +1920,10 @@ p.label + ul {
         margin-bottom: 1.25em; /* Make standard? */
     }
     /* Get the Post a reply form to follow the size of the posts */
-    #add-to-topic #form\.message {
+    .gs-group-messages-topic-add #form\.message {
         width: 95%;
     }
-    #add-to-topic .buttons {
+    .gs-group-messages-topic-add .buttons {
         width: 100%;
     }
 }
