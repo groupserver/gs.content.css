@@ -471,6 +471,7 @@ input[type=text], textarea, input.textType {
 
 body {
     text-align: center; /* HACK for IE < 9. Bless it. */ 
+    background: #eeeeee;
 }
 #toparea {
     background: #eeeeee;
@@ -479,7 +480,7 @@ body {
 }
 #gs-content-layout-body {
     position: relative;
-    background: red;
+    background: white;
     width: 100%;
     height: auto;
 }
@@ -495,18 +496,22 @@ body {
 }
 
 #titlebar-home-link {
-  text-decoration: none;
-  border: none;
-  display: block;
-  padding-top: 1.25em; /* 1u */
-  text-overflow: ellipsis;
-  overflow: hidden;
+    text-decoration: none;
+    border: none;
+    display: block;
+    padding-top: 1.25em; /* 1u */
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 #titlebar .logo {
-  display: none;
+    display: none;
 }
 #titlebar .site {
-  font: bold 250%/1 arial,helvetica,clean,sans-serif; /* 2u */
+    font: bold 250%/1 arial,helvetica,clean,sans-serif; /* 2u */
+}
+
+#gs-content-layout-body {
+    padding: 0 0 1.25em 0;
 }
 
 #bodyblock {
@@ -521,7 +526,7 @@ body {
     border-top: 0.375em solid #cccccc;
     position: relative;
     clear: both;
-    margin: 1.25em 0 0 0;
+    margin: 0;
 }
 #gs-content-layout-footer-content {
     position: relative;
