@@ -477,6 +477,13 @@ body {
     height: 5.250em; /*4.5u - thick*/
     border-bottom: 0.375em solid #cccccc;
 }
+#gs-content-layout-body {
+    position: relative;
+    background: red;
+    width: 100%;
+    height: auto;
+}
+
 #toparea, #titlebar, #bodyblock {
     position: relative; /* Create a new positioning context */
 }
@@ -503,6 +510,7 @@ body {
 }
 
 #bodyblock {
+    background: white;
     padding: 1.25em 0 0 0; /* 1u 0 1u 0 */
 }
 
@@ -623,10 +631,13 @@ p.label + ul {
 }
 
 .noFloat {
-  clear: both;
+    clear: both;
 }
-div.noFloat {
-  height: 0;
+div.noFloat { 
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Columns */
