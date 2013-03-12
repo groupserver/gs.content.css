@@ -1,3 +1,21 @@
+==================
+``gs.content.css``
+==================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Core CSS support for GroupServer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:Authors: `Michael JasonSmith`_,
+         Mike Harding,
+         Ben Ford,
+         Josh Campbell
+:Contact: Michael JasonSmith <mpj17@onlinegroups.net>
+:Date: 2013-03-12
+:Organization: `GroupServer.org`_
+:Copyright: This document is licensed under a
+  `Creative Commons Attribution-Share Alike 3.0 New Zealand License`_
+  by `OnlineGroups.Net`_.
+
 Introduction
 ============
 
@@ -89,9 +107,11 @@ of the following three values:
 Authors
 =======
 
-`Ben Ford <ben@metasoltuions.co.nz>`_ did the initial design work. The
-CSS coding and egg creation was by `Michael JasonSmith 
-<mpj17@onlinegroups.net>`_. 
+Josh Campbell did the initial design and implementation (GS 0.9). Ben Ford
+from Metasolutions_ did a major redesign (GS 1.0). Mike Harding from
+`Cactus Lab`_ re-imagined the design into what is implemented here (GS
+2.0). The CSS coding for the most recent two versions, and egg creation,
+was by `Michael JasonSmith`_.
 
 Resources
 =========
@@ -101,4 +121,10 @@ Resources
 - Report bugs at https://redmine.iopen.net/projects/groupserver
 
 .. _GroupServer: http://groupserver.org/
-.. _OnlineGroups.Net: http://onlinegroups.net/
+.. _GroupServer.org: http://groupserver.org/
+.. _OnlineGroups.Net: https://onlinegroups.net/
+.. _Michael JasonSmith: http://groupserver.org/p/mpj17/
+.. _Creative Commons Attribution-Share Alike 3.0 New Zealand License:
+   http://creativecommons.org/licenses/by-sa/3.0/nz/
+..  _Metasolutions: http://metasoltuions.co.nz/
+.. _Cactus Lab: http://cactuslab.com/
