@@ -1371,6 +1371,20 @@ p.label + ul {
     display: none;
 }
 
+/*********/
+/* Topics */
+/*********/
+/* An obscure page, a page presenting a table of topics. */
+/* TODO: move to gs.group.messages.topics */
+#gs-group-messages-topics-page .btn-toolbar {
+    position: absolute;
+    right: 0;
+    margin: 0;
+}
+#gs-group-messages-topics-page .nav {
+    margin: 0;
+}
+
 /***********/
 /* Profile */
 /***********/
