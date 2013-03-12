@@ -1561,7 +1561,7 @@ p.label + ul {
     margin: 0.562em 0 0 0; /* 0.5u - thin 0 0 0*/
 }
 .gs-group-messages-image .scaled-image + .gs-group-messages-image-navlinks {
-    left: 0;
+    position: static;
 }
 
 /* Invitations Pages */
