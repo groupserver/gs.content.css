@@ -561,6 +561,10 @@ body {
     max-height: 1.250em;
     overflow: hidden;
 }
+#utilitylinks .userimage img {
+    width: 1.250em;
+    height: 1.250em;
+}
 #utilitylinks-profile {
     font-weight: bold;
 }
@@ -1147,6 +1151,9 @@ p.label + ul {
 }
 .mediaFileList .hmedia + .hmedia {
     margin: 0 0 1.250em 1.250em;
+}
+.mediaFileList .hmedia a {
+    display: inline-block;
 }
 .mediaFileList .hmedia img {
     max-width: 11.812em; /* 9.5u - thin;*/
