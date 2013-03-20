@@ -289,9 +289,11 @@ select[readonly],
 textarea[readonly] {
     background: #dddddd;
 }
-
 #gs-content-form-message a {
     text-decoration: underline;
+}
+.gs-content-form-message-status :first-child {
+    margin-top: 0;
 }
 
 /* TODO: move to gs.content.js.more */
@@ -744,6 +746,7 @@ p.label + ul {
     padding: 0 0.625em 0.625em 0; /* 0 0.5u 0.5u 0 */
     background: #666666;
     overflow: hidden;
+    line-height: 100%;
 }
 .userimage img {
     /* --=mpj17=-- Because I can */
@@ -1604,18 +1607,20 @@ p.label + ul {
   display: inline;
 }      
 #manage-members .statusActions {
-  position: relative;
-  border-top: 0.063em solid #333333;
-  border-bottom: 0.063em solid #333333;
-  padding: 1.188em 0 1.188em 0; /* 1u - thin */
-  overflow: hidden;
+    position: relative;
+    border-bottom: 0.063em solid #333333;
+    padding: 1.25em 0 1.188em 0; /* 1u, 0 1u - thin, 0 */
+    overflow: hidden;
+    width: 43.75em; /* 34em */
 }
 #manage-members .userimage {
-  position: absolute;
-  float: none;
-  top: 0;
-  right: 0;
-  padding: 1.250em; /* 1u */
+    float: left;
+    height: auto;
+    width: auto;
+    padding: 0;
+}
+#manage-members h4 {
+    padding: 0 0 0 0.625em; /* 0.5u */
 }
 #manage-members .radioItem {
   margin: 0.625em 0; /* 0.5u */
