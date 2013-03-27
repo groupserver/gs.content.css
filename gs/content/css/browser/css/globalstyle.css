@@ -46,15 +46,18 @@ h1 code, h2 code, h3 code, h3 code, h4 code {
 }
 
 h1 {
-    font-size: 187.5%;
+    font-size: 187.5%; /* 1.5u */
+    line-height: 1.333; /* 2u */
     margin: 0;
 }
 h2 {
-    font-size: 125%;
-    margin: 1em 0 1em 0; /* 1u */
+    font-size: 125%; /* 1u */
+    line-height: 1.5; /* 1.5u */
+    margin: 1em 0 0.5em 0; /* 1u 0 0.5u 0 */
 }
 h3, h4 {
     font-size: 100%;
+    line-height: 1.25; /* 1u */
 }
 h3 {
     padding: 0 0 0.438em 0; /* 0.5u - medium */
@@ -791,7 +794,7 @@ p.label + ul {
     margin: 0;
 }
 .gs-group-list {
-    margin: 1.062em 0 1.875em 0; /* 1u - medium, 0, 1.5u, 0 */
+    margin: 0.438em 0 1.875em 0; /* 0.5u - medium, 0, 1.5u, 0 */
     border-top: 0.188em solid #666666;
     padding: 0;
 }
