@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 import os
 from setuptools import setup, find_packages
 from version import get_version
@@ -32,9 +32,8 @@ setup(name='gs.content.css',
     zip_safe=True,
     install_requires=[
         'setuptools',
-        # -*- Extra requirements: -*-
+        'zope.browserresource',  # --=mpj17=-- Honestly, that is all
     ],
     entry_points="""
     # -*- Entry points: -*-
     """,)
-
