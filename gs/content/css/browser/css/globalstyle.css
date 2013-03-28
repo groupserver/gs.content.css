@@ -574,6 +574,12 @@ body {
     font-weight: bold;
 }
 
+#utilitylinks-log-in-link {
+    font-weight: bold;
+    background: #cecece;
+    border-color: #cecece;
+}
+
 /* Breadcrumbs (Where should this live?) */
 #breadcrumbs {
     margin: 0 0 1.25em 0;
@@ -880,6 +886,10 @@ p.label + ul {
     top: 0;
     right: 0;
 }
+#gs-site-welcome-message :first-child {
+    margin-top: 0;
+}
+
 
 /* About box on the site homepage */
 /* TODO: move to gs.site.about */
