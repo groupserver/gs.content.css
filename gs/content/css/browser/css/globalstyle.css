@@ -805,7 +805,6 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 /* GroupServer Typeface Setup */
 /******************************/
 /* http://alistapart.com/article/fluidgrids */
-
 .small {
     font-size: 14px;
     line-height: 1.429; /* 20px */
@@ -1006,9 +1005,9 @@ ol ol ol li {
   list-style:lower-roman outside;
 }
 /* Remove the top and bottom margins for nested lists. */
-ul ul, ul ol, ol ol, ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
+ul ul, ul ol, ol ol, ol ul, ul ul.small, ul ol.small, ol ol.small, ol ul.small {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 dt {
