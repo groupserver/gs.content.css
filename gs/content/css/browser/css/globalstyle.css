@@ -2644,26 +2644,21 @@ p.label + ul {
     font-style: normal;
 }
 
-[data-icon]:before {
-    font-family: 'gs-icons';
-    content: attr(data-icon);
+[data-icon]:before, [data-icon-after]:after {
+    font-family: 'gs-icons', inherit;
     speak: none;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
+}
+[data-icon]:before {
+    content: attr(data-icon) " ";
 }
 [data-icon-after]:after {
-    font-family: 'gs-icons';
-    content: attr(data-icon-after);
-    speak: none;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-}
+    content: " " attr(data-icon-after);
+ }
 /* Taken from CSS Tricks <http://css-tricks.com/html-for-icon-font-usage/> */
 .icon-alone {
   display: inline-block; /* Fix for clickability issue in WebKit */
