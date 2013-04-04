@@ -10,7 +10,7 @@ Core CSS support for GroupServer
          Ben Ford,
          Josh Campbell
 :Contact: Michael JasonSmith <mpj17@onlinegroups.net>
-:Date: 2013-03-12
+:Date: 2013-04-04
 :Organization: `GroupServer.org`_
 :Copyright: This document is licensed under a
   `Creative Commons Attribution-Share Alike 3.0 New Zealand License`_
@@ -167,8 +167,10 @@ as detailed below.
 | Twitter     | ``&#x74;``     | No  | The ``t`` character             |
 +-------------+----------------+-----+---------------------------------+
 
-Where possible the glyphs are mapped onto standard Unicode code-points,
-otherwise they are placed at the start of the private-use area.
+Where possible the glyphs are mapped onto standard Unicode code
+points. This allows them to look *vaguely* right when typefaces other than
+the glyph-font are being used. The non-standard icons are placed at the
+start of the private-use area.
 
 `Two patterns from CSS Tricks`_ are used to display the icons:
 
@@ -178,28 +180,28 @@ otherwise they are placed at the start of the private-use area.
 Enhance a word
 --------------
 
-Two data attributes can be used to add icons::
+Two data attributes can be used to add icons in order to enhance a word::
 
   <button data-icon="&#x25c3;">Newer</button>
   <button data-icon-after="&#x25b9;">Older</button>
 
 The first attribute is ``data-icon``. It take the character to display (a
 left arrow in the above example) as its argument. That character is
-displayed before the text within the element. It is the most common use of
-the icon. By using the ``data-icon`` attribute screen-readers do not
-"speak" the icon, and older browsers degrade gracefully.
+displayed before the text within the element. By using the ``data-icon``
+attribute screen-readers do not "speak" the icon, and older browsers
+degrade gracefully.
 
 The second example above shows the ``data-icon-after`` attribute. It
-displays the icon after the text within the element, and is mostly used for
+displays the icon after the text within the element; it is mostly used for
 *Next* buttons.
 
 
 Standalone icons
 ----------------
 
-Standalone icons need additional markup so screen-readers can hear "read"
-what the icon is, while visual browsers just see the glyph. For example,
-the following displays a Web feed icon::
+Standalone icons need additional markup so screen-readers can "read" what
+the icon is, while visual browsers see the glyph. For example, the
+following displays a Web feed icon::
 
   <a type="application/atom+xml" class="icon-alone" href="/some/feed.atom">
     <span aria-hidden="true" data-icon="&#xe003;"></span>
@@ -211,8 +213,8 @@ the following displays a Web feed icon::
   attribute that is used to `enhance a word`_. The ``aria-hidden``
   attribute prevents screen readers from "saying" the icon.
 * The third and final element provides the text for the screen-reader. It
-  is given the ``screen-reader-text`` class so it is not visible to
-  visual-browsers.
+  is given the ``screen-reader-text`` class so it is hidden to visual
+  browsers.
 
 Acknowledgements
 ================
