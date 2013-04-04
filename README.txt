@@ -19,10 +19,11 @@ Core CSS support for GroupServer
 Introduction
 ============
 
-The core GroupServer_ CSS code implements a style known as "Colour is
-for Happy People". It is *deliberately* devoid of colour: just black,
-white and greys are used. This means that everything has to rely on
-layout (alignment and proximity), shape and typography to make sense.
+The core GroupServer_ CSS code implements a style known as "Colour is for
+Happy People". It is *deliberately* devoid of colour: just black, white and
+greys are used. This means that everything has to rely on layout_
+(alignment and proximity), shape and typography to make sense. The
+typography is supported by some glyph icons_.
 
 To this core layout different colourful skins can be added. See
 ``gs.skin.green`` and ``gs.skin.blue`` for two examples.
@@ -150,7 +151,7 @@ as detailed below.
 +-------------+----------------+-----+---------------------------------+
 | Sound       | ``&#x1f509;``  | Yes | Speaker                         |
 +-------------+----------------+-----+---------------------------------+
-| Documents   | ``&#x1f4da;``  | Yes | Replaces "empty pages"          |
+| Documents   | ``&#x1f5cd;``  | Yes | Replaces "empty pages"          |
 +-------------+----------------+-----+---------------------------------+
 | Attach      | ``&#x1f4ce;``  | Yes | Paperclip (attachments exist)   |
 +-------------+----------------+-----+---------------------------------+
