@@ -103,6 +103,132 @@ of the following three values:
 | Thick  |   6 | 0.375 |
 +--------+-----+-------+
 
+Icons
+=====
+
+An glyph-font is supplied by this product. Twenty-two icons are provided,
+as detailed below.
+
++-------------+----------------+-----+---------------------------------+
+|    Icon     |    Character   |Std? | Note                            |
++=============+================+=====+=================================+
+| **Breadcrumb trail**                                                 |
++-------------+----------------+-----+---------------------------------+
+| Home        | ``&#x2302;``   | Yes |                                 |
++-------------+----------------+-----+---------------------------------+
+| Separator   | ``&#xe000;``   | No  | A right-pointing chevron        |
++-------------+----------------+-----+---------------------------------+
+| **Navigation**                                                       |
++-------------+----------------+-----+---------------------------------+
+| Left/Prev   | ``&#x25c3;``   | Yes | Replaces "small left-triangle"  |
++-------------+----------------+-----+---------------------------------+
+| Up          | ``&#x2b06;``   | Yes | Replaces bold up arrow          | 
++-------------+----------------+-----+---------------------------------+
+| Right/Next  | ``&#x25b9;``   | Yes | Replaces "small right-triangle" |
++-------------+----------------+-----+---------------------------------+
+| Web feed    | ``&#xe003;``   | No  | The RSS or ATOM symbol          |
++-------------+----------------+-----+---------------------------------+
+| Settings    | ``&#x2699;``   | Yes | A cog                           |
++-------------+----------------+-----+---------------------------------+
+| Lock        | ``&#x1f512;``  | Yes | Sign in                         |
++-------------+----------------+-----+---------------------------------+
+| **Actions**                                                          |
++-------------+----------------+-----+---------------------------------+
+| Share       |  ``&#xe001;``  | No  | Arrow pointing out of a box     |
++-------------+----------------+-----+---------------------------------+
+| Reply       | ``&#x27a6;``   | Yes | Arrow curving right (redo)      |
++-------------+----------------+-----+---------------------------------+
+| Delete      | ``&#x1f5d1;``  | Yes | Wastebasket (rubbish, trash)    |
++-------------+----------------+-----+---------------------------------+
+| Search      | ``&#x1f50d;``  | Yes | Magnifying glass                |
++-------------+----------------+-----+---------------------------------+
+| **True icons**                                                       |
++-------------+----------------+-----+---------------------------------+
+| Picture     | ``&#x1f3a8;``  | Yes | Replaces "artist palette"       |
++-------------+----------------+-----+---------------------------------+
+| Movie       | ``&#x1f3a6;``  | Yes | Replaces "movie projector"      |
++-------------+----------------+-----+---------------------------------+
+| Sound       | ``&#x1f509;``  | Yes | Speaker                         |
++-------------+----------------+-----+---------------------------------+
+| Documents   | ``&#x1f4da;``  | Yes | Replaces "empty pages"          |
++-------------+----------------+-----+---------------------------------+
+| Attach      | ``&#x1f4ce;``  | Yes | Paperclip (attachments exist)   |
++-------------+----------------+-----+---------------------------------+
+| Email       | ``&#x2709;``   | Yes | An envelope                     |
++-------------+----------------+-----+---------------------------------+
+| Pin         | ``&#x1f4cc;``  | Yes | For *sticky* topics             |
++-------------+----------------+-----+---------------------------------+
+| **Social-media services**                                            |
++-------------+----------------+-----+---------------------------------+
+| Facebook    | ``&#x66;``     | No  | The ``f`` character             | 
++-------------+----------------+-----+---------------------------------+
+| Google Plus | ``&#x67;``     | No  | The ``g`` character             |
++-------------+----------------+-----+---------------------------------+
+| Twitter     | ``&#x74;``     | No  | The ``t`` character             |
++-------------+----------------+-----+---------------------------------+
+
+Where possible the glyphs are mapped onto standard Unicode code-points,
+otherwise they are placed at the start of the private-use area.
+
+`Two patterns from CSS Tricks`_ are used to display the icons:
+
+#.  `Enhance a word`_, and
+#.  `Standalone icons`_.
+
+Enhance a word
+--------------
+
+Two data attributes can be used to add icons::
+
+  <button data-icon="&#x25c3;">Newer</button>
+  <button data-icon-after="&#x25b9;">Older</button>
+
+The first attribute is ``data-icon``. It take the character to display (a
+left arrow in the above example) as its argument. That character is
+displayed before the text within the element. It is the most common use of
+the icon. By using the ``data-icon`` attribute screen-readers do not
+"speak" the icon, and older browsers degrade gracefully.
+
+The second example above shows the ``data-icon-after`` attribute. It
+displays the icon after the text within the element, and is mostly used for
+*Next* buttons.
+
+
+Standalone icons
+----------------
+
+Standalone icons need additional markup so screen-readers can hear "read"
+what the icon is, while visual browsers just see the glyph. For example,
+the following displays a Web feed icon::
+
+  <a type="application/atom+xml" class="icon-alone" href="/some/feed.atom">
+    <span aria-hidden="true" data-icon="&#xe003;"></span>
+    <span class="screen-reader-text">Web feed</span>
+  </a>
+
+* The outer element is marked up with the ``icon-alone`` class.
+* The second element provides the icon, using the same ``data-icon``
+  attribute that is used to `enhance a word`_. The ``aria-hidden``
+  attribute prevents screen readers from "saying" the icon.
+* The third and final element provides the text for the screen-reader. It
+  is given the ``screen-reader-text`` class so it is not visible to
+  visual-browsers.
+
+Acknowledgements
+================
+
+The `Twitter Bootstrap`_ CSS is pasted at the start of the GroupServer file
+to eliminate the need for an HTTP request. It is licenced under the `Apache
+License, Version 2.0`_.
+
+The Icons_ were taken from two glyph-fonts:
+
+* Entypo_ by Daniel Bruce provided most of the icons. It is licenced under
+  the `CC BY-SA 3.0 license`_ (much like this README).
+* `Font Awesome`_ by Dave Gandy provided the pin icon. It is licenced under 
+  the `CC BY 3.0 license`_.
+
+The `IcoMoon`_ App, by Keyamoon, was used to crate the font-files.
 
 Authors
 =======
@@ -126,5 +252,13 @@ Resources
 .. _Michael JasonSmith: http://groupserver.org/p/mpj17/
 .. _Creative Commons Attribution-Share Alike 3.0 New Zealand License:
    http://creativecommons.org/licenses/by-sa/3.0/nz/
+.. _Two patterns from CSS Tricks: http://css-tricks.com/html-for-icon-font-usage/
+.. _Twitter Bootstrap: http://twitter.github.com/bootstrap/
+.. _Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
+.. _Entypo: http://entypo.com/
+.. _CC BY-SA 3.0 license: http://creativecommons.org/licenses/by-sa/3.0/
+.. _CC BY 3.0 license: http://creativecommons.org/licenses/by/3.0/
+.. _Font Awesome: http://fortawesome.github.com/Font-Awesome/
+.. _IcoMoon: http://icomoon.io/
 ..  _Metasolutions: http://metasoltuions.co.nz/
 .. _Cactus Lab: http://cactuslab.com/
