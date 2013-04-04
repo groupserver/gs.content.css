@@ -37,5 +37,11 @@
     directory="browser/images/anim/"
     permission="zope2.Public" />
 
+  <!-- fonts -->
+  <browser:resourceDirectory 
+    name="fonts-20130404"
+    directory="browser/fonts/"
+    permission="zope2.Public" />
+
 </configure>
 
