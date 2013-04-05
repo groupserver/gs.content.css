@@ -843,6 +843,9 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
   line-height: inherit;
   
 }
+.small .dotted-inline-list .icon-alone {
+    height: 14px;
+}
 .screen-reader-text { /* Reusable, toolbox kind of class */
   position: absolute;
   top: -9999px;
@@ -1572,7 +1575,7 @@ div.noFloat {
 .small .dotted-inline-list li:before, 
 .dotted-inline-list.small li:before, 
 .dotted-inline-list li.small:before {
-   padding: 0 0.714em; /* 0.5u */
+   padding: 0 0;
 }
 
 .dotted-inline-list li:first-child:before {
