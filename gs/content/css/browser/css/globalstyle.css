@@ -835,6 +835,13 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 /* Taken from CSS Tricks <http://css-tricks.com/html-for-icon-font-usage/> */
 .icon-alone {
   display: inline-block; /* Fix for clickability issue in WebKit */
+  /* Resolve a disagreement with the Bootstrap icons */
+  height: auto;
+  width: auto;
+  vertical-align: inherit;
+  margin: 0;
+  line-height: inherit;
+  
 }
 .screen-reader-text { /* Reusable, toolbox kind of class */
   position: absolute;
