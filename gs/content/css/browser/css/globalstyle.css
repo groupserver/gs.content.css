@@ -2400,29 +2400,34 @@ p.label + ul {
     left: 0;
     top: 0;
 }
-#gs-group-messages-files .gs-search-result img {
-    max-height: 2.5em; /* 2u */
-    max-width: 2.5em;
-    overflow: hidden;
-}
 .gs-group-messages-files-file-icon, 
 .gs-group-messages-files-file-icon [data-icon]:before {
-    height: 2.5em;
-    width: 2.5em;
-    line-height: 250%;
+    height: 2.5em; /* 2u */
+    width: 2.5em; /* 2u */
+    line-height: 250%; /* 2u */
     text-align: center;
+}
+.small .gs-group-messages-files-file-icon {
+    font-size: 16px;
 }
 .gs-group-messages-files-file-icon {
     background: #dcdcdc;
     color: #959595;
 }
 .gs-group-messages-files-file-icon-img {
+    max-height: 2.5em; /* 2u */
+    max-width: 2.5em; /* 2u*/
+    overflow: hidden;
     background: none;
 }
 #gs-group-messages-files .gs-search-result div {
     padding-left: 3.125em; /* 2.5u */
     text-overflow: ellipsis;
 }
+.small #gs-group-messages-files .gs-search-result div {
+    padding-left: 4.167em; /* 2.5u @12px */
+}
+
 
 /* Posted Image Page */
 /* TODO: move to gs.group.messages.image */
