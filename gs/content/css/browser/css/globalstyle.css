@@ -1589,6 +1589,11 @@ div.noFloat {
     content: none;
 }
 
+.btn-toolbar .dotted-inline-list {
+    margin: 0;
+    padding-top: 0.313em; /* 0.25u, to allign with the text in the buttons */
+}
+
 /* Text Markup: labels for lists */
 p.label {
     margin-bottom: 0;
