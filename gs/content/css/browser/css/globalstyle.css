@@ -2330,6 +2330,7 @@ p.label + ul {
   clear: both;
 }  
 
+/* Files list */
 /* TODO: move to gs.group.messages.files */
 #gs-group-messages-files {
     overflow: hidden;
@@ -2362,13 +2363,30 @@ p.label + ul {
     border: none;
     padding: 0;
 }
+#gs-group-messages-files .gs-search-result img, 
+.gs-group-messages-files-file-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 #gs-group-messages-files .gs-search-result img {
     max-height: 2.5em; /* 2u */
     max-width: 2.5em;
     overflow: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
+}
+.gs-group-messages-files-file-icon, 
+.gs-group-messages-files-file-icon [data-icon]:before {
+    height: 2.5em;
+    width: 2.5em;
+    line-height: 250%;
+    text-align: center;
+}
+.gs-group-messages-files-file-icon {
+    background: #dcdcdc;
+    color: #959595;
+}
+.gs-group-messages-files-file-icon-img {
+    background: none;
 }
 #gs-group-messages-files .gs-search-result div {
     padding-left: 3.125em; /* 2.5u */
