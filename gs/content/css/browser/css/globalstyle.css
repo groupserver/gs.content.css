@@ -843,9 +843,6 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
   line-height: inherit;
   
 }
-.small .dotted-inline-list .icon-alone {
-    height: 14px;
-}
 .screen-reader-text { /* Reusable, toolbox kind of class */
   position: absolute;
   top: -9999px;
@@ -857,8 +854,11 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 /******************************/
 /* http://alistapart.com/article/fluidgrids */
 .small {
-    font-size: 14px;
-    line-height: 1.429; /* 20px */
+    font-size: 12px;
+    line-height: 1.667; /* 20px */
+}
+.small .dotted-inline-list .icon-alone {
+    height: 12px;
 }
 
 .muted pre, pre.muted {
@@ -909,8 +909,8 @@ h3 {
 }
 /* Only h3 and h4 headings make sense at small sizes*/
 h3.small, .small h3 {
-    padding: 0 0 0.5em 0; /* 0.5u - medium */
-    border-bottom: 0.214em solid #666666;
+    padding: 0 0 0.583em 0; /* 0.5u - medium */
+    border-bottom: 0.25em solid #666666;
 }
 
 
@@ -981,8 +981,8 @@ code, pre {
     border-width: 0.063em;
 }
 .small .well, .well.small {
-    padding: 0.562em; /* 0.5u@14px - thin */
-    border-width: 0.071em;
+    padding: 0.75em; /* 0.5u@12px - thin */
+    border-width: 0.083em;
 }
 
 .well > :first-child, .well > :first-child > :first-child {
@@ -1009,7 +1009,7 @@ p, ul, ol, dl, fieldset, table, pre {
     margin: 1.250em 0; /* 1u */
 }
 p.small, ul.small, ol.small, dl.small, fieldset.small, table.small, pre.small {
-    margin: 1.429em 0; /* 1u @ 14px */
+    margin: 1.667em 0; /* 1u @ 12px */
 }
 ul ul.small, ul ol.small, ol.small, ol.small {
     margin-top: 0;
@@ -1156,7 +1156,7 @@ textarea[readonly] {
     height: 5em; /* 4u */
 }
 .small .gs-content-js-more-content-small {
-    height: 5.712em; /* 4u */    
+    height: 6.667em; /* 4u @ 12px */    
 }
 .gs-content-js-more-content-large {
     height: auto;
@@ -1165,21 +1165,21 @@ textarea[readonly] {
     border-top: 0.063em solid #dddddd;
     position: relative;
     text-align: center;
-    margin: 1.188em 0 1.25em 0;
+    margin: 1.188em 0 1.25em 0; /* 1u - thin, 0, 1u, 0 */
 }
 .small .gs-content-js-more-buttons {
-    border-top: 0.071em solid #dddddd;
-    margin: 1.357em 0 1.429em 0;
+    border-top: 0.083em solid #dddddd;
+    margin: 1.583em 0 1.667em 0; /* 1u - thin, 0, 1u, 0 @ 12px */
 }
 .gs-content-js-more-buttons a {
     display: inline-block;
     background: white;
-    padding: 0 0.625em;
+    padding: 0 0.625em; /* 0.5u */
     position: relative;
     top: -0.786em; /* 0.5u - thin, visually selected. */
 }
 .small .gs-content-js-more-buttons a {
-    padding: 0 0.714em;
+    padding: 0 0.833em; /* 0, 0.5u @ 12px*/
 }
 .gs-content-js-more-buttons a:hover {
     color: #333333;
@@ -1426,10 +1426,10 @@ body {
 
 /* Breadcrumbs (Where should this live?) */
 #breadcrumbs {
-    margin: 0 0 1.25em 0;
+    margin: 0 0 1.25em 0; /* 1u */
 }
 #breadcrumbs.small {
-    margin: 0 0 1.429em 0;
+    margin: 0 0 1.667em 0;
 }
 #breadcrumbs * {
     display: inline-block;
@@ -1531,14 +1531,14 @@ div.noFloat {
     float: right;
     width: 17.5em; /*14u (not - thin) */
     padding: 0 0 0 1.125em; /* 0 0 0 1u - 2 * thin */
-    border-left: 0.063em solid #cccccc;
+    border-left: 0.063em solid #cccccc; /* Thin */
     left: -0.063em; /* - thin */
 }
 .gs-content-layout-cols .secondary.small {
-    width: 20em; /*14u @ 14px */
-    padding: 0 0 0 1.286em; /* 0 0 0 1u (- 2 * thin) */
+    width: 23.333em; /*14u @ 12px */
+    padding: 0 0 0 1.5em; /* 0 0 0 1u (- 2 * thin) */
     border-left: 0.071em solid #cccccc;
-    left: -0.071em;
+    left: -0.083em; /* Thin */
 }
 
 .gs-content-layout-cols > * > :first-child,
@@ -1564,7 +1564,7 @@ div.noFloat {
 .small .inline-list li,
 .inline-list.small li,
 .inline-list li.small {
-    margin-right: 0.714em; /* 0.5u */
+    margin-right: 0.833em; /* 0.5u */
 }
 
 .dotted-inline-list li:before {
@@ -1778,7 +1778,7 @@ p.label + ul {
 }
 .small .searchResults,
 .searchResults.small {
-    margin: 1.429em 0 0 0; /* 1u */
+    margin: 1.667em 0 0 0; /* 1u */
 }
 .searchResults .tags li {
     margin: 0;
@@ -1791,16 +1791,16 @@ p.label + ul {
   display: inline-block;
 }
 .gs-search-results .gs-search-result {
-    border-bottom: 0.063em solid #dddddd;
-    padding-bottom: 1.188em; /* 1u - border */
+    border-bottom: 0.063em solid #dddddd; /* Thin */
+    padding-bottom: 1.188em; /* 1u - thin */
     margin-bottom: 1.250em; /* 1u */
     list-style: none;
     min-height: auto;
 }
 .small .gs-search-result, .gs-search-result.small {
-    border-bottom: 0.071em solid #dddddd;
-    padding-bottom: 1.357em; /* 1u - border */
-    margin-bottom: 1.429em; /* 1u */
+    border-bottom: 0.083em solid #dddddd; /* Thin */
+    padding-bottom: 1.583em; /* 1u - thin */
+    margin-bottom: 1.667em; /* 1u */
 }
 
 .gs-search-keyword {
@@ -1994,7 +1994,7 @@ p.label + ul {
     margin: 0;
 }
 .email-remainder p.small {
-    margin: 1.429em 0 0 0;
+    margin: 1.667em 0 0 0; /* 1u @12px */
 }
 .email-remainder pre {
     margin: 0;
@@ -2383,7 +2383,7 @@ p.label + ul {
     padding: 0;
 }
 .small #gs-group-messages-files-nav {
-    top: 0.5em; /* 0.5u  - medium */ 
+    top: 0.583em; /* 0.5u  - medium */ 
 }
 #gs-group-messages-files-nav * {
     overflow: hidden;
