@@ -2009,10 +2009,13 @@ p.label + ul {
 }
 .hentry .normalFileList {
     vertical-align: top;
-    margin: 0;
+    margin: 0 1.250em 1.250em 0;
 }
 .normalFileList .hmedia {
     position: relative;
+}
+.normalFileList .hmedia + .hmedia {
+    margin: 0.625em 0 0 0;
 }
 .normalFileList .icon-alone, .normalFileList [data-icon]:before {
     position: absolute;
@@ -2032,21 +2035,17 @@ p.label + ul {
 .normalFileList .fn, .normalFileList .size {
     display: block
 }
-.normalFileList .enclosure
-.normalFileList + .mediaFileList {
+.normalFileList .enclosure, .normalFileList + .mediaFileList {
     max-width: 30em; /* 21u */
 }
-.normalFileList + .mediaFileList .hmedia {
-    margin: 0 0 1.250em 1.250em;
-}
 .mediaFileList .hmedia {
-    margin: 0 0 1.250em 0;
+    margin: 0 1.250em 1.250em 0;
     display: inline-block;
     max-width: 11.875em; /* 9.5u */
     vertical-align: top;
 }
 .mediaFileList .hmedia + .hmedia {
-    margin: 0 0 1.250em 1.250em;
+    margin: 0 1.250em 1.250em 0;
 }
 .mediaFileList .hmedia a {
     display: inline-block;
