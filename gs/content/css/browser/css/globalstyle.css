@@ -909,7 +909,8 @@ h3 {
 }
 /* Only h3 and h4 headings make sense at small sizes*/
 h3.small, .small h3 {
-    padding: 0 0 0.583em 0; /* 0.5u - medium */
+    line-height: 1; /* 12px */
+    padding: 0 0 0.417em 0; /* 5px @ 12px */
     border-bottom: 0.25em solid #666666;
 }
 
@@ -1708,6 +1709,16 @@ p.label + ul {
 
 /* The Recently Active members list */
 /* TODO: move to gs.group.member.active */
+#gs-group-member-active {
+    position: relative;
+}
+#gs-group-member-active-all-members {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1.25;
+}
 .gs-group-member-active-members-member {
     position: relative; /* Create a new positioning context */
     margin: 0 0 0.625em 0;
@@ -2376,12 +2387,6 @@ p.label + ul {
 }
 #gs-group-messages-files-nav {
     position: absolute;
-    top: 0.625em;
-    right: 0;
-    margin: 0;
-    padding: 0;
-}
-#gs-group-messages-files-nav {
     top: 0.438em; /* 0.5u - medium */
     right: 0;
     margin: 0;
