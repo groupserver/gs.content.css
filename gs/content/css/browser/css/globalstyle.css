@@ -808,11 +808,11 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 /* TODO: move to gs.content.icons */
 @font-face {
     font-family: 'gs-icons';
-    src:url('/++resource++fonts-20130404/gs-icons.eot');
-    src:url('/++resource++fonts-20130404/gs-icons.eot?#iefix') format('embedded-opentype'),
-    url('/++resource++fonts-20130404/icons/gs-icons.woff') format('woff'),
-    url('/++resource++fonts-20130404/icons/gs-icons.ttf') format('truetype'),
-    url('/++resource++fonts-20130404/icons/gs-icons.svg#gs-icons') format('svg');
+    src:url('/++resource++fonts-20130409/gs-icons.eot');
+    src:url('/++resource++fonts-20130409/gs-icons.eot?#iefix') format('embedded-opentype'),
+    url('/++resource++fonts-20130409/icons/gs-icons.woff') format('woff'),
+    url('/++resource++fonts-20130409/icons/gs-icons.ttf') format('truetype'),
+    url('/++resource++fonts-20130409/icons/gs-icons.svg#gs-icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -1681,10 +1681,11 @@ p.label + ul {
 /* About box on the Group page */
 /* TODO: Move to gs.group.about */
 #gs-group-about {
-    margin: 1.875em 0 0 0; /* 1.5u */
+    margin: 1.250em 0 0 0; /* 1u */
     position: relative;
 }
 #gs-group-about h2 {
+    margin: 0 0 0.625em 0;
     border-bottom: 0.15em solid #666666;
     padding: 0 0 0.35em 0;
 }
@@ -2721,6 +2722,13 @@ p.label + ul {
 .gs-content-js-sharebox-dialog p, .gs-content-js-sharebox-dialog .full-share * {
     margin: 0;
     padding: 0;
+}
+.gs-content-js-sharebox-dialog-widgets-public {
+    position: relative;
+}
+.gs-content-js-sharebox-dialog-widgets-public .btn-toolbar {
+    position: relative;
+    top: -5px; /* 0.25em @20, but toobars do not have a font-size */
 }
 .gs-content-js-sharebox-dialog .full-share input {
     margin: 0.8333em 0 0 0; /* 0.5u */
