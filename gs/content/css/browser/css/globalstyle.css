@@ -2518,8 +2518,15 @@ p.label + ul {
 }
 
 /* Login */
-#login-form .textType{
-  height: auto; /* I do not know why I have to do this */
+/* TODO: move to gs.login */
+#gs-login-buttons {
+    margin: 0 0 1.25em 0;
+}
+#gs-login-remember-me {
+    margin: 0 1.25em 0 0;
+}
+#gs-login-remember-me label {
+    font-weight: bold;
 }
 
 /* Content Manager */
@@ -2758,6 +2765,11 @@ p.label + ul {
 
 #signupmethod-email {
         padding-left: 1.387em;
+}
+
+/* The "Show password" toggle */
+.gs-profile-password-toggle {
+    margin: 0 0 0 1.25em;
 }
 
 /*******************/
