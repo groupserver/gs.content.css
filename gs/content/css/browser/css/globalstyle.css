@@ -1442,7 +1442,7 @@ body {
     list-style: none;
 }
 #breadcrumbs li:after {
-    font-family: 'gs-icons', inherit;
+    font-family: 'gs-icons';
     speak: none;
     font-weight: normal;
     font-variant: normal;
@@ -1890,7 +1890,7 @@ p.label + ul {
     top: -0.2em; /* 2px */
 }
 .gs-search-result .files + .tooltip {
-    font-family: 'gs-icons', inherit;
+    font-family: 'gs-icons';
     speak: none;
     font-weight: normal;
     font-variant: normal;
