@@ -818,7 +818,7 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 }
 
 [data-icon]:before, [data-icon-after]:after {
-    font-family: 'gs-icons', inherit;
+    font-family: 'gs-icons';
     speak: none;
     font-weight: normal;
     font-variant: normal;
