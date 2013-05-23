@@ -1,39 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <configure xmlns="http://namespaces.zope.org/zope"
   xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:rdb="http://namespaces.zope.org/rdb"
-  xmlns:sqlos="http://namespaces.sqlobject.org/sqlos"
   xmlns:five="http://namespaces.zope.org/five">
   
   <!-- CSS files -->
-  <browser:resource name="globalstyle-20120604.css"
+  <browser:resource 
+    name="globalstyle-20130523.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
-  <browser:resource name="globalstyle-20120515.css"
+  <browser:resource 
+    name="globalstyle-20120604.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
-  <browser:resource name="globalstyle-20110714.css"
+  <browser:resource 
+    name="globalstyle-20120515.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
-  <browser:resource name="globalstyle-20110406.css"
+  <browser:resource 
+    name="globalstyle-20110714.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
-  <browser:resource name="globalstyle-20110308.css"
+  <browser:resource 
+    name="globalstyle-20110406.css"
+    file="browser/css/globalstyle.css"
+    permission="zope2.Public" />
+  <browser:resource 
+    name="globalstyle-20110308.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
     
-  <browser:resource name="site-20110714.css"
+  <browser:resource 
+    name="site-20110714.css"
     file="browser/css/site.css" 
     permission="zope2.Public" />
-  <browser:resource name="site-20110406.css"
+  <browser:resource 
+    name="site-20110406.css"
     file="browser/css/site.css" 
     permission="zope2.Public" />
-  <browser:resource name="site-20110308.css"
+  <browser:resource 
+    name="site-20110308.css"
     file="browser/css/site.css" 
     permission="zope2.Public" />
     
   <!-- Animated images -->
-  <browser:resourceDirectory name="anim"
+  <browser:resourceDirectory 
+    name="anim"
     directory="browser/images/anim/"
     permission="zope2.Public" />
 
