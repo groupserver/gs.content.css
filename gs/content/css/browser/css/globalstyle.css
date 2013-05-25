@@ -2133,11 +2133,13 @@ p.label + ul {
     margin-bottom: 0;
 }
 
-.modal + .gs-group-messages-topic-navlinks {
+.modal + .gs-group-messages-topic-navlinks, 
+.postList + .gs-group-messages-topic-navlinks {
     position: relative;
     top: 0.625em;
 }
-.modal + .gs-group-messages-topic-navlinks .btn {
+.modal + .gs-group-messages-topic-navlinks .btn,
+.postList + .gs-group-messages-topic-navlinks .btn {
     margin-top: 1.250em;
 }
 #gs-group-messages-topic-admin-stickytoggle button {
@@ -2277,6 +2279,23 @@ p.label + ul {
 #gs-group-messages-starttopic-new-topic input {
     padding: inherit 0.562em; /* .5u - thin */
     width: 36.875em; /* 29.5u */
+}
+
+/* Cannot Post */
+#gs-group-messages-topic-cannotadd {
+    top: -1.688em; /* 1u - meduim */
+}
+/* Cheap two columns */
+#gs-group-type-discussion-canpost-anon {
+    position: relative;
+}
+#gs-group-type-discussion-canpost-anon div p {
+    margin: 0;
+}
+#gs-group-type-discussion-canpost-anon-sign-up {
+    position: absolute;
+    right: 1.25em; /* 1u */
+    top: 2.500em; /* 2u */
 }
 
 /*********/
