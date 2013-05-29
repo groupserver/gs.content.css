@@ -1458,42 +1458,34 @@ body {
 
 /* The main block that contains the context navigation and the main */
 /* page content. */
-#contextnav {
-  width: 11.250em;  /* 9u */
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 1.250em 0;
+/* #contextnav */
+#gs-content-layout-menu {
+    width: 11.875em; /* 9.5u */
+    margin: 0 0 0 0.625em; /* 0.5u */
+    position: absolute;
+    top: 1.25em; /* 1u */
+    left: 0;
+    z-index: 128;
 }
-#contextnav .label {
-  border-top: thin solid #333333;
+#gs-content-layout-menu p {
+    width: 11.875em;
+    margin: 0 0 0.625em 0; /* 0.5u */
 }
-#contextnav .label, #contextnav a {
-  padding: 0.625em 0 0.625em 1.250em;
+#gs-content-layout-menu ul {
+    margin: 0;
 }
-#contextnav .label a {
-  padding: 0;
+#gs-content-layout-menu li {
+    list-style: none;
+    margin: 0;
+    padding-bottom: 0.625em; /* 0.5u */
 }
-#contextnav .label, #contextnav ul {
-  margin:0;
+#gs-content-layout-menu-after {
+    position: relative;
+    top: -1.25em; /* 1u */
+    padding-left: 13.75em; /* 11u */
 }
-#contextnav li, #contextnav a  {
-  display: block;
-}
-#contextnav li {
-  list-style-type: none;
-  margin: 0;
-}
-#contextnav li li a {
-  padding: 0.625em 0 0.625em 2.5em; 
-}
+/* #content */
 
-#content {
-  width: 50em; /* 40u */
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 /* Text Markup */
 p.label {
   font-weight: bold;
