@@ -2339,8 +2339,10 @@ p.label + ul {
 /***********/
 /* Profile */
 /***********/
-.cols h2 {
-  margin-top: 0;
+#gs-profile-view .userimage {
+    height: auto;
+    width: auto;
+    background: none;
 }
 
 /**********/
