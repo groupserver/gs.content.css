@@ -2354,30 +2354,26 @@ p.label + ul {
     margin-bottom: 0;
 }
 
-#gs-profile-view .searchResults ul {
+.gs-search-posts-results ul {
     margin: 0.625em 0; /* 0.5u */
 }
-#gs-profile-view .searchResults li {
+.gs-search-posts-results li {
     list-style: none;
     margin: 0.625em 0; /* 0.5u */
 }
-#gs-profile-view .searchResults pre,
-#gs-profile-view .searchResults .groupInfo,
-#gs-profile-view .searchResults .metadata {
-    font-size: 12px;
-    line-height: 1.667; /* 20px */
-    color: #999999;
-    margin: 0 0 0 1.667em;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+.gs-search-posts-results pre,
+.gs-search-posts-results .groupInfo,
+.gs-search-posts-results .metadata {
+    margin: 0 0 0 1.667em; /* 1u @ 12px */
 }
-#gs-profile-view .searchResults .groupInfo:before {
+.gs-search-posts-results .groupInfo:before {
     content: "to ";
 }
-#gs-profile-view .searchResults pre:before {
-    content: "\"";
+.gs-search-posts-results pre:before {
+    content: open-quote;
 }
-#gs-profile-view .searchResults pre:after {
-    content: "\"";
+.gs-search-posts-results pre:after {
+    content: close-quote;
 }
 
 /**********/
