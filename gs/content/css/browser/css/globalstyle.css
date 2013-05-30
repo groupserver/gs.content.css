@@ -2344,6 +2344,15 @@ p.label + ul {
     width: auto;
     background: none;
 }
+#gs-profile-view #profileAtributes th {
+    vertical-align: top;
+}
+#gs-profile-view #profileAtributes td :first-child {
+    margin-top: 0;
+}
+#gs-profile-view #profileAtributes td :last-child {
+    margin-bottom: 0;
+}
 
 /**********/
 /* Search */
