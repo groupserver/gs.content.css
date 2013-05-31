@@ -1137,11 +1137,20 @@ select[readonly],
 textarea[readonly] {
     background: #dddddd;
 }
+.alert {
+    padding: 0.562em; /* 1u - thin */
+}
+.alert .close {
+    right: 0;
+}
 #gs-content-form-message a {
     text-decoration: underline;
 }
 .gs-content-form-message-status :first-child {
     margin-top: 0;
+}
+.gs-content-form-message-status :last-child {
+    margin-bottom: 0;
 }
 
 /* TODO: move to gs.content.js.more */
@@ -1481,8 +1490,7 @@ body {
 }
 #gs-content-layout-menu-after {
     position: relative;
-    top: -1.25em; /* 1u */
-    padding-left: 13.75em; /* 11u */
+    padding: 0 1.25em 0 13.75em; /* 1u 11u */
 }
 /* #content */
 
