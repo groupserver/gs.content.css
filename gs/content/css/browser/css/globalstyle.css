@@ -865,8 +865,27 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
     color: #999999;
 }
 
+/* Hypertext Links */
+/* --=mpj17=-- *Most* common links do not have underlining, which stops the */
+/* dazzle-effect of having many horrizontal lines on the page. However, */
+/* links in text-blocks *do* have underlining (otherwise there is no way to */
+/* spot them). */
 a, a:hover, a:focus, a:visited {
     color: inherit;
+    text-decoration: none;
+}
+p a, p a:hover, p a:visited, pre a, pre a:hover, pre a:visited,
+li a, li a:hover, li a:visited, dd a, dd a:hover, dd a:visited {
+    text-decoration: underline;
+}
+p a, p a:visited, pre a, pre a:visited, li a, li a:visited, dd a, dd a:visited {
+    text-decoration-color: #999999;
+}
+p a:hover, pre a:hover, li a:hover, dd a:hover {
+    text-decoration-color: currentColor;  /* Normally dark */
+}
+[role=navigation] a, [role=contentinfo] a,  
+a[role=button],  a[role=button]:hover {
     text-decoration: none;
 }
 
@@ -1094,6 +1113,7 @@ tbody th {
     padding: 0 0 0.438em 0;
     line-height: 1.250;
     border: none;
+    text-decoration: none;
 }
 .nav-tabs > li > a * {
     margin: 0;
@@ -1187,6 +1207,10 @@ textarea[readonly] {
     padding: 0 0.625em; /* 0.5u */
     position: relative;
     top: -0.786em; /* 0.5u - thin, visually selected. */
+    text-decoration: none;
+}
+.gs-content-js-more-buttons a:hover {
+    text-decoration: none;
 }
 .small .gs-content-js-more-buttons a {
     padding: 0 0.833em; /* 0, 0.5u @ 12px*/
@@ -1337,6 +1361,9 @@ body {
     height: 5.250em; /*4.5u - thick*/
     border-bottom: 0.375em solid #cccccc;
 }
+#toparea a {
+    text-decoration: none;
+}
 #gs-content-layout-body {
     position: relative;
     background: white;
@@ -1366,7 +1393,7 @@ body {
     display: none;
 }
 #titlebar .site {
-    font: bold 250%/1 arial,helvetica,clean,sans-serif; /* 2u */
+    font: bold 250%/1 "Helvetica Neue", Helvetica, Arial, sans-serif; /* 2u */
 }
 
 #gs-content-layout-body {
@@ -1463,6 +1490,9 @@ body {
 }
 #breadcrumbs li:last-of-type:after {
     content: '';
+}
+#breadcrumbs a {
+    text-decoration: none;
 }
 
 /* The main block that contains the context navigation and the main */
@@ -1623,6 +1653,7 @@ p.label + ul {
 }
 
 /* Text Markup: Disclosure Widget */
+/* TODO: move to gs.content.js.disclosure */
 .disclosureButton {
   display: block;
   text-decoration: none;
@@ -1709,6 +1740,18 @@ p.label + ul {
     display: none;
 }
 
+/* Group Membership Info */
+/* TODO: Move to gs.group.member.info */
+.gs-group-member-info a {
+    text-decoration: none;
+}
+
+/* Posting Info */
+/* TODO: Move to gs.group.messages.topic.add */
+#gs-group-messages-topics-postinginfo a {
+    text-decoration: none;
+}
+
 /* The Recently Active members list */
 /* TODO: move to gs.group.member.active */
 #gs-group-member-active {
@@ -1740,6 +1783,9 @@ p.label + ul {
     margin: 0;
     padding: 0;
     font-weight: bold;
+}
+.gs-group-member-active-members-member .fn a {
+    text-decoration: none;
 }
 #gs-group-member-active-stats {
     border-top: 1px solid  #dddddd;
@@ -1796,10 +1842,13 @@ p.label + ul {
 .searchResults {
     margin: 1.250em 0 0 0; /* 1u */
 }
-.small .searchResults,
-.searchResults.small {
+.small .searchResults, .searchResults.small {
     margin: 1.667em 0 0 0; /* 1u */
 }
+.searchResults a {
+    text-decoration: none;
+}
+
 .searchResults .tags li {
     margin: 0;
 }
@@ -1919,6 +1968,11 @@ p.label + ul {
 }
 .gs-search-toolbar.btn-toolbar .gs-search-toolbar-next {
     right: 0;
+}
+
+/* Post search results */
+.gs-search-posts-results pre {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* Messages */
@@ -2553,6 +2607,9 @@ p.label + ul {
 }
 .gs-group-messages-image .enclosure {
     margin: 0.562em 0 0 0; /* 0.5u - thin 0 0 0*/
+}
+.gs-group-messages-image .enclosure a {
+    text-decoration: none;
 }
 .gs-group-messages-image .scaled-image + .gs-group-messages-image-navlinks {
     position: static;
