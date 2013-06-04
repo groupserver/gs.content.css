@@ -1494,7 +1494,9 @@ body {
 #breadcrumbs a {
     text-decoration: none;
 }
-
+#breadcrumbs a:hover {
+    text-decoration: underline;
+}
 /* The main block that contains the context navigation and the main */
 /* page content. */
 /* #contextnav */
@@ -1787,6 +1789,9 @@ p.label + ul {
 .gs-group-member-active-members-member .fn a {
     text-decoration: none;
 }
+.gs-group-member-active-members-member .fn a:hover {
+    text-decoration: underline;
+}
 #gs-group-member-active-stats {
     border-top: 1px solid  #dddddd;
     margin: 0.625em 0 1.250em 0;
@@ -1845,10 +1850,12 @@ p.label + ul {
 .small .searchResults, .searchResults.small {
     margin: 1.667em 0 0 0; /* 1u */
 }
-.searchResults a {
+.searchResults a, .gs-search-results a {
     text-decoration: none;
 }
-
+.searchResults a:hover, .gs-search-results a:hover {
+    text-decoration: underline;
+}
 .searchResults .tags li {
     margin: 0;
 }
@@ -2520,12 +2527,14 @@ p.label + ul {
     left: 0;
     top: 0;
 }
-.gs-group-messages-files-file-icon, 
+.gs-group-messages-files-file-icon, .gs-group-messages-files-file-icon:hover,
 .gs-group-messages-files-file-icon [data-icon]:before {
     height: 2.5em; /* 2u */
     width: 2.5em; /* 2u */
     line-height: 250%; /* 2u */
     text-align: center;
+    /* --=mpj17=-- A sure sign that things are becoming too complex */
+    text-decoration: none !important;
 }
 .small .gs-group-messages-files-file-icon {
     font-size: 16px;
