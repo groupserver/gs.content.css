@@ -2831,12 +2831,15 @@ p.label + ul {
 /*  Small-screen browsing, for phones (iPhone). The main three pages
   * that are handled by this CSS are the site homepage, group page,
   * and the Topic page. */
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 950px) {
     /* Tablet or Small desktop */
 
     /* Take up the full width of the screen*/
     #titlebar, #bodyblock, #gs-content-layout-footer-content {
-        width: 100%;
+        width: 98%;
+        /* 950 * 0.01 = close enough to 10px for me to be happy */
+        padding-left: 1%;
+        padding-right: 1%;
     }
     /* Dynamically size the columns*/
     .gs-content-layout-cols .main,
