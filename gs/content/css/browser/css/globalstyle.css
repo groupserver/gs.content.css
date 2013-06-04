@@ -1558,6 +1558,7 @@ div.noFloat {
 .inline-list li, .dotted-inline-list li, .comma-inline-list li {
     list-style: none;
     display: inline-block;
+    vertical-align: top; /* For Webkit */
 }
 .inline-list li {
     margin-right: 0.625em; /* 0.5u */
