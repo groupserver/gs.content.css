@@ -5,7 +5,7 @@
   
   <!-- CSS files -->
   <browser:resource 
-    name="globalstyle-20130523.css"
+    name="globalstyle-20130604.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
   <browser:resource 
