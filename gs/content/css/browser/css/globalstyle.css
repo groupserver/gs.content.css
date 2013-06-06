@@ -1646,7 +1646,7 @@ p.label + ul {
     width: 3.125em;  /* 3u */
     height: 3.125em;  /* 3u */
     padding: 0 0.625em 0.625em 0; /* 0 0.5u 0.5u 0 */
-    background: #666666;
+    background: none;
     overflow: hidden;
     line-height: 100%;
 }
