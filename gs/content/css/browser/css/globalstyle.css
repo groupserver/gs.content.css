@@ -875,7 +875,8 @@ a, a:hover, a:focus, a:visited {
     text-decoration: none;
 }
 p a, p a:hover, p a:visited, pre a, pre a:hover, pre a:visited,
-li a, li a:hover, li a:visited, dd a, dd a:hover, dd a:visited {
+li a, li a:hover, li a:visited, dd a, dd a:hover, dd a:visited,
+[role=listitem] a:hover, a[role=listitem]:hover {
     text-decoration: underline;
 }
 p a, p a:visited, pre a, pre a:visited, li a, li a:visited, dd a, dd a:visited {
