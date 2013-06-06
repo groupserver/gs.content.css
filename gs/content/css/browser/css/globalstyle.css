@@ -884,11 +884,12 @@ p a, p a:visited, pre a, pre a:visited, li a, li a:visited, dd a, dd a:visited {
 p a:hover, pre a:hover, li a:hover, dd a:hover {
     text-decoration-color: currentColor;  /* Normally dark */
 }
-[role=navigation] a, [role=contentinfo] a,  
+a.btn, [role=navigation] a, [role=contentinfo] a,  
 a[role=button],  a[role=button]:hover {
     text-decoration: none;
 }
 
+/* Headings */
 h1, h2, h3, h4 {
     line-height: 1;
     text-overflow: ellipsis;
@@ -1740,12 +1741,6 @@ p.label + ul {
 /* TODO: move to gs.group.encouragement */
 #gs-group-encouragement-area {
     display: none;
-}
-
-/* Group Membership Info */
-/* TODO: Move to gs.group.member.info */
-.gs-group-member-info a {
-    text-decoration: none;
 }
 
 /* Posting Info */
