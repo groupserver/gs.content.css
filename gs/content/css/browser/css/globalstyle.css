@@ -1053,8 +1053,11 @@ cite, em {
 
 blockquote {
     border-left: 0.375em solid #666666;
-    padding-left: 0.438em;
-    margin-left: 0.625em;
+    padding-left: 0.250em;
+    margin-left: 0;
+}
+blockquote p {
+    font-size: inherit;
 }
 
 /* Less important information is grey */
@@ -2745,6 +2748,18 @@ p.label + ul {
 #gs-group-member-invite-csv select {
   margin: 0 0 1.250em 1.250em; /* 0 0 1u 1u */
 }
+
+/* Respond to the Invitation */
+#gs-profile-invite-respond-about-admin h2 {
+    margin: 0 0 0.5em 0;
+}
+#gs-profile-invite-respond-about-admin .userimage {
+    padding: 0 1.25em 0 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+
 
 /* View Profile: Membership List */
 #gs-profile-view #membership ul {
