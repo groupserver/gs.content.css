@@ -1820,8 +1820,9 @@ p.label + ul {
 
 /* About box on the site homepage */
 /* TODO: move to gs.site.about */
-/* If anyone puts something in front of the About box there will be */
-/*   hell to pay*/
+#gs-site-about-home {
+    position: relative;
+}
 #gs-site-about-home-change-link {
     display: block;
     line-height: 1;
