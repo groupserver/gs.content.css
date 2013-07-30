@@ -1391,12 +1391,10 @@ body {
 }
 
 #titlebar-home-link {
-    text-decoration: none;
-    border: none;
     display: block;
+    border: none;
     padding-top: 1.25em; /* 1u */
-    text-overflow: ellipsis;
-    overflow: visible;
+    text-decoration: none;
 }
 #titlebar .logo {
     display: none;
@@ -2159,9 +2157,11 @@ p.label + ul {
 .hentry + .gs-group-messages-post-navigation {
     position: static;
 }
-.gs-group-messages-post-navigation h1 {
+#gs-group-messages-post h1 {
     white-space: nowrap;
     max-width: 19.5em;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 #gs-group-messages-post .hentry {
     margin: 1.25em 0; /* 1u */
