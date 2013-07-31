@@ -955,6 +955,9 @@ abbr.initialism {
     height: 12.5em; /* 10u */
     padding: 0.562em; /* 0.5u - 1px (for now) */
 }
+.modal-header h3 {
+    border: none;
+}
 
 .btn {
     background-image: none; /* A flat button*/
@@ -2173,6 +2176,9 @@ p.label + ul {
 /* TODO: move to gs.group.messages.post.hide */
 #hide-the-post {
     text-align: left;
+}
+#hide-the-post .buttons {
+    width: auto;
 }
 
 /* TODO Move to a sane place */
