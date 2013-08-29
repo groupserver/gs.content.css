@@ -968,6 +968,10 @@ abbr.initialism {
     background-color: #dddddd;
 }
 
+.tooltip-inner {
+    text-align: left;
+}
+
 select {
     /*font-size: 12px; */ /* Fixme */
     padding: 0;
