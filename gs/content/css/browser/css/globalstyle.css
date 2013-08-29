@@ -3090,3 +3090,12 @@ p.label + ul {
         margin: 0.625em 0 0.625em 0;
     }
 }
+
+@media print {
+    #utilitylinks, #gs-content-layout-footer-content, #breadcrumbs {
+        display: none;
+    }
+    #toparea a[href]:after, a[href^="mailto:"]:after {
+        content: "";
+    }
+}
