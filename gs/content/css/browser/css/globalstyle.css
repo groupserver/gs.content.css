@@ -1642,6 +1642,18 @@ div.noFloat {
     padding-top: 0.313em; /* 0.25u, to allign with the text in the buttons */
 }
 
+div[role="region"] {
+    position: relative;
+}
+
+.header-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1;
+}
+
 /* Text Markup: labels for lists */
 p.label {
     margin-bottom: 0;
@@ -1764,16 +1776,6 @@ p.label + ul {
 
 /* The Recently Active members list */
 /* TODO: move to gs.group.member.active */
-#gs-group-member-active {
-    position: relative;
-}
-#gs-group-member-active-all-members {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    line-height: 1;
-}
 .gs-group-member-active-members-member {
     position: relative; /* Create a new positioning context */
     margin: 0 0 0.625em 0;
