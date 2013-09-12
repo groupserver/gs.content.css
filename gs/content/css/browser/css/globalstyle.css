@@ -1013,10 +1013,12 @@ code, pre {
     border-width: 0.083em;
 }
 
-.well > :first-child, .well > :first-child > :first-child {
+.well > :first-child, .well > :first-child > :first-child, 
+.tab-pane > :first-child, .tab-pane > :first-child > :first-child {
     margin-top: 0;
 }
-.well > :last-child, .well > :last-child > :last-child {
+.well > :last-child, .well > :last-child > :last-child,
+.tab-pane > :last-child, .tab-pane > :last-child > :last-child {
     margin-bottom: 0;
 }
 
@@ -2711,28 +2713,32 @@ p.label + ul {
 }
 
 /* Members List */
+/* TODO: Move to gs.group.member.list */
+#gs-group-member-list a {
+    text-decoration: none;
+}
+#gs-group-member-list ul {
+    margin-left: 0;
+}
 #gs-group-member-list li.vcard {
   display: inline-block;
   width: 16.25em; /*13u*/
   height: 2.5em; /* 2u*/
-  margin: 1.250em; /* 1u */
-}
-#gs-group-member-list li.vcard img {
-  height: 2.5em;
+  margin: 0 1.250em 1.250em 0; /* 1u */
 }
 #gs-group-member-list .vcard li {
   list-style: none;
 }
-#gs-group-member-list .photo {
-  width:  1.875em; /* 1.5u */
-  height: 2.5em; /* 2.0u */
+#gs-group-member-list .userimage {
   padding: 0;
+  width: 2.5em; /* 2u */
+  height: 2.5em; /* 2u */
   display: inline-block;
   float: left;
-  background: #999;
+  background: none;
 }
 #gs-group-member-list .vcard ul {
-  margin-left: 2.5em; /* 2u */
+  margin-left: 3.125em; /* 2.5u */
 }
 
 /* Sign Up */
