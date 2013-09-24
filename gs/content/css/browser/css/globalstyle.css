@@ -1540,6 +1540,9 @@ body {
     position: relative;
     padding: 0 1.25em 0 13.75em; /* 1u 11u */
 }
+#gs-content-layout-menu-after #breadcrumbs {
+    display: none;
+}
 /* #content */
 
 /* Text Markup */
