@@ -3085,6 +3085,49 @@ p.label + ul {
     .gs-group-messages-topic-add .buttons {
         width: 100%;
     }
+
+    /* Turn the menu horizontal */
+    #gs-content-layout-menu {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    #gs-content-layout-menu p,
+    #gs-content-layout-menu ul,
+    #gs-content-layout-menu li {
+        display: inline;
+        width: auto;
+        margin: 0;
+    }
+    #gs-content-layout-menu p {
+        margin: 0 1.25em 0 0;
+    }
+    #gs-content-layout-menu li {
+        padding: 0;
+    }
+    #gs-content-layout-menu li:after {
+        font-family: 'gs-icons';
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        content: "\2022";
+        color: #cccccc;
+    }
+    #gs-content-layout-menu li:last-of-type:after {
+        content: '';
+    }
+    #gs-content-layout-menu-after {
+        padding: 0;
+    }
+
+    #gs-products-gscontentmanager-login {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 570px) {
