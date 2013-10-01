@@ -881,6 +881,7 @@ li a, li a:hover, li a:visited, dd a, dd a:hover, dd a:visited,
 }
 p a, p a:visited, pre a, pre a:visited, li a, li a:visited, dd a, dd a:visited {
     text-decoration-color: #999999;
+    text-decoration: underline;
 }
 p a:hover, pre a:hover, li a:hover, dd a:hover {
     text-decoration-color: currentColor;  /* Normally dark */
@@ -3138,6 +3139,15 @@ p.label + ul {
         width: auto;
     }    
 }
+
+@media screen and (max-width: 460px) {
+    #gs-group-type-discussion-canpost-anon-sign-up {
+        position: relative;
+        right: auto;
+        top: auto;
+    }    
+}
+
 @media screen and (max-width: 410px) {
     #gs-group-messages-topics-search-form-new-topic {
         position: static;
