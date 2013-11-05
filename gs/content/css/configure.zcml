@@ -1,58 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <configure xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:five="http://namespaces.zope.org/five">
-  
+           xmlns:browser="http://namespaces.zope.org/browser">
+
   <!-- CSS files -->
-  <browser:resource 
+  <browser:resource
     name="globalstyle-20130604.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
-  <browser:resource 
+  <browser:resource
     name="globalstyle-20120604.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
-  <browser:resource 
+  <browser:resource
     name="globalstyle-20120515.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
-  <browser:resource 
+  <browser:resource
     name="globalstyle-20110714.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
-  <browser:resource 
+  <browser:resource
     name="globalstyle-20110406.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
-  <browser:resource 
+  <browser:resource
     name="globalstyle-20110308.css"
     file="browser/css/globalstyle.css"
     permission="zope2.Public" />
-    
-  <browser:resource 
+
+  <browser:resource
     name="site-20110714.css"
-    file="browser/css/site.css" 
+    file="browser/css/site.css"
     permission="zope2.Public" />
-  <browser:resource 
+  <browser:resource
     name="site-20110406.css"
-    file="browser/css/site.css" 
+    file="browser/css/site.css"
     permission="zope2.Public" />
-  <browser:resource 
+  <browser:resource
     name="site-20110308.css"
-    file="browser/css/site.css" 
+    file="browser/css/site.css"
     permission="zope2.Public" />
-    
+
   <!-- Animated images -->
-  <browser:resourceDirectory 
+  <browser:resourceDirectory
     name="anim"
     directory="browser/images/anim/"
     permission="zope2.Public" />
 
   <!-- fonts -->
-  <browser:resourceDirectory 
+  <browser:resourceDirectory
     name="fonts-20130409"
     directory="browser/fonts/"
     permission="zope2.Public" />
-
 </configure>
-
