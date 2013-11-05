@@ -5,27 +5,27 @@
   <!-- CSS files -->
   <browser:resource
     name="globalstyle-20130604.css"
-    file="browser/css/globalstyle.css"
+    file="browser/css/globalstyle-min.css"
     permission="zope2.Public" />
   <browser:resource
     name="globalstyle-20120604.css"
-    file="browser/css/globalstyle.css"
+    file="browser/css/globalstyle-min.css"
     permission="zope2.Public" />
   <browser:resource
     name="globalstyle-20120515.css"
-    file="browser/css/globalstyle.css"
+    file="browser/css/globalstyle-min.css"
     permission="zope2.Public" />
   <browser:resource
     name="globalstyle-20110714.css"
-    file="browser/css/globalstyle.css"
+    file="browser/css/globalstyle-min.css"
     permission="zope2.Public" />
   <browser:resource
     name="globalstyle-20110406.css"
-    file="browser/css/globalstyle.css"
+    file="browser/css/globalstyle-min.css"
     permission="zope2.Public" />
   <browser:resource
     name="globalstyle-20110308.css"
-    file="browser/css/globalstyle.css"
+    file="browser/css/globalstyle-min.css"
     permission="zope2.Public" />
 
   <browser:resource
