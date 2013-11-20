@@ -1328,15 +1328,6 @@ input[type=text], textarea, input.textType {
   margin: 0 0.625em 0 0; 
 }
 
-/* WYMeditor */
-/* The styling for the WYMeditor is *not* done here. It is done by a */
-/* separate CSS that the WYMeditor loads */
-
-#tabmenu {
-    /* Just hide the tab-menu on editable pages, for now. */
-    display: none;
-}
-
 /* GroupServer Page Layout */
 /* TODO: move to 3 viewlets within gs.content.layout */
 
