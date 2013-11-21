@@ -2554,6 +2554,9 @@ p.label + ul {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+#gs-group-messages-files .gs-search-empty {
+    top: 0;
+}
 #gs-group-messages-files .gs-search-result {
     position: relative;
     border: none;
