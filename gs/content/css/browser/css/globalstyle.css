@@ -1863,6 +1863,11 @@ p.label + ul {
   padding:0;
 }
 
+.gs-search-empty {
+    position: relative;
+    top: -2.5em;
+}
+
 /* The results */
 .searchResults {
     margin: 1.250em 0 0 0; /* 1u */
