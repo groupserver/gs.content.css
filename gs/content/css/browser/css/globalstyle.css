@@ -1951,12 +1951,15 @@ p.label + ul {
     width: 100%;
 }
 
-#gs-group-messages-topics-search-form {
+#gs-group-messages-topics-search-form,
+#gs-group-type-announcement-posts-search-form {
     position: relative;
 }
-#gs-group-messages-topics-search-form-new-topic {
+#gs-group-messages-topics-search-form-new-topic, 
+#gs-group-type-announcement-posts-form-new-topic {
     position: absolute;
     right: 0;
+    z-index: 127;
 }
 .gs-search-result .files {
     margin-left: 0.389em;
@@ -3160,7 +3163,8 @@ p.label + ul {
 }
 
 @media screen and (max-width: 410px) {
-    #gs-group-messages-topics-search-form-new-topic {
+    #gs-group-messages-topics-search-form-new-topic,
+    #gs-group-type-announcement-posts-form-new-topic {
         position: static;
         margin: 0.625em 0 0.625em 0;
     }
