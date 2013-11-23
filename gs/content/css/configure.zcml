@@ -72,7 +72,7 @@
 
   <!-- fonts -->
   <browser:resourceDirectory
-    name="fonts-20130409"
+    name="fonts-20131122"
     directory="browser/fonts/"
     permission="zope2.Public" />
 </configure>

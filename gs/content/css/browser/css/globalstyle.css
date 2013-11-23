@@ -820,11 +820,11 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 /* TODO: move to gs.content.icons */
 @font-face {
     font-family: 'gs-icons';
-    src:url('/++resource++fonts-20130409/gs-icons.eot');
-    src:url('/++resource++fonts-20130409/gs-icons.eot?#iefix') format('embedded-opentype'),
-    url('/++resource++fonts-20130409/icons/gs-icons.woff') format('woff'),
-    url('/++resource++fonts-20130409/icons/gs-icons.ttf') format('truetype'),
-    url('/++resource++fonts-20130409/icons/gs-icons.svg#gs-icons') format('svg');
+    src:url('/++resource++fonts-20131122/gs-icons.eot');
+    src:url('/++resource++fonts-20131122/gs-icons.eot?#iefix') format('embedded-opentype'),
+    url('/++resource++fonts-20131122/icons/gs-icons.woff') format('woff'),
+    url('/++resource++fonts-20131122/icons/gs-icons.ttf') format('truetype'),
+    url('/++resource++fonts-20131122/icons/gs-icons.svg#gs-icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -859,6 +859,25 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
   position: absolute;
   top: -9999px;
   left: -9999px;
+}
+
+
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+@-moz-keyframes spin {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+.loading {
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-name: spin;
+    animation-timing-function: linear;
 }
 
 /******************************/
