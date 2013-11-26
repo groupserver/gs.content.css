@@ -879,6 +879,9 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
     animation-name: spin;
     animation-timing-function: linear;
 }
+span.loading {
+    display: inline-block;
+}
 
 /******************************/
 /* GroupServer Typeface Setup */
