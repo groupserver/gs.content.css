@@ -10,7 +10,7 @@ Core CSS support for GroupServer
          Ben Ford,
          Josh Campbell
 :Contact: Michael JasonSmith <mpj17@onlinegroups.net>
-:Date: 2013-04-04
+:Date: 2013-11-26
 :Organization: `GroupServer.org`_
 :Copyright: This document is licensed under a
   `Creative Commons Attribution-Share Alike 3.0 New Zealand License`_
@@ -115,7 +115,7 @@ as detailed below.
 +=============+================+=====+=================================+
 | **Breadcrumb trail**                                                 |
 +-------------+----------------+-----+---------------------------------+
-| Home        | ``&#x2302;``   | Yes |                                 |
+| Home        | ``&#x2302;``   | Yes | A house                         |
 +-------------+----------------+-----+---------------------------------+
 | Separator   | ``&#xe000;``   | No  | A right-pointing chevron        |
 +-------------+----------------+-----+---------------------------------+
@@ -143,6 +143,8 @@ as detailed below.
 +-------------+----------------+-----+---------------------------------+
 | Search      | ``&#x1f50d;``  | Yes | Magnifying glass                |
 +-------------+----------------+-----+---------------------------------+
+| Install     | ``&#xe002;``   | No  | Arrow pointing to a disk druve  |
++-------------+----------------+-----+---------------------------------+
 | **True icons**                                                       |
 +-------------+----------------+-----+---------------------------------+
 | Picture     | ``&#x1f3a8;``  | Yes | Replaces "artist palette"       |
@@ -153,11 +155,17 @@ as detailed below.
 +-------------+----------------+-----+---------------------------------+
 | Documents   | ``&#x1f5cd;``  | Yes | Replaces "empty pages"          |
 +-------------+----------------+-----+---------------------------------+
+| Archive     | ``&#xe004;``   | No  | For zip and tar files           |
++-------------+----------------+-----+---------------------------------+
 | Attach      | ``&#x1f4ce;``  | Yes | Paperclip (attachments exist)   |
 +-------------+----------------+-----+---------------------------------+
 | Email       | ``&#x2709;``   | Yes | An envelope                     |
 +-------------+----------------+-----+---------------------------------+
 | Pin         | ``&#x1f4cc;``  | Yes | For *sticky* topics             |
++-------------+----------------+-----+---------------------------------+
+| Linux       | ``&#xe017;``   | No  | Tux, for <groupserver.org>      |
++-------------+----------------+-----+---------------------------------+
+| Groupserver | ``&#xe018;``   | No  | "GS", for <groupserver.org>     |
 +-------------+----------------+-----+---------------------------------+
 | **Social-media services**                                            |
 +-------------+----------------+-----+---------------------------------+
@@ -166,6 +174,52 @@ as detailed below.
 | Google Plus | ``&#x67;``     | No  | The ``g`` character             |
 +-------------+----------------+-----+---------------------------------+
 | Twitter     | ``&#x74;``     | No  | The ``t`` character             |
++-------------+----------------+-----+---------------------------------+
+| **Devices**                                                          |
++-------------+----------------+-----+---------------------------------+
+| Mobile      | ``&#x013;``    | No  | A cell-phone                    |
++-------------+----------------+-----+---------------------------------+
+| Tablet      | ``&#x014``     | No  |                                 |
++-------------+----------------+-----+---------------------------------+
+| Laptop      | ``&#x015``     | No  |                                 |
++-------------+----------------+-----+---------------------------------+
+| Desktop     | ``&#x016``     | No  | A monitor, or screen            |
++-------------+----------------+-----+---------------------------------+
+| **Text editing**                                                     |
++-------------+----------------+-----+---------------------------------+
+| Bold        | ``&#xe005;``   | No  | A bold **B**                    |
++-------------+----------------+-----+---------------------------------+
+| Italic      | ``&#xe006;``   | No  | A italic *I*                    |
++-------------+----------------+-----+---------------------------------+
+| Superscript | ``&#xe007;``   | No  | ``x²``                          |
++-------------+----------------+-----+---------------------------------+
+| Subscript   | ``&#xe008;``   | No  | ``x₂``                          |
++-------------+----------------+-----+---------------------------------+
+| Unlink      | ``&#xe009;``   | No  | A broken chain                  |
++-------------+----------------+-----+---------------------------------+
+| Link        | ``&#xe00a;``   | No  | A chain                         |
++-------------+----------------+-----+---------------------------------+
+| ``ul``      | ``&#xe00b;``   | No  | Unordered list icon             |
++-------------+----------------+-----+---------------------------------+
+| ``ol``      | ``&#xe00c;``   | No  | Ordered list icon               |
++-------------+----------------+-----+---------------------------------+
+| Indent      | ``&#xe00d;``   | No  | Indent list left                |
++-------------+----------------+-----+---------------------------------+
+| Outdent     | ``&#xe00e;``   | No  | Indent list right               |
++-------------+----------------+-----+---------------------------------+
+| Code        | ``&#xe00f;``   | No  | ``</>``                         |
++-------------+----------------+-----+---------------------------------+
+| Table       | ``&#xe010;``   | No  |                                 |
++-------------+----------------+-----+---------------------------------+
+| Paste       | ``&#xe011;``   | No  | A page and clipboard            |
++-------------+----------------+-----+---------------------------------+
+| Undo        | ``&#x238c;``   | Yes |                                 |
++-------------+----------------+-----+---------------------------------+
+| Redo        | ``&#x012;``    | No  |                                 |
++-------------+----------------+-----+---------------------------------+
+| **Activity**                                                         |
++-------------+----------------+-----+---------------------------------+
+| spinner     | ``&#xe619;``   | No  | Animated (see Loading_ below)   |
 +-------------+----------------+-----+---------------------------------+
 
 Where possible the glyphs are mapped onto standard Unicode code
@@ -177,6 +231,8 @@ start of the private-use area.
 
 #.  `Enhance a word`_, and
 #.  `Standalone icons`_.
+
+The latter is used to display the Loading_ animation.
 
 Enhance a word
 --------------
@@ -217,6 +273,20 @@ following displays a Web feed icon::
   is given the ``screen-reader-text`` class so it is hidden to visual
   browsers.
 
+Loading
+-------
+
+When loading data using AJAX it is desirable to show that activity is
+taking place in the background. To do this the Loading icon-character is
+provided with some CSS3 to animate the icon so it spins. To create a
+Loading icon add a standalone icon with the ``loading`` class::
+
+  <span data-icon="&#xe619;" aria-hidden="true" class="loading"> </span>
+
+:Note: The space in the ``<span> </span>`` is important. Markup processors
+       (such as TAL) can turn XHTML self-closed elements (``<span/>``) into
+       unclosed elements. The side effect is the entire paragraph is spun.
+
 Acknowledgements
 ================
 
@@ -226,10 +296,11 @@ License, Version 2.0`_.
 
 The Icons_ were taken from two glyph-fonts:
 
+* `Font Awesome`_ by Dave Gandy provided the text-editing icons, the
+  devices, the spinner, and the pin-icon. It is licenced under the `CC BY
+  3.0 license`_.
 * Entypo_ by Daniel Bruce provided most of the icons. It is licenced under
   the `CC BY-SA 3.0 license`_ (much like this README).
-* `Font Awesome`_ by Dave Gandy provided the pin icon. It is licenced under 
-  the `CC BY 3.0 license`_.
 
 The `IcoMoon`_ App, by Keyamoon, was used to crate the font-files.
 
