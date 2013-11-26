@@ -1,14 +1,14 @@
 {
 	"metadata": {
 		"name": "GS Fonts Take Two",
-		"lastOpened": 1385157883203,
+		"lastOpened": 1385425182715,
 		"created": 1385146183513
 	},
 	"iconSets": [
 		{
 			"selection": [
 				{
-					"order": 45,
+					"order": 44,
 					"id": 0,
 					"prevSize": 16,
 					"code": 57368,
@@ -4263,7 +4263,7 @@
 					"id": 182
 				},
 				{
-					"order": 44,
+					"order": 43,
 					"id": 183,
 					"prevSize": 20,
 					"code": 128265,
@@ -9450,10 +9450,10 @@
 					"id": 29
 				},
 				{
-					"order": 39,
+					"order": 38,
 					"id": 30,
 					"prevSize": 28,
-					"code": 57363,
+					"code": 57362,
 					"name": "repeat",
 					"tempChar": "",
 					"ligatures": ""
@@ -9573,7 +9573,7 @@
 					"id": 56
 				},
 				{
-					"order": 32,
+					"order": 31,
 					"id": 57,
 					"prevSize": 28,
 					"code": 57357,
@@ -9582,7 +9582,7 @@
 					"ligatures": ""
 				},
 				{
-					"order": 33,
+					"order": 32,
 					"id": 58,
 					"prevSize": 28,
 					"code": 57358,
@@ -10040,7 +10040,7 @@
 					"id": 169
 				},
 				{
-					"order": 31,
+					"order": 30,
 					"id": 170,
 					"prevSize": 28,
 					"code": 57354,
@@ -10081,7 +10081,7 @@
 					"id": 178
 				},
 				{
-					"order": 28,
+					"order": 27,
 					"id": 179,
 					"prevSize": 28,
 					"code": 57355,
@@ -10090,7 +10090,7 @@
 					"ligatures": ""
 				},
 				{
-					"order": 29,
+					"order": 28,
 					"id": 180,
 					"prevSize": 28,
 					"code": 57356,
@@ -10107,7 +10107,7 @@
 					"id": 182
 				},
 				{
-					"order": 35,
+					"order": 34,
 					"id": 183,
 					"prevSize": 28,
 					"code": 57360,
@@ -10184,7 +10184,7 @@
 					"id": 200
 				},
 				{
-					"order": 38,
+					"order": 37,
 					"id": 201,
 					"prevSize": 28,
 					"code": 9100,
@@ -10221,7 +10221,7 @@
 					"id": 208
 				},
 				{
-					"order": 36,
+					"order": 35,
 					"id": 209,
 					"prevSize": 28,
 					"code": 57361,
@@ -10338,16 +10338,16 @@
 					"id": 236
 				},
 				{
-					"order": 37,
+					"order": 36,
 					"id": 237,
 					"prevSize": 28,
-					"code": 57362,
+					"code": 57366,
 					"name": "desktop",
 					"tempChar": "",
 					"ligatures": ""
 				},
 				{
-					"order": 41,
+					"order": 40,
 					"id": 238,
 					"prevSize": 28,
 					"code": 57365,
@@ -10356,7 +10356,7 @@
 					"ligatures": ""
 				},
 				{
-					"order": 40,
+					"order": 39,
 					"id": 239,
 					"prevSize": 28,
 					"code": 57364,
@@ -10365,10 +10365,10 @@
 					"ligatures": ""
 				},
 				{
-					"order": 42,
+					"order": 41,
 					"id": 240,
 					"prevSize": 28,
-					"code": 57366,
+					"code": 57363,
 					"name": "mobile",
 					"tempChar": "",
 					"ligatures": ""
@@ -10390,7 +10390,7 @@
 					"id": 361
 				},
 				{
-					"order": 46,
+					"order": 45,
 					"id": 244,
 					"prevSize": 16,
 					"name": "spinner",
@@ -10459,7 +10459,7 @@
 					"id": 259
 				},
 				{
-					"order": 34,
+					"order": 33,
 					"id": 260,
 					"prevSize": 28,
 					"code": 57359,
@@ -10488,7 +10488,7 @@
 					"id": 265
 				},
 				{
-					"order": 30,
+					"order": 29,
 					"id": 266,
 					"prevSize": 28,
 					"code": 57353,
@@ -10509,7 +10509,7 @@
 					"id": 269
 				},
 				{
-					"order": 26,
+					"order": 25,
 					"id": 270,
 					"prevSize": 28,
 					"code": 57351,
@@ -10518,7 +10518,7 @@
 					"ligatures": ""
 				},
 				{
-					"order": 27,
+					"order": 26,
 					"id": 271,
 					"prevSize": 28,
 					"code": 57352,
@@ -10823,7 +10823,7 @@
 					"id": 345
 				},
 				{
-					"order": 43,
+					"order": 42,
 					"id": 346,
 					"prevSize": 28,
 					"code": 57367,
