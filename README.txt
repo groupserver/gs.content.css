@@ -292,7 +292,13 @@ Acknowledgements
 
 The `Twitter Bootstrap`_ CSS is pasted at the start of the GroupServer file
 to eliminate the need for an HTTP request. It is licenced under the `Apache
-License, Version 2.0`_.
+License, Version 2.0`_. The included CSS is a modified version of `Bootstrap
+2.3.0`_. Refer to the `documentation for 2.3.2`_ to learn more. Do note that
+the following components have been removed from the included version of 
+Bootstrap:
+
+* The grid system
+* Responsive utility classes
 
 The Icons_ were taken from two glyph-fonts:
 
@@ -328,6 +334,9 @@ Resources
    http://creativecommons.org/licenses/by-sa/3.0/nz/
 .. _Two patterns from CSS Tricks: http://css-tricks.com/html-for-icon-font-usage/
 .. _Twitter Bootstrap: http://twitter.github.com/bootstrap/
+.. _Bootstrap 2.3.0: 
+   http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css
+.. _documentation for 2.3.2: http://getbootstrap.com/2.3.2/
 .. _Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
 .. _Entypo: http://entypo.com/
 .. _CC BY-SA 3.0 license: http://creativecommons.org/licenses/by-sa/3.0/
