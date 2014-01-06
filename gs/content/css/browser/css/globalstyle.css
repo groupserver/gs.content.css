@@ -2811,17 +2811,32 @@ p.label + ul {
 }
 
 /* Invitations */
+/* TODO: Move to gs.group.member.invite.base */
 #invite-message-preview-button {
   padding: 0.625em; /* 0.5u */
   margin: 1.250em 0; /* 1u */
   cursor: pointer;
 }
+
 /* Invite by CSV */
-#gs-group-member-invite-csv select {
-  margin: 0 0 1.250em 1.250em; /* 0 0 1u 1u */
+/* TODO: Move to gs.group.member.invite.csv */
+#gs-group-member-invite-csv-columns-table colgroup.required {
+    border-right: thin solid black;
+    background: #ebebeb;
+}
+#gs-group-member-invite-csv-columns-table thead tr {
+    border-bottom: thin solid black;
+}
+#gs-group-member-invite-csv-columns-table .dropdown-menu a {
+    text-decoration: none;
+}
+#gs-group-member-invite-csv-invitation {
+    /* Hidden, so it is avaliable to JS but not the administrator. */
+    display: none;
 }
 
 /* Respond to the Invitation */
+/* TODO: Move to gs.profile.invite */
 #gs-profile-invite-respond-about-admin h2 {
     margin: 0 0 0.5em 0;
 }
