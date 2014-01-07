@@ -2067,12 +2067,12 @@ p.label + ul {
     min-height: 6.250em; /* 5u */
 }
 .gs-search .hentry {
-    min-height: 0; 
+    min-height: 0;
 }
 
-.hentry pre a, 
-.hentry pre a:visited, 
-.hentry pre a:hover, 
+.hentry pre a,
+.hentry pre a:visited,
+.hentry pre a:hover,
 .hentry pre a:focus {
     color: black;
     text-decoration: underline;
@@ -2113,9 +2113,9 @@ p.label + ul {
 
 .hentry .email-message, .hidden-post {
     position: relative;
-    left: 17.5em; /* 14u */
+    left: 16.875em; /* 13.5u, but see below for the 0.5u padding */
     width: 41.25em; /* 33u */
-    padding: 1.250em 0 0 0; 
+    padding: 1.250em 0 0 0;
 }
 .hentry pre {
     font-family: inherit;
@@ -2123,11 +2123,13 @@ p.label + ul {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0;
     border: none;
     margin: 0;
 }
-.hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification, 
+.hentry pre, .hidden-post, .hentry .fileNotification {
+    padding: 0 0 0 0.625em;  /* 0.5u, for wierd clipping reasons */
+}
+.hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification,
 .hidden-post {
     width: 41.25em; /* 33u */
 }
