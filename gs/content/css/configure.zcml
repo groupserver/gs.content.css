@@ -19,7 +19,7 @@
     file="browser/css/globalstyle-min.css"
     permission="zope2.Public" />
   <browser:resource
-    name="globalstyle-20140127.css"
+    name="globalstyle-min-20140127.css"
     file="browser/css/globalstyle-min.css"
     permission="zope2.Public" />
   <browser:resource
