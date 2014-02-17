@@ -819,8 +819,8 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 /* TODO: move to gs.content.icons */
 @font-face {
     font-family: 'gs-icons';
-    src:url('/++resource++fonts-20131122/gs-icons.eot');
-    src:url('/++resource++fonts-20131122/gs-icons.eot?#iefix') format('embedded-opentype'),
+    src:url('/++resource++fonts-20131122/icons/gs-icons.eot');
+    src:url('/++resource++fonts-20131122/icons/gs-icons.eot?#iefix') format('embedded-opentype'),
     url('/++resource++fonts-20131122/icons/gs-icons.woff') format('woff'),
     url('/++resource++fonts-20131122/icons/gs-icons.ttf') format('truetype'),
     url('/++resource++fonts-20131122/icons/gs-icons.svg#gs-icons') format('svg');
