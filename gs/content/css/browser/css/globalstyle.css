@@ -2638,8 +2638,9 @@ p.label + ul {
 /* resizes the image before displaying it on the Image Page. Besides */
 /* the image the Image Page shows some Metadata associated with the */
 /* posted file. */
-.gs-group-messages-image  h1 {
-    max-width: 25.333em; /* 47.5u */
+.gs-group-messages-image h1 {
+    max-width: 24em; /* 18.0u @30px on 40px line */
+    overflow: hidden;
     white-space: nowrap; /* Because of the code element */
 }
 .gs-group-messages-image-navlinks {
