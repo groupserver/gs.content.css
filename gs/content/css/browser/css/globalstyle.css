@@ -1175,7 +1175,7 @@ tbody th {
 }
 .nav-tabs > li > a:hover {
     color: #333333;
-    border-color-bottom: #666666;
+    border-bottom-color: #666666;
     background: none;
 }
 .nav-tabs > .active > a,
@@ -1228,6 +1228,7 @@ textarea[readonly] {
 }
 
 /* TODO: move to gs.content.js.more */
+/* TODO: max-height transition hack */
 .gs-content-js-more-content {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1243,7 +1244,7 @@ textarea[readonly] {
     height: 6.667em; /* 4u @ 12px */    
 }
 .gs-content-js-more-content-large {
-    height: auto;
+    height: au;
 }
 .gs-content-js-more-buttons {
     border-top: 0.063em solid #dddddd;
@@ -1601,7 +1602,7 @@ div.noFloat {
 .gs-content-layout-cols {
     position: relative; /* Create a new positioning context */
     margin-top: 1.250em;
-    width: width: 58.813em; /* 47u + thin, for complex float reasons*/
+    width: 58.813em; /* 47u + thin, for complex float reasons*/
 }
 .gs-content-layout-cols .main {
     position: relative;
@@ -1924,7 +1925,7 @@ p.label + ul {
     padding-bottom: 1.188em; /* 1u - thin */
     margin-bottom: 1.250em; /* 1u */
     list-style: none;
-    min-height: auto;
+    min-height: 0;
 }
 .small .gs-search-result, .gs-search-result.small {
     border-bottom: 0.083em solid #dddddd; /* Thin */
@@ -2412,7 +2413,8 @@ p.label + ul {
     width: 3.125em; /* 2.5u */
 }
 #gs-group-messages-starttopic-new-topic input {
-    padding: inherit 0.562em; /* .5u - thin */
+    padding-left: 0.562em; /* .5u - thin */
+    padding-right: 0.562em; /* .5u - thin */
     width: 36.875em; /* 29.5u */
 }
 

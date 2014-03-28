@@ -16,7 +16,7 @@
   <!-- CSS files -->
   <browser:resource
     name="globalstyle-20140305.css"
-    file="browser/css/globalstyle-min.css"
+    file="browser/css/globalstyle.css"
     permission="zope2.Public" />
   <browser:resource
     name="globalstyle-20140217.css"
