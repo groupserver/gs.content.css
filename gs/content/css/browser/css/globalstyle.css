@@ -1845,6 +1845,9 @@ p.label + ul {
     margin: 0.625em 0 1.250em 0;
     padding: 0.562em 0 0 0; /* 0.5u - 1px */
 }
+#gs-group-member-active-stats ul {
+    margin: 0;
+}
 
 /* The Welcome message on the site homepage */
 /* TODO: move to gs.site.welcome */
