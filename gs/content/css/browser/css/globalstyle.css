@@ -1,9 +1,8 @@
 /* GroupServer Standard Stylesheet
  * 
- * -- Michael JasonSmith (mpj17) 2013
+ * -- Michael JasonSmith (mpj17) 2013, 2014
  *
  */
-
 
 /* Bootstrap CSS, copied here to save a request. */
 
@@ -811,6 +810,9 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 /* WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED   */
 /* WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS */
 /* FOR A PARTICULAR PURPOSE. */
+
+/* TODO: Add a lobotomised owl selector */
+/* <http://alistapart.com/article/axiomatic-css-and-lobotomized-owls> */
 
 /*********/
 /* Icons */
@@ -1812,6 +1814,13 @@ p.label + ul {
     text-decoration: none;
 }
 
+/* The membership info box */
+/* TODO: Move to gs.group.member.info */
+#gs-group-member-info-logged-in-member-info-email-settings {
+    display: block;
+    float: right;
+}
+
 /* The Recently Active members list */
 /* TODO: move to gs.group.member.active */
 .gs-group-member-active-members-member {
@@ -2216,11 +2225,21 @@ p.label + ul {
 }
 .hentry + .gs-group-messages-post-navigation {
     position: static;
+    
+}
+/* --=mpj17=-- The CSS3 overflow properies are a bit odd. If */
+/* overflow-x is set then the element is likely to get a */
+/* vertical scroll bar, even if overflow-y:visible is set. To */
+/* get around this the headding is wrapped. */
+#gs-group-messages-post-heading {
+    height: 2.5em;
+    overflow-y: visible;
 }
 #gs-group-messages-post h1 {
-    white-space: nowrap;
-    max-width: 19.5em;
+    height: 3em; /* Needed must be > height of container. */
+    max-width: 19.0em;
     overflow-x: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
 }
 #gs-group-messages-post .hentry {
