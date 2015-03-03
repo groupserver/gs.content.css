@@ -242,7 +242,9 @@ Enhance a word
 --------------
 
 Two data attributes can be used to add icons in order to enhance
-a word::
+a word.
+
+.. code-block:: xml
 
   <button data-icon="&#x25c3;">Newer</button>
   <button data-icon-after="&#x25b9;">Older</button>
@@ -263,7 +265,9 @@ Standalone icons
 
 Standalone icons need additional markup so screen-readers can
 "read" what the icon is, while visual browsers see the glyph. For
-example, the following displays a Web feed icon::
+example, the following displays a Web feed icon:
+
+.. code-block:: xml
 
   <a type="application/atom+xml" class="icon-alone" href="/some/feed.atom">
     <span aria-hidden="true" data-icon="&#xe003;"></span>
@@ -286,9 +290,12 @@ When loading data using AJAX it is desirable to show that
 activity is taking place in the background. To do this the
 Loading icon-character is provided with some CSS3 to animate the
 icon so it spins. To create a Loading icon add a standalone icon
-with the ``loading`` class::
+with the ``loading`` class:
 
-  <span data-icon="&#xe619;" aria-hidden="true" class="loading"> </span>
+.. code-block:: xml
+
+  <span data-icon="&#xe619;" aria-hidden="true" 
+        class="loading"> </span>
 
 :Note: The space in the ``<span> </span>`` is important. Markup
        processors (such as TAL) can turn XHTML self-closed
