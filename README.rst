@@ -322,8 +322,9 @@ was by `Michael JasonSmith`_.
 Resources
 =========
 
-- Code repository: https://source.iopen.net/groupserver/gs.content.css
-- Questions and comments to http://groupserver.org/groups/development
+- Code repository: https://github.com/groupserver/gs.content.css
+- Questions and comments to
+  http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
 
 .. _GroupServer: http://groupserver.org/
