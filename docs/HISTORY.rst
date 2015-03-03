@@ -34,7 +34,7 @@ Changelog
 * Fixing the profile images in *Reply to topic* and *Start a new
   topic*, closing `Bug 4082`_
 
-.. _Feature 4082: https://redmine.iopen.net/issues/4082
+.. _Bug 4082: https://redmine.iopen.net/issues/4082
 
 2.4.1 (2014-02-17)
 ------------------
