@@ -10,31 +10,35 @@ Core CSS support for GroupServer
          Ben Ford,
          Josh Campbell
 :Contact: Michael JasonSmith <mpj17@onlinegroups.net>
-:Date: 2013-11-26
+:Date: 2015-03-03
 :Organization: `GroupServer.org`_
 :Copyright: This document is licensed under a
-  `Creative Commons Attribution-Share Alike 3.0 New Zealand License`_
-  by `OnlineGroups.Net`_.
+  `Creative Commons Attribution-Share Alike 4.0 International License`_
+  by `OnlineGroups.net`_.
 
 Introduction
 ============
 
-The core GroupServer_ CSS code implements a style known as "Colour is for
-Happy People". It is *deliberately* devoid of colour: just black, white and
-greys are used. This means that everything has to rely on layout_
-(alignment and proximity), shape and typography to make sense. The
-typography is supported by some glyph icons_.
+The core GroupServer_ CSS code implements a style known as
+"Colour is for Happy People". It is *deliberately* devoid of
+colour: just black, white and greys are used. This means that
+everything has to rely on layout_ (alignment and proximity),
+shape and typography to make sense. The typography is supported
+by some glyph icons_.
 
 To this core layout different colourful skins can be added. See
-``gs.skin.green`` and ``gs.skin.blue`` for two examples.
+`gs.skin.green`_ and `gs.skin.blue`_ for two examples.
+
+.. _gs.skin.green: https://github.com/groupserver/gs.skin.green
+.. _gs.skin.blue: https://github.com/groupserver/gs.skin.blue
 
 Layout
 ======
 
-The CSS layout is based on a 16px typeface on a 20px line, with all
-measurements specified in ems. Below is a table that can be used to convert
-between units, pixels and ems. (All measurements should be multiples of
-half-units).
+The CSS layout is based on a 16px typeface on a 20px line, with
+all measurements specified in ems. Below is a table that can be
+used to convert between units, pixels and ems. (All measurements
+should be multiples of half-units).
 
 +-------+-----+--------+--------------------------------------------+
 |       |     |        | Without Border Width (in em)               |
@@ -89,10 +93,10 @@ For values above 10u use the following formula::
   em = ────────
          16.0
 
-The only complication are borders. They can throw out the rhythm, so must
-be taken off the margin or padding. The last three columns in the above
-table have the border widths taken out. For values above 6u take away one
-of the following three values:
+The only complication are borders. They can throw out the rhythm,
+so must be taken off the margin or padding. The last three
+columns in the above table have the border widths taken out. For
+values above 6u take away one of the following three values:
 
 +--------+-----+-------+
 | Size   | px  |  em   | 
@@ -223,9 +227,9 @@ as detailed below.
 +-------------+----------------+-----+---------------------------------+
 
 Where possible the glyphs are mapped onto standard Unicode code
-points. This allows them to look *vaguely* right when typefaces other than
-the glyph-font are being used. The non-standard icons are placed at the
-start of the private-use area.
+points. This allows them to look *vaguely* right when typefaces
+other than the glyph-font are being used. The non-standard icons
+are placed at the start of the private-use area.
 
 `Two patterns from CSS Tricks`_ are used to display the icons:
 
@@ -237,28 +241,29 @@ The latter is used to display the Loading_ animation.
 Enhance a word
 --------------
 
-Two data attributes can be used to add icons in order to enhance a word::
+Two data attributes can be used to add icons in order to enhance
+a word::
 
   <button data-icon="&#x25c3;">Newer</button>
   <button data-icon-after="&#x25b9;">Older</button>
 
-The first attribute is ``data-icon``. It take the character to display (a
-left arrow in the above example) as its argument. That character is
-displayed before the text within the element. By using the ``data-icon``
-attribute screen-readers do not "speak" the icon, and older browsers
-degrade gracefully.
+The first attribute is ``data-icon``. It take the character to
+display (a left arrow in the above example) as its argument. That
+character is displayed before the text within the element. By
+using the ``data-icon`` attribute screen-readers do not "speak"
+the icon, and older browsers degrade gracefully.
 
-The second example above shows the ``data-icon-after`` attribute. It
-displays the icon after the text within the element; it is mostly used for
-*Next* buttons.
+The second example above shows the ``data-icon-after``
+attribute. It displays the icon after the text within the
+element; it is mostly used for *Next* buttons.
 
 
 Standalone icons
 ----------------
 
-Standalone icons need additional markup so screen-readers can "read" what
-the icon is, while visual browsers see the glyph. For example, the
-following displays a Web feed icon::
+Standalone icons need additional markup so screen-readers can
+"read" what the icon is, while visual browsers see the glyph. For
+example, the following displays a Web feed icon::
 
   <a type="application/atom+xml" class="icon-alone" href="/some/feed.atom">
     <span aria-hidden="true" data-icon="&#xe003;"></span>
@@ -266,58 +271,64 @@ following displays a Web feed icon::
   </a>
 
 * The outer element is marked up with the ``icon-alone`` class.
-* The second element provides the icon, using the same ``data-icon``
-  attribute that is used to `enhance a word`_. The ``aria-hidden``
-  attribute prevents screen readers from "saying" the icon.
-* The third and final element provides the text for the screen-reader. It
-  is given the ``screen-reader-text`` class so it is hidden to visual
-  browsers.
+* The second element provides the icon, using the same
+  ``data-icon`` attribute that is used to `enhance a word`_. The
+  ``aria-hidden`` attribute prevents screen readers from "saying"
+  the icon.
+* The third and final element provides the text for the
+  screen-reader. It is given the ``screen-reader-text`` class so
+  it is hidden to visual browsers.
 
 Loading
 -------
 
-When loading data using AJAX it is desirable to show that activity is
-taking place in the background. To do this the Loading icon-character is
-provided with some CSS3 to animate the icon so it spins. To create a
-Loading icon add a standalone icon with the ``loading`` class::
+When loading data using AJAX it is desirable to show that
+activity is taking place in the background. To do this the
+Loading icon-character is provided with some CSS3 to animate the
+icon so it spins. To create a Loading icon add a standalone icon
+with the ``loading`` class::
 
   <span data-icon="&#xe619;" aria-hidden="true" class="loading"> </span>
 
-:Note: The space in the ``<span> </span>`` is important. Markup processors
-       (such as TAL) can turn XHTML self-closed elements (``<span/>``) into
-       unclosed elements. The side effect is the entire paragraph is spun.
+:Note: The space in the ``<span> </span>`` is important. Markup
+       processors (such as TAL) can turn XHTML self-closed
+       elements (``<span/>``) into unclosed elements. The side
+       effect is the entire paragraph is spun.
 
 Acknowledgements
 ================
 
-The `Twitter Bootstrap`_ CSS is pasted at the start of the GroupServer file
-to eliminate the need for an HTTP request. It is licenced under the `Apache
-License, Version 2.0`_. The included CSS is a modified version of `Bootstrap
-2.3.0`_. Refer to the `documentation for 2.3.2`_ to learn more. Do note that
-the following components have been removed from the included version of 
-Bootstrap:
+The `Twitter Bootstrap`_ CSS is pasted at the start of the
+GroupServer file to eliminate the need for an HTTP request. It is
+licenced under the `Apache License, Version 2.0`_. The included
+CSS is a modified version of `Bootstrap 2.3.0`_. Refer to the
+`documentation for 2.3.2`_ to learn more. Do note that the
+following components have been removed from the included version
+of Bootstrap:
 
 * The grid system
 * Responsive utility classes
 
 The Icons_ were taken from two glyph-fonts:
 
-* `Font Awesome`_ by Dave Gandy provided the text-editing icons, the
-  devices, the spinner, and the pin-icon. It is licenced under the `CC BY
-  3.0 license`_.
-* Entypo_ by Daniel Bruce provided most of the icons. It is licenced under
-  the `CC BY-SA 3.0 license`_ (much like this README).
+* `Font Awesome`_ by Dave Gandy provided the text-editing icons,
+  the devices, the spinner, and the pin-icon. It is licenced
+  under the `CC BY 3.0 license`_.
+* Entypo_ by Daniel Bruce provided most of the icons. It is
+  licenced under the `CC BY-SA 3.0 license`_ (much like this
+  README).
 
 The `IcoMoon`_ App, by Keyamoon, was used to crate the font-files.
 
 Authors
 =======
 
-Josh Campbell did the initial design and implementation (GS 0.9). Ben Ford
-from Metasolutions_ did a major redesign (GS 1.0). Mike Harding from
-`Cactus Lab`_ re-imagined the design into what is implemented here (GS
-2.0). The CSS coding for the most recent two versions, and egg creation,
-was by `Michael JasonSmith`_.
+Josh Campbell did the initial design and implementation (GS
+0.9). Ben Ford from Metasolutions_ did a major redesign (GS
+1.0). Mike Harding from `Cactus Lab`_ re-imagined the design into
+what is implemented here (GS 2.0). The CSS coding for the most
+recent two versions, and egg creation, was by `Michael
+JasonSmith`_.
 
 Resources
 =========
@@ -331,8 +342,6 @@ Resources
 .. _GroupServer.org: http://groupserver.org/
 .. _OnlineGroups.Net: https://onlinegroups.net/
 .. _Michael JasonSmith: http://groupserver.org/p/mpj17/
-.. _Creative Commons Attribution-Share Alike 3.0 New Zealand License:
-   http://creativecommons.org/licenses/by-sa/3.0/nz/
 .. _Two patterns from CSS Tricks: http://css-tricks.com/html-for-icon-font-usage/
 .. _Twitter Bootstrap: http://twitter.github.com/bootstrap/
 .. _Bootstrap 2.3.0: 
