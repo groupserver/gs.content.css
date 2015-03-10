@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.6.0 (2015-03-10)
+------------------
+
+* Adding the CSS for the *Verify* page
+* Adding the CSS for the *Verify wait* page
+
 2.5.0 (2015-03-03)
 ------------------
 
