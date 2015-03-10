@@ -2971,6 +2971,38 @@ p.label + ul {
   padding: 0 0.625em; /* 0.5u */
 }
 
+/* The Awaiting verification page */
+/* TODO: move to gs.profile.signup.base */
+#gs-profile-signup-verify .status {
+    max-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#gs-profile-signup-verify .status-current {
+    max-width: 43.75em;
+    max-height: 2.5em;
+    -webkit-transition: max-width 1s;
+    transition: max-width 1s;
+}
+
+/* The Verify page */
+/* TODO: move to gs.profile.email.verify */
+#gs-profile-email-verify {
+    min-height: 11.25em; /*9u*/
+}
+#gs-profile-email-verify .status {
+    overflow: hidden;
+    max-height: 0;
+    margin:0;
+    padding:0;
+}
+#gs-profile-email-verify .status-current {
+    max-height: 500px;
+    -webkit-transition: max-height 1s;
+    transition: max-height 1s;
+}
+
 /* The Share widget */
 /* TODO: move to gs.content.js.share */
 .gs-content-js-sharebox-dialog {
