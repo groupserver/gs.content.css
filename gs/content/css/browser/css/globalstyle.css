@@ -2131,6 +2131,7 @@ p.label + ul {
     padding: 1.250em 0 0 0;
 }
 .hentry pre {
+    word-break: normal;  /* Over-ride Twitter Bootstrap */
     font-family: inherit;
     font-weight: normal;
     width: 100%;
