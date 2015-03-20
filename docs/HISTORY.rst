@@ -1,6 +1,16 @@
 Changelog
 =========
 
+2.6.1 (2015-03-20)
+------------------
+
+* Improving the rendering of posts on small screens, with thanks
+  to Piers_
+* Truncating the name of the author on the Image page when it is
+  wider than the containing box.
+
+.. _Piers: http://groupserver.org/r/post/7hAninwloIp51mDkbk183F
+
 2.6.0 (2015-03-10)
 ------------------
 
