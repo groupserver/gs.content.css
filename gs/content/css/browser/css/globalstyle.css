@@ -2055,7 +2055,7 @@ p.label + ul {
 /************/
 
 /* Messages: Post, both in a topic, on the posts page, or by itself. */
-/* TODO: move to gs.group.messages.post
+/* TODO: move to gs.group.messages.post.base
 /* PPP MMMMM EEEEEEEEEEEEEEEEE */
 /* PPP MMMMM EEEEEEEEEEEEEEEEE */
 /* PPP       EEEEEEEEEEEEEEEEE */
@@ -2072,7 +2072,7 @@ p.label + ul {
 /* P: photo (3u by 4u); M: metadata (12.5); A: Actions; E: email (33u); */
 /* R: remainder; F: files. 0.5u gap seperates the three vertical columns. */
 
-.hentry {
+.h-entry {
     position: relative;
     padding: 0 0 1.250em 0; /* TODO: check the 1.250 */
     border-bottom: 0.063em solid #dddddd;
@@ -2083,10 +2083,10 @@ p.label + ul {
     min-height: 0;
 }
 
-.hentry pre a,
-.hentry pre a:visited,
-.hentry pre a:hover,
-.hentry pre a:focus {
+.h-entry pre a,
+.h-entry pre a:visited,
+.h-entry pre a:hover,
+.h-entry pre a:focus {
     color: black;
     text-decoration: underline;
     -moz-text-decoration-color: #cccccc;
@@ -2098,18 +2098,18 @@ p.label + ul {
     padding: 0 0 1.062em 0;
 }
 
-.hentry .userimage, .email-metadata {
+.h-entry .userimage, .email-metadata {
     position: absolute;
     top: 1.250em;
 }
-.hentry .userimage {
+.h-entry .userimage {
     padding: 0;
 }
 .email-metadata {
     left: 3.750em; /* 3.5u: 3u for the photo, and 0.5u gap */
     width: 12.5em /* 10u */
 }
-.email-metadata .vcard, .email-metadata .posted {
+.email-metadata .h-card, .email-metadata .posted {
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
@@ -2124,13 +2124,13 @@ p.label + ul {
   display: none;
 }
 
-.hentry .email-message, .hidden-post {
+.h-entry .email-message, .hidden-post {
     position: relative;
     left: 16.875em; /* 13.5u, but see below for the 0.5u padding */
     width: 41.25em; /* 33u */
     padding: 1.250em 0 0 0;
 }
-.hentry pre {
+.h-entry pre {
     word-break: normal;  /* Over-ride Twitter Bootstrap */
     font-family: inherit;
     font-weight: normal;
@@ -2140,14 +2140,14 @@ p.label + ul {
     border: none;
     margin: 0;
 }
-.hentry pre, .hidden-post, .hentry .fileNotification {
+.h-entry pre, .hidden-post, .h-entry .fileNotification {
     padding: 0 0 0 0.625em;  /* 0.5u, for wierd clipping reasons */
 }
-.hentry .entry-content, .hentry .email-remainder, .hentry .fileNotification,
+.h-entry .entry-content, .h-entry .email-remainder, .h-entry .fileNotification,
 .hidden-post {
     width: 41.25em; /* 33u */
 }
-.hentry .entry-content, .hidden-post > p {
+.h-entry .entry-content, .hidden-post > p {
     margin: 0;
 }
 .email-remainder p.small {
@@ -2158,13 +2158,13 @@ p.label + ul {
 }
 
 /* File list at the bottom of a post. */
-.hentry .fileNotification {
+.h-entry .fileNotification {
     margin: 1.250em 0 0 0;
     padding: 1.188em 0 0 0;
     border-top: 0.063em solid #dddddd;
     vertical-align: top;
 }
-.hentry .fileNotification > * {
+.h-entry .fileNotification > * {
     display: inline-block;
 }
 .hentry .normalFileList {
@@ -2224,7 +2224,7 @@ p.label + ul {
     position: absolute;
     right: 0;
 }
-.hentry + .gs-group-messages-post-navigation {
+.h-entry + .gs-group-messages-post-navigation {
     position: static;
     
 }
@@ -2243,7 +2243,7 @@ p.label + ul {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-#gs-group-messages-post .hentry {
+#gs-group-messages-post .h-entry {
     margin: 1.25em 0; /* 1u */
     border-top: 0.188em solid #666666;
     border-bottom: 0.188em solid #666666;
