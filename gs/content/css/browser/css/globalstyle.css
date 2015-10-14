@@ -2113,6 +2113,7 @@ p.label + ul {
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
+    margin: 0;
 }
 .email-metadata > * {
     display: block;
@@ -2123,13 +2124,20 @@ p.label + ul {
 .email-metadata .topic {
   display: none;
 }
-
 .h-entry .email-message, .hidden-post {
     position: relative;
     left: 16.875em; /* 13.5u, but see below for the 0.5u padding */
     width: 41.25em; /* 33u */
     padding: 1.250em 0 0 0;
 }
+.gs-group-messages-post-buttons {
+    position: absolute;
+    font-size: 16px;
+    line-height: 20px;
+    top: 3.75em;  /* 2u */
+    left: 3.75em;  /* 2u */
+}
+
 .h-entry pre {
     word-break: normal;  /* Over-ride Twitter Bootstrap */
     font-family: inherit;
