@@ -1,5 +1,5 @@
 /* GroupServer Standard Stylesheet
- * 
+ *
  * -- Michael JasonSmith (mpj17) 2013, 2014
  *
  */
@@ -854,7 +854,7 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
   vertical-align: inherit;
   margin: 0;
   line-height: inherit;
-  
+
 }
 .screen-reader-text { /* Reusable, toolbox kind of class */
   position: absolute;
@@ -928,7 +928,7 @@ p a, p a:visited, pre a, pre a:visited, li a, li a:visited, dd a, dd a:visited {
 p a:hover, pre a:hover, li a:hover, dd a:hover {
     text-decoration-color: currentColor;  /* Normally dark */
 }
-a.btn, [role=navigation] a, [role=contentinfo] a,  
+a.btn, [role=navigation] a, [role=contentinfo] a,
 a[role=button],  a[role=button]:hover {
     text-decoration: none;
 }
@@ -1056,7 +1056,7 @@ code, pre {
     border-width: 0.083em;
 }
 
-.well > :first-child, .well > :first-child > :first-child, 
+.well > :first-child, .well > :first-child > :first-child,
 .tab-pane > :first-child, .tab-pane > :first-child > :first-child {
     margin-top: 0;
 }
@@ -1093,7 +1093,7 @@ h2 + :not(div), h3 + :not(div), h4 + :not(div), h5 + :not(div), h6 + :not(div), 
 }
 
 h3 {
-    /* 13px line*/ 
+    /* 13px line*/
     padding: 0 0 0.154em 0; /* + 2px padding = 15px */
     border-bottom: 0.188em solid #666666; /* + 3px border = 18px = 1u */
 }
@@ -1205,11 +1205,11 @@ label {
   font-weight: bold;
   margin: 1.250em 0 0.625em 0;
 }
-input[disabled], 
-select[disabled], 
-textarea[disabled], 
-input[readonly], 
-select[readonly], 
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
 textarea[readonly] {
     background: #dddddd;
 }
@@ -1243,7 +1243,7 @@ textarea[readonly] {
     height: 5em; /* 4u */
 }
 .small .gs-content-js-more-content-small {
-    height: 6.667em; /* 4u @ 12px */    
+    height: 6.667em; /* 4u @ 12px */
 }
 .gs-content-js-more-content-large {
     height: au;
@@ -1356,7 +1356,7 @@ input[type=text], textarea, input.textType {
 }
 #form-message .ui-icon, .form-widget-message .ui-icon {
   float: left;
-  margin: 0 0.625em 0 0; 
+  margin: 0 0.625em 0 0;
 }
 
 /* GroupServer Page Layout */
@@ -1368,7 +1368,7 @@ input[type=text], textarea, input.textType {
 /*
 /*   TTTTTTTTTTTTTT     UUUUUUU   */
 /* .............................. */
-/*   RRRR > RRRR > RRRR > RRRRR   */ 
+/*   RRRR > RRRR > RRRR > RRRRR   */
 /*                                */
 /*   BBBBBBBBBBBBBBBBBBB CCCCCC   */
 /*   BBBBBBBBBBBBBBBBBBB CCCCCC   */
@@ -1381,7 +1381,7 @@ input[type=text], textarea, input.textType {
 /* "Normal" page */
 /* TTTTTTTTTTTTTTTT     UUUUUUUUU */
 /* .............................. */
-/* RRRR > RRRR > RRRR > RRRR      */ 
+/* RRRR > RRRR > RRRR > RRRR      */
 /*                                */
 /* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
 /* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
@@ -1395,7 +1395,7 @@ input[type=text], textarea, input.textType {
 /* N: Context menu                */
 /* TTTTTTTTTTTTTTTT     UUUUUUUUU */
 /* .............................. */
-/* RRRR > RRRR > RRRR > RRRR      */ 
+/* RRRR > RRRR > RRRR > RRRR      */
 /*                                */
 /* NNN BBBBBBBBBBBBBBBBBBBBBBBBBB */
 /* NNN BBBBBBBBBBBBBBBBBBBBBBBBBB */
@@ -1406,7 +1406,7 @@ input[type=text], textarea, input.textType {
 /* FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
 
 body {
-    text-align: center; /* HACK for IE < 9. Bless it. */ 
+    text-align: center; /* HACK for IE < 9. Bless it. */
     background: #eeeeee;
 }
 #toparea {
@@ -1523,7 +1523,7 @@ body {
     display: inline-block;
 }
 #breadcrumbs ul {
-    margin: 0; 
+    margin: 0;
 }
 #breadcrumbs li {
     list-style: none;
@@ -1592,7 +1592,7 @@ p.label + ul {
 .noFloat {
     clear: both;
 }
-div.noFloat { 
+div.noFloat {
     visibility: hidden;
     height: 0;
     margin: 0;
@@ -1660,8 +1660,8 @@ div.noFloat {
     color: #999999;
     padding: 0 0.0.188em; /* medium */
 }
-.small .dotted-inline-list li:before, 
-.dotted-inline-list.small li:before, 
+.small .dotted-inline-list li:before,
+.dotted-inline-list.small li:before,
 .dotted-inline-list li.small:before {
    padding: 0 0;
 }
@@ -1977,12 +1977,12 @@ p.label + ul {
     top: 100%;
     left: 0.6em; /* 6px */
     content: " ";
-    width: 0; 
+    width: 0;
     height: 0;
     border: none;
     border-left: 0 solid transparent;
     border-right: 0.9em solid transparent;
-        
+
     border-top: 0.6em solid #dddddd;
 }
 .gs-search-result .tags {
@@ -1996,7 +1996,7 @@ p.label + ul {
 #gs-group-type-announcement-posts-search-form {
     position: relative;
 }
-#gs-group-messages-topics-search-form-new-topic, 
+#gs-group-messages-topics-search-form-new-topic,
 #gs-group-type-announcement-posts-form-new-topic {
     position: absolute;
     right: 0;
@@ -2058,8 +2058,8 @@ p.label + ul {
 /* TODO: move to gs.group.messages.post.base
 /* PPP MMMMM EEEEEEEEEEEEEEEEE */
 /* PPP MMMMM EEEEEEEEEEEEEEEEE */
-/* PPP       EEEEEEEEEEEEEEEEE */
-/* PPP AAAAA EEEEEEEEEEEEEEEEE */
+/*           EEEEEEEEEEEEEEEEE */
+/*     AAAAA EEEEEEEEEEEEEEEEE */
 /*           EEEEEEEEEEEEEEEEE */
 /*           EEEEEEEEEEEEEEEEE */
 /*           RRRRRRRRRRRRRRRRR */
@@ -2093,7 +2093,7 @@ p.label + ul {
     text-decoration-color: #cccccc;
 }
 
-#gs-group-messages-topic-page-content .hentry:last-child {
+#gs-group-messages-topic-page-content .h-entry:last-child {
     border-bottom: 0.188em solid #666666;
     padding: 0 0 1.062em 0;
 }
@@ -2101,6 +2101,8 @@ p.label + ul {
 .h-entry .userimage, .email-metadata {
     position: absolute;
     top: 1.250em;
+    height: 2.5em;
+    width: 2.5em;
 }
 .h-entry .userimage {
     padding: 0;
@@ -2179,7 +2181,7 @@ p.label + ul {
 .h-entry .fileNotification > * {
     display: inline-block;
 }
-.hentry .normalFileList {
+.h-entry .normalFileList {
     vertical-align: top;
     margin: 0 1.250em 1.250em 0;
 }
@@ -2224,7 +2226,7 @@ p.label + ul {
 }
 .mediaFileList .hmedia img {
     max-width: 11.812em; /* 9.5u - thin;*/
-    max-height: 11.812em; 
+    max-height: 11.812em;
     border: 0.063em solid #eeeeee;
 }
 .mediaFileList .hmedia .info {
@@ -2238,7 +2240,7 @@ p.label + ul {
 }
 .h-entry + .gs-group-messages-post-navigation {
     position: static;
-    
+
 }
 /* --=mpj17=-- The CSS3 overflow properies are a bit odd. If */
 /* overflow-x is set then the element is likely to get a */
@@ -2302,7 +2304,7 @@ p.label + ul {
     margin-bottom: 0;
 }
 
-.modal + .gs-group-messages-topic-navlinks, 
+.modal + .gs-group-messages-topic-navlinks,
 .postList + .gs-group-messages-topic-navlinks {
     position: relative;
     top: 0.625em;
@@ -2436,7 +2438,7 @@ p.label + ul {
 }
 
 /* Start a Topic, alias New topic */
-/* TODO: move to gs.group.messages.starttopic, 
+/* TODO: move to gs.group.messages.starttopic,
    or gs.group.messages.topic.start */
 #gs-group-messages-startopic-new {
     margin: 1.25em 0 0 0;
@@ -2602,7 +2604,7 @@ p.label + ul {
 .refinement li {
   margin: 0;
   clear: both;
-}  
+}
 
 /* Files list */
 /* TODO: move to gs.group.messages.files */
@@ -2620,7 +2622,7 @@ p.label + ul {
     padding: 0;
 }
 .small #gs-group-messages-files-nav {
-    top: 0.583em; /* 0.5u  - medium */ 
+    top: 0.583em; /* 0.5u  - medium */
 }
 #gs-group-messages-files-nav * {
     overflow: hidden;
@@ -2634,7 +2636,7 @@ p.label + ul {
     border: none;
     padding: 0;
 }
-#gs-group-messages-files .gs-search-result img, 
+#gs-group-messages-files .gs-search-result img,
 .gs-group-messages-files-file-icon {
     position: absolute;
     left: 0;
@@ -2747,7 +2749,7 @@ p.label + ul {
 
 /* Invitations Pages */
 .group-invitation p {
-  margin-left: 1.250em; 
+  margin-left: 1.250em;
 }
 .group-invitation ul {
   margin-left: 3.125em; /* 2.5u */
@@ -2783,7 +2785,7 @@ p.label + ul {
 /* is a *huge* form. */
 #manage-members .navlinks {
   display: inline;
-}      
+}
 #manage-members .statusActions {
     position: relative;
     border-bottom: 0.063em solid #333333;
@@ -2902,7 +2904,7 @@ p.label + ul {
   margin: 1.250em 0 1.250em 0;/* 1u 0 1u 0 */
 }
 #gs-profile-view #membership li {
-  list-style: none;  
+  list-style: none;
 }
 #gs-profile-view #membership a, #gs-profile-view #membership .current {
   display: block;
@@ -3094,7 +3096,7 @@ p.label + ul {
     }
     /* Dynamically size the columns*/
     .gs-content-layout-cols .main,
-    .gs-content-layout-cols .secondary, 
+    .gs-content-layout-cols .secondary,
     .gs-content-layout-cols .secondary.small {
         padding: 0;
         border: none;
@@ -3102,17 +3104,34 @@ p.label + ul {
     .gs-content-layout-cols .main {
         width: 62%;
     }
-    .gs-content-layout-cols .secondary, 
+    .gs-content-layout-cols .secondary,
     .gs-content-layout-cols .secondary.small {
         width: 35%;
     }
 
-    /* Place the email body in a single column with the email body */
-    .email-metadata, .hentry .email-message {
+    /* Place the email metadata in a single column with the email body */
+    .h-entry .userimage {
+        /* Already absolutely positioned */
+        top: 0.689em; /*0.5u */
+    }
+    .email-metadata, .h-entry .email-message {
         position: static;
     }
     .email-metadata {
-        padding: 0.689em 0 0 3.750em;
+        padding: 0.689em 0 0 0;
+    }
+    .userimage + .email-metadata {
+        padding: 0.689em 0 0 3.125em;  /* 2.5u */
+    }
+    .gs-group-messages-post-hide {
+        padding: 0 0 0 0.689em;
+    }
+    .h-entry pre {
+        padding: 0;
+    }
+    .gs-group-messages-post-buttons {
+        position: static;
+        margin: 0.689em 0 0.689em 0;
     }
     /* Flick the "Post a reply" form into a single column, with the email. */
     #gs-group-messages-topic-cannotadd, #add-to-topic {
@@ -3122,7 +3141,7 @@ p.label + ul {
     }
 
     /* Place the image below its metadata */
-    .gs-group-messages-image .metadata > *, 
+    .gs-group-messages-image .metadata > *,
     .gs-group-messages-image .metadata ul,
     .gs-group-messages-image .metadata .gs-group-messages-image-buttons {
         position: static;
@@ -3138,7 +3157,7 @@ p.label + ul {
         max-width: 100%;
         padding: 1.25em 0 0 0;
     }
-    
+
 }
 
 @media screen and (max-width: 790px) {
@@ -3163,9 +3182,9 @@ p.label + ul {
         padding: 0.625em 0 0.250em 0;
     }
     /* Remove the columns */
-    .gs-content-layout-cols, 
-    .gs-content-layout-cols .main, 
-    .gs-content-layout-cols .secondary, 
+    .gs-content-layout-cols,
+    .gs-content-layout-cols .main,
+    .gs-content-layout-cols .secondary,
     .gs-content-layout-cols .secondary.small,
     #gs-group-messages-topic-tasks {
         float: none;
@@ -3196,7 +3215,7 @@ p.label + ul {
         width: 95%;
         max-width: 41.875em; /* 33.5u */
     }
-    .radioItem > *, .checkboxGroup > *,  input.checkboxType, 
+    .radioItem > *, .checkboxGroup > *,  input.checkboxType,
     label.checkboxLabel {
         display: inline;
     }
@@ -3208,15 +3227,15 @@ p.label + ul {
 
 @media screen and (max-width: 660px) {
     /* Allow the text in the email messages to wrap. */
-    .hentry .entry-content, .hentry .email-remainder, 
-    .hentry .fileNotification, 
-    .hentry .email-message {
+    .h-entry .entry-content, .h-entry .email-remainder,
+    .h-entry .fileNotification,
+    .h-entry .email-message {
         width: 100%;
     }
-    .hentry pre {
+    .h-entry pre {
         white-space: pre-wrap;
     }
-    .hentry .normalFileList .hmedia {
+    .h-entry .normalFileList .hmedia {
         margin-bottom: 1.25em; /* Make standard? */
     }
     /* Get the Post a reply form to follow the size of the posts */
@@ -3274,7 +3293,7 @@ p.label + ul {
 @media screen and (max-width: 570px) {
     .gs-search-entry input {
         width: auto;
-    }    
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -3282,7 +3301,7 @@ p.label + ul {
         position: relative;
         right: auto;
         top: auto;
-    }    
+    }
 }
 
 @media screen and (max-width: 410px) {
