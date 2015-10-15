@@ -2124,11 +2124,15 @@ p.label + ul {
 .email-metadata .topic {
   display: none;
 }
-.h-entry .email-message, .hidden-post {
+.h-entry .email-message {
     position: relative;
     left: 16.875em; /* 13.5u, but see below for the 0.5u padding */
     width: 41.25em; /* 33u */
     padding: 1.250em 0 0 0;
+}
+.gs-group-messages-post-hide > p {
+    margin-top: 0;
+    padding-top: 0;
 }
 .gs-group-messages-post-buttons {
     position: absolute;
@@ -3104,7 +3108,7 @@ p.label + ul {
     }
 
     /* Place the email body in a single column with the email body */
-    .email-metadata, .hentry .email-message, .hidden-post {
+    .email-metadata, .hentry .email-message {
         position: static;
     }
     .email-metadata {
@@ -3206,8 +3210,7 @@ p.label + ul {
     /* Allow the text in the email messages to wrap. */
     .hentry .entry-content, .hentry .email-remainder, 
     .hentry .fileNotification, 
-    .hidden-post,
-    .hentry .email-message, .hidden-post {
+    .hentry .email-message {
         width: 100%;
     }
     .hentry pre {
