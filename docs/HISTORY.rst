@@ -1,6 +1,15 @@
 Changelog
 =========
 
+2.6.2 (2015-09-30)
+------------------
+
+* Following the changes in `gs.group.messages.post.base`_ to
+  Microformats 2
+
+.. _gs.group.messages.post.base:
+   https://github.com/groupserver/gs.group.messages.post.base
+
 2.6.1 (2015-03-20)
 ------------------
 
