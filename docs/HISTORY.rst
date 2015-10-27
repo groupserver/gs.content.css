@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.6.3 (2015-10-27)
+------------------
+
+* Updating the version number in the ``site.css`` resource
+
 2.6.2 (2015-09-30)
 ------------------
 
