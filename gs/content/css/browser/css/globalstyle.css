@@ -1,6 +1,6 @@
 /* GroupServer Standard Stylesheet
  *
- * -- Michael JasonSmith (mpj17) 2013, 2014
+ * -- Michael JasonSmith (mpj17) 2013, 2014, 2015
  *
  */
 
@@ -800,7 +800,7 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 /* END Bootstrap CSS */
 
 /* GroupServer specific styles below */
-/* Copyright © 2013, 2014 OnlineGroups.net and Contributors.               */
+/* Copyright © 2013, 2014, 2015 OnlineGroups.net and Contributors.          */
 /* All Rights Reserved.                                                    */
 
 /* This software is subject to the provisions of the Zope Public License,  */
@@ -2153,6 +2153,9 @@ p.label + ul {
     text-overflow: ellipsis;
     border: none;
     margin: 0;
+}
+.h-entry .line {
+    white-space: pre-wrap;
 }
 .h-entry pre, .hidden-post, .h-entry .fileNotification {
     padding: 0 0 0 0.625em;  /* 0.5u, for wierd clipping reasons */
