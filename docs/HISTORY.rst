@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.6.4 (2015-11-06)
+------------------
+
+* Making the white-space significant (``white-space: pre-wrap``)
+  in the posts on the web.
+
 2.6.3 (2015-10-27)
 ------------------
 
