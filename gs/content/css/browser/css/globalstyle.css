@@ -3045,12 +3045,19 @@ p.label + ul {
     position: relative;
     top: -5px; /* 0.25em @20, but toobars do not have a font-size */
 }
+
 .gs-content-js-sharebox-dialog .full-share input {
     margin: 0.8333em 0 0 0; /* 0.5u */
     font-size: 12px;
     line-height: 1.667;
-    width: 20em; /* 12u @ 12 px */
+    width: 18.333em; /* 11u @ 12 px */
     cursor: text;
+}
+.gs-content-js-sharebox-dialog .full-share button {
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    margin: 0 0 0 0.625em;
 }
 
 #signupmethods .odd, #signupmethods .even {

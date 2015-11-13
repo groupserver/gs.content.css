@@ -15,8 +15,12 @@
 
   <!-- CSS files -->
   <browser:resource
-    name="globalstyle-20151106.css"
+    name="globalstyle-20151112.css"
     file="browser/css/globalstyle-min.css"
+    permission="zope2.Public" />
+  <browser:resource
+    name="globalstyle-20151106.css"
+    file="browser/css/globalstyle.css"
     permission="zope2.Public" />
   <browser:resource
     name="globalstyle-20151015.css"
