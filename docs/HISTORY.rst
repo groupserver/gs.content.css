@@ -1,6 +1,16 @@
 Changelog
 =========
 
+2.6.5 (2015-11-12)
+------------------
+
+* Adjusting the *Share* popup from `gs.content.js.sharebox`_ to
+  make space for the new *Copy* button
+
+.. _gs.content.js.sharebox:
+   https://github.com/groupserver/gs.content.js.sharebox
+
+
 2.6.4 (2015-11-06)
 ------------------
 
