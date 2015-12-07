@@ -1081,6 +1081,10 @@ code, pre {
 p, ul, ol, dl, fieldset, table, pre {
     margin: 1.250em 0; /* 1u */
 }
+.table th, .table td, .table caption {
+    padding: 0.625em;
+}
+
 p.small, ul.small, ol.small, dl.small, fieldset.small, table.small, pre.small {
     margin: 1.667em 0; /* 1u @ 12px */
 }
@@ -2988,12 +2992,77 @@ p.label + ul {
 }
 
 /* Profile: Email Settings*/
-#gs-profile-email-change .change select, #gs-profile-email-change .change input {
-  display: inline;
-  width: auto;
+/* TODO: move to gs.profile.email.settings */
+#gs-profile-email-settings .preferred-address [role="toolbar"],
+#gs-profile-email-settings .extra-address [role="toolbar"],
+#gs-profile-email-settings .unverified-address [role="toolbar"] {
+    padding: 0 0 0 1.25em;
+    display: inline-block;
 }
-#gs-profile-email-change .change input {
-  padding: 0 0.625em; /* 0.5u */
+.gs-profile-email-settings-address-list .remove {
+    margin: 0 0 0 1.25em;
+}
+.gs-profile-email-settings-address-list .demote {
+    transform: rotate(180deg);
+}
+
+#gs-profile-email-settings-model,
+.gs-profile-email-settings-address-list {
+    margin: 1.25em 0 1.25em 0.625em;
+    list-style: none;
+    border: 0.063em solid rgba(0, 0, 0, 0);
+    box-shadow: none;
+    min-height: 1.25em;
+
+    transition-property: border-color, box-shadow;
+    transition-delay: 0;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+.gs-profile-email-settings-address-list.drop-prepare {
+    border-color: #cccccc;
+    box-shadow: inset 0.375em 0.375em 0.375em 0 #cdcdcd;
+}
+.gs-profile-email-settings-address-list li {
+    margin: 0.625em 0 0.625em 0;
+}
+.gs-profile-email-settings-address-list .email {
+    display: inline-block;
+    width: 18.624em; /*15u - (thin * 2) */
+    line-height: 20px;
+    vertical-align: middle;
+    border: 0.063em solid rgba(0, 0, 0, 0);
+    padding: 2px 0.625em 2px 0.625em; /*2px is the same as the bootstrap buttons*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    transition-property: border-color, background, box-shadow;
+    transition-delay: 0.15s;
+    transition-duration: 0.95s;
+    transition-timing-function: ease;
+}
+.gs-profile-email-settings-address-list .email[draggable=true]:hover {
+    border-color: #cccccc;
+    background: #eeeeee;
+    box-shadow: 0.625em 0.625em 0.625em 0 #cdcdcd;
+    cursor: move;
+}
+#gs-profile-email-settings-model, #gs-profile-email-settings-feedback {
+    display: none;
+}
+
+#gs-profile-email-settings p.intro {
+    margin-left: 1.25em;
+    max-width: 41.875em;
+}
+#gs-profile-email-settings-group {
+    margin-top: 2.5em;
+}
+#gs-profile-email-settings-group caption {
+    text-align: left;
+}
+.gs-profile-email-settings-group-setting-setting .btn {
+    min-width: 5.625em; /* 4.5u */
 }
 
 /* The Awaiting verification page */
