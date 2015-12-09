@@ -200,4 +200,4 @@ with the ``loading`` class:
        effect is the entire paragraph is spun.
 
 .. _Two patterns from CSS Tricks:
-   http://css-tricks.com/html-for-icon-font-usage/
+   https://css-tricks.com/html-for-icon-font-usage/

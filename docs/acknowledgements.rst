@@ -22,13 +22,13 @@ The :doc:`icons` were taken from two glyph-fonts:
 
 The `IcoMoon`_ App, by Keyamoon, was used to crate the font-files.
 
-.. _Twitter Bootstrap: http://twitter.github.com/bootstrap/
+.. _Twitter Bootstrap: http://getbootstrap.com/2.3.2/
 .. _Bootstrap 2.3.0: 
    http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css
 .. _documentation for 2.3.2: http://getbootstrap.com/2.3.2/
 .. _Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
-.. _Font Awesome: http://fortawesome.github.com/Font-Awesome/
-.. _IcoMoon: http://icomoon.io/
+.. _Font Awesome: http://fortawesome.github.io/Font-Awesome/
+.. _IcoMoon: https://icomoon.io/
 .. _Entypo: http://entypo.com/
 .. _CC BY-SA 3.0 license: http://creativecommons.org/licenses/by-sa/3.0/
 .. _CC BY 3.0 license: http://creativecommons.org/licenses/by/3.0/
@@ -45,7 +45,7 @@ GroupServer 2.0. The CSS coding for the all versions from 1.0
 onward, and egg creation, was by `Michael JasonSmith`_.
 
 .. _Michael JasonSmith: http://groupserver.org/p/mpj17/
-..  _Metasolutions: http://metasoltuions.co.nz/
+..  _Metasolutions: http://www.metadigital.co.nz/
 .. _Cactus Lab: http://cactuslab.com/
 
 ..  LocalWords:  CSS README
