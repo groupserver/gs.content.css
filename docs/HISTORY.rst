@@ -1,6 +1,14 @@
 Changelog
 =========
 
+2.6.6 (2015-12-09)
+------------------
+
+* Following the changes to `gs.profile.email.settings`_
+
+.. _gs.profile.email.settings:
+   https://github.com/groupserver/gs.profile.email.settings
+
 2.6.5 (2015-11-12)
 ------------------
 
