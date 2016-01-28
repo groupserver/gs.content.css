@@ -2435,8 +2435,15 @@ p.label + ul {
 .MultiFile-label {
     margin: 0.625em 0; /* 0.5u */
 }
+div.MultiFile-label {
+    display: flex;
+}
+div.MultiFile-label > span {
+    order: 0;
+}
 .MultiFile-remove {
-    margin: 0 0.625em 0 0; /* 0.5u */
+    padding: 0 0 0 0.625em; /* 0.5u */
+    order: 1;
 }
 .MultiFile-remove abbr {
     text-decoration: none;
