@@ -1,6 +1,18 @@
 Changelog
 =========
 
+2.6.7 (2016-01-28)
+------------------
+
+* Following the changes to `gs.content.js.multifile`_ and
+  `gs.group.messages.topic.base`_
+
+.. _gs.content.js.multifile:
+   https://github.com/groupserver/gs.content.js.multifile
+
+.. _gs.group.messages.topic.base:
+   https://github.com/groupserver/gs.group.messages.topic.base
+
 2.6.6 (2015-12-09)
 ------------------
 
@@ -111,7 +123,7 @@ Changelog
 
 * Turning the editor back on for *content editor* pages
 * Added the animated swirl icon
-* Added new glyph icons: 
+* Added new glyph icons:
 
   + Install
   + Archive
