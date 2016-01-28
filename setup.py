@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ############################################################################
 #
-# Copyright © 2011, 2012, 2013, 2014, 2015 OnlineGroups.net and
+# Copyright © 2011, 2012, 2013, 2014, 2015, 2016 OnlineGroups.net and
 # Contributors.
 #
 # All Rights Reserved.
@@ -57,8 +57,10 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'zope.browserresource',  # --=mpj17=-- Honestly, that is all
     ],
+    extras_require={
+        'zope': ['zope.browserresource', ],
+        'docs': ['Sphinx', ]},
     entry_points="""
     # -*- Entry points: -*-
     """,)
