@@ -40,7 +40,7 @@ Resources
 
 - Code repository: https://github.com/groupserver/gs.content.css
 - Documentation:
-  http://groupserver.readthedocs.org/projects/gscontentcss/
+  http://groupserver.readthedocs.io/projects/gscontentcss/
 - Questions and comments to
   http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
